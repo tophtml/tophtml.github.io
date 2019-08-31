@@ -1105,7 +1105,7 @@ main {
 	}
 	.about-us__img {
 		max-width: 80%;
-		height: 150px;
+		height: 170px;
 		margin: 20px auto 0 auto;
 	}
 	.about-us::before {
@@ -1265,7 +1265,7 @@ main {
 		top: 24px;
 	}
 	.footer-main__copywriting {
-		max-width: 150px;
+		max-width: 175px;
 		font-size: 0.8rem;
 	}
 }
