@@ -1010,7 +1010,8 @@ main {
 	}
 	.furniture__img,
 	.decor__img {
-		
+		max-width: 80%;
+		height: 150px;
 		margin: 20px auto;
 	}
 	.furniture__text::before,
@@ -1103,6 +1104,8 @@ main {
 		padding-bottom: 30px;
 	}
 	.about-us__img {
+		max-width: 80%;
+		height: 150px;
 		margin: 20px auto 0 auto;
 	}
 	.about-us::before {
@@ -1144,107 +1147,105 @@ main {
 		padding-top: 0;
 		padding-bottom: 20px;
 	}
-	@media (max-width: 480px) {
+@media (max-width: 480px) {
 		.furniture__text::before,
-		.decor__text::before,
-		.skills__text::before,
-		.about__text::before {
-		display: none;
+	.decor__text::before,
+	.skills__text::before,
+	.about__text::before {
+	display: none;
 	}
-		.home__main-title {
-			max-width: 260px;
-			font-size: 3rem;
-			letter-spacing: .5rem;
-		}
-		.home-baner__button {
-			width: 260px;		
-		}
-		.home-baner__button::after {
-			left: 195px;
-		}
-		.products {
-			padding-top: 20px;
-		}
-		.product-quality {
-			padding-bottom: 10px;
-		}
-		.main-title {
-			margin-bottom: 10px;
-			font-size: 1.8rem;
-			text-align: center;
-		}
-		.main-text {
-			margin-bottom: 10px;
-			text-align: justify;
-			color: green;
-		}
-		.furniture__img, 
-		.decor__img {
-			max-width: 80%;
-			height: 150px;
-			margin-bottom: 10px;
-		}
-		.products::before {
-			top: 290px;
-			left: 20px;
-			font-size: 2rem;
-		}
-		.decor::before {
-			top: 270px;
-			left: 0;
-			font-size: 2rem;
-		}
-		.video-box__title {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-		.video-box__title,
-		.video-skills,
-		.video-quality {
-		 	margin: 10px auto;
-		}
-		.video-box__img img {
-			max-width: 80%;
-		}
-		.video-box__bn {
-			top: -115px;
-    		left: 64px;
-		}
-		.video-box__img_unavailable {
-	    top: -183px;
-	    right: 0px;
-	    height: 200px;
-	    width: 232px;
-        padding-top: 65px;
-		}
-		.skills__title {
-			margin-top: 10px;
-			margin-bottom: 10px;
-			font-size: 1.5rem;
-		}
-		.skills__text {
-			max-width: 265px;
-		}
-		.skills__bn {
-			width: 260px;
-			padding: 20px 50px 20px 70px;
-			background-position: 25px 16px;
-		}
-		.about-us {
-			padding-top: 15px;
-			padding-bottom: 15px;
-		}
-		.about-us__img {
-			margin: 10px auto 0 auto;
-		}
-		.about-us::before {
-			top: 135px;
-	   		left: -8px;
-			font-size: 2rem;
-		}
-		.about {
-			margin-top: 0;
-			margin-bottom: 10px;
+	.home__main-title {
+		max-width: 260px;
+		font-size: 3rem;
+		letter-spacing: .5rem;
+	}
+	.home-baner__button {
+		width: 260px;		
+	}
+	.home-baner__button::after {
+		left: 195px;
+	}
+	.products {
+		padding-top: 20px;
+	}
+	.product-quality {
+		padding-bottom: 10px;
+	}
+	.main-title {
+		margin-bottom: 10px;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+	.main-text {
+		margin-bottom: 10px;
+		text-align: justify;
+	}
+	.furniture__img, 
+	.decor__img {
+		margin-bottom: 10px;
+	}
+	.products::before {
+		top: 290px;
+		left: 20px;
+		font-size: 2rem;
+	}
+	.decor::before {
+		top: 270px;
+		left: 0;
+		font-size: 2rem;
+	}
+	.video-box__title {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.video-box__title,
+	.video-skills,
+	.video-quality {
+	 	margin: 10px auto;
+	}
+	.video-box__img img {
+		max-width: 80%;
+		max-height: 80%;
+	}
+	.video-box__bn {
+		top: -115px;
+		left: 64px;
+	}
+	.video-box__img_unavailable {
+    top: -183px;
+    right: 0px;
+    height: 200px;
+    width: 232px;
+    padding-top: 65px;
+	}
+	.skills__title {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.5rem;
+	}
+	.skills__text {
+		max-width: 265px;
+	}
+	.skills__bn {
+		width: 260px;
+		padding: 20px 50px 20px 70px;
+		background-position: 25px 16px;
+	}
+	.about-us {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.about-us__img {
+		margin: 10px auto 0 auto;
+	}
+	.about-us::before {
+		top: 135px;
+   		left: -8px;
+		font-size: 2rem;
+	}
+	.about {
+		margin-top: 0;
+		margin-bottom: 10px;
 	}
 		.about__title {
 		margin: 10px auto;
@@ -1264,7 +1265,7 @@ main {
 		top: 24px;
 	}
 	.footer-main__copywriting {
-		max-width: 175px;
+		max-width: 150px;
 		font-size: 0.8rem;
 	}
 }
