@@ -1191,7 +1191,7 @@ main {
 	}
 	.decor::before {
 		top: 270px;
-		left: -17;
+		left: -17px;
 		font-size: 2rem;
 	}
 	.video-box__title {
