@@ -1186,12 +1186,12 @@ main {
 	}
 	.products::before {
 		top: 290px;
-		left: 20px;
+		left: 0px;
 		font-size: 2rem;
 	}
 	.decor::before {
 		top: 270px;
-		left: 0;
+		left: -17;
 		font-size: 2rem;
 	}
 	.video-box__title {
