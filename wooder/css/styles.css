@@ -161,7 +161,6 @@ button {
 	margin-top: 80px;
 	padding-left: 13px;
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.5);
 }
 .hamburger__item {
 	padding-top: 10px;
@@ -964,6 +963,10 @@ main {
 	.about-us::after,
 	.about__title::before {
 		display: none;
+	}
+	*:focus,
+	*:active {
+		outline: none;
 	}
 		.hamburger-btn {
 		display: block;
