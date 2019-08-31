@@ -1176,6 +1176,7 @@ main {
 		.main-text {
 			margin-bottom: 10px;
 			text-align: justify;
+			color: green;
 		}
 		.furniture__img, 
 		.decor__img {
