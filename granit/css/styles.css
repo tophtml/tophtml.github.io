@@ -121,7 +121,7 @@ a {
 	border: 2px solid transparent;
 	transition: 0.3s;
 }
-.header-nav {
+.header-nav-wrap {
 	position: relative;
 	z-index: 10;
 	margin-top: 31px;
@@ -201,7 +201,7 @@ a {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.available-section {
+.available-section-wrap {
 	padding: 80px 0 116px;
 }
 .available-product {
@@ -250,7 +250,7 @@ a {
 	margin: 0 auto 36px;
 	padding: 20px 55px;
 }
-.advantages-section {
+.advantages-section-wrap {
 	padding: 80px 0;
 	background-color: #f4f4f4;
 }
@@ -304,7 +304,7 @@ a {
 	font-weight: 300;
 	line-height: 18px;
 }
-.popular-section {
+.popular-section-wrap {
 	padding: 80px 0 94px;
 }
 .popular-box {
@@ -370,7 +370,7 @@ a {
 	font-weight: 300;
 	text-decoration: line-through;
 }
-.services-section {
+.services-section-wrap {
 	padding: 80px 0;
 	background-color: #f4f4f4;
 }
@@ -427,7 +427,7 @@ a {
 	color: #ffd200;
 	transition: 0.3s;
 }
-.contacts-section {
+.contacts-section-wrap {
 	position: relative;
 	padding: 80px 0;
 	background: #292929 url(../img/contacts_bg.jpg) center top no-repeat;
@@ -511,7 +511,7 @@ a {
 	background: url(../img/icons/envelope.png) no-repeat;
 	cursor: default;
 }
-.footer-section {
+.footer-section-wrap {
 	padding: 48px 0 38px;
 	color: #ffffff;
 	background-color: #292929;

@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -26,31 +27,33 @@
 				</div>
 			</div>
 			<nav class="header-nav">
-				<ul class="header-nav__list">
-					<li class="header-nav__item">
-						<a class="header-nav__link header-nav__link_current">Главная
-						</a>
-					</li>
-					<li class="header-nav__item">
-						<a href="#popular-section" class="header-nav__link">Каталог
-						</a>
-					</li>
-					<li class="header-nav__item">
-						<a class="header-nav__link" href="#services-section">Услуги
-						</a>
-					</li>
-					<li class="header-nav__item">
-						<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="header-nav__link btn btn-primary">Доставка
-						</a>
-					</li>
-					<li class="header-nav__item">
-						<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="header-nav__link btn btn-primary">О компании
-						</a>
-					</li>
-					<li class="header-nav__item">
-						<a class="header-nav__link" href="#contacts-section">Контакты</a>
-					</li>
-				</ul>
+				<div class="header-nav-wrap">
+					<ul class="header-nav__list">
+						<li class="header-nav__item">
+							<a class="header-nav__link header-nav__link_current">Главная
+							</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#popular-section" class="header-nav__link">Каталог
+							</a>
+						</li>
+						<li class="header-nav__item">
+							<a class="header-nav__link" href="#services-section">Услуги
+							</a>
+						</li>
+						<li class="header-nav__item">
+							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="header-nav__link btn btn-primary">Доставка
+							</a>
+						</li>
+						<li class="header-nav__item">
+							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="header-nav__link btn btn-primary">О компании
+							</a>
+						</li>
+						<li class="header-nav__item">
+							<a class="header-nav__link" href="#contacts-section">Контакты</a>
+						</li>
+					</ul>
+				</div>	
 			</nav>
 		</div>
 		<div class="header-banner">
@@ -68,185 +71,197 @@
 	</header>
 	<main>
 		<section class="available-section">
-			<div class="container">
-				<div class="available">
-					<h2 class="title-main available__title">Всегда в наличии</h2>
-					<div class="available-box">
-						<div class="available-product">
-							<figure class="available-product__img">
-								<img src="img/send.png" alt="River send">
-							</figure>
-							<h3 class="available-product__name">
-								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="available-product__link btn btn-primary">Песок речной</a>
-							</h3>
-							<p class="available-product__text">Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав которых он входит. 
-							</p>
-							<span class="available-product__price">от 330 р./т</span>
-							<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button available-product__btn btn btn-primary">Подробнее</button>
+			<div class="available-section-wrap">
+				<div class="container">
+					<div class="available">
+						<h2 class="title-main available__title">Всегда в наличии</h2>
+						<div class="available-box">
+							<div class="available-product">
+								<div class="available-product__img">
+									<img src="img/send.png" alt="River send">
+								</div>
+								<h3 class="available-product__name">
+									<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="available-product__link btn btn-primary">Песок речной</a>
+								</h3>
+								<p class="available-product__text">Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав которых он входит. 
+								</p>
+								<span class="available-product__price">от 330 р./т</span>
+								<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button available-product__btn btn btn-primary">Подробнее</button>
+							</div>
+							<div class="available-product">
+								<div class="available-product__img">
+									<img src="img/crushed_stone.png" alt="Crushed stone">
+								</div>
+								<h3 class="available-product__name">
+									<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="available-product__link btn btn-primary">Щебень</a>
+								</h3>
+								<p class="available-product__text">Щебень обладает повышеной прочностью и долговечностью, поэтому может широко использоваться в строительных и промышленных работах. 
+								</p>
+								<span class="available-product__price">от 550 р./т</span>
+								<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button available-product__btn btn btn-primary">Подробнее</button>
+							</div>
+							<div class="available-product">
+								<div class="available-product__img">
+									<img src="img/soil.png" alt="Soil">
+								</div>
+								<h3 class="available-product__name">
+									<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="available-product__link btn btn-primary">Грунт</a>
+								</h3>
+								<p class="available-product__text">Грунт отлично подойдет для больших и маленьких комнатных растений. В нем большое количество полезных минеральных веществ. 
+								</p>
+								<span class="available-product__price">от 440 р./т</span>
+								<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button available-product__btn btn btn-primary">Подробнее</button>
+							</div>
 						</div>
-						<div class="available-product">
-							<figure class="available-product__img">
-								<img src="img/crushed_stone.png" alt="Crushed stone">
-							</figure>
-							<h3 class="available-product__name">
-								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="available-product__link btn btn-primary">Щебень</a>
-							</h3>
-							<p class="available-product__text">Щебень обладает повышеной прочностью и долговечностью, поэтому может широко использоваться в строительных и промышленных работах. 
-							</p>
-							<span class="available-product__price">от 550 р./т</span>
-							<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button available-product__btn btn btn-primary">Подробнее</button>
-						</div>
-						<div class="available-product">
-							<figure class="available-product__img">
-								<img src="img/soil.png" alt="Soil">
-							</figure>
-							<h3 class="available-product__name">
-								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="available-product__link btn btn-primary">Грунт</a>
-							</h3>
-							<p class="available-product__text">Грунт отлично подойдет для больших и маленьких комнатных растений. В нем большое количество полезных минеральных веществ. 
-							</p>
-							<span class="available-product__price">от 440 р./т</span>
-							<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button available-product__btn btn btn-primary">Подробнее</button>
-						</div>
-					</div>
-				</div>	
-			</div>
+					</div>	
+				</div>
+			</div>	
 		</section>
 		<section class="advantages-section">
-			<div class="container">
-				<div class="advantages">
-					<h2 class="title-main advantages__title">Наши преимущества</h2>
-					<div class="advantages-box">
-						<div class="advantages-item">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="advantages-item__link advantages-item_icon1 btn btn-primary">
-								<h3 class="advantages-item__title">Низкая цена</h3>
-								<p class="advantages__text">Мы сотрудничаем напрямую с производителем, поэтому можем гарантировать самую низкую цену.
-								</p>
-							</a>	
+			<div class="advantages-section-wrap">
+				<div class="container">
+					<div class="advantages">
+						<h2 class="title-main advantages__title">Наши преимущества</h2>
+						<div class="advantages-box">
+							<div class="advantages-item">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="advantages-item__link advantages-item_icon1 btn btn-primary">
+									<h3 class="advantages-item__title">Низкая цена</h3>
+									<p class="advantages__text">Мы сотрудничаем напрямую с производителем, поэтому можем гарантировать самую низкую цену.
+									</p>
+								</a>	
+							</div>
+							<div class="advantages-item">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="advantages-item__link advantages-item_icon2 btn btn-primary">
+									<h3 class="advantages-item__title">Быстрая доставка</h3>
+									<p class="advantages__text">Весь товар уже находится на нашем складе. Нам остается только погрузить его и в путь!
+									</p>
+								</a>	
+							</div>
+							<div class="advantages-item">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="advantages-item__link advantages-item_icon3 btn btn-primary">
+									<h3 class="advantages-item__title">Индивидуальный подход</h3>
+									<p class="advantages__text">Вам нужны бесперебойные поставки или большая партия товара со скидкой? Мы найдем решение! 
+									</p>
+								</a>	
+							</div>
 						</div>
-						<div class="advantages-item">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="advantages-item__link advantages-item_icon2 btn btn-primary">
-								<h3 class="advantages-item__title">Быстрая доставка</h3>
-								<p class="advantages__text">Весь товар уже находится на нашем складе. Нам остается только погрузить его и в путь!
-								</p>
-							</a>	
-						</div>
-						<div class="advantages-item">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="advantages-item__link advantages-item_icon3 btn btn-primary">
-								<h3 class="advantages-item__title">Индивидуальный подход</h3>
-								<p class="advantages__text">Вам нужны бесперебойные поставки или большая партия товара со скидкой? Мы найдем решение! 
-								</p>
-							</a>	
-						</div>
-					</div>
-				</div>	
-			</div>
+					</div>	
+				</div>
+			</div>	
 		</section>
 		<section id="popular-section" class="popular-section">
-			<div class="container">
-				<div class="popular">
-					<h2 class="title-main">Популярные товары</h2>
-					<div class="popular-box">
-						<div class="popular-product">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
-								<figure class="popular-product__img popular-product__img_tag">
-									<img src="img/popular_crashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
-								</figure>
-								<h3 class="popular-product__title">Гранитный щебень 5-20 мм</h3><br>
-								<span class="popular-product__cost_old">1 500 р./т</span>
-								<span class="popular-product__cost popular-product__cost_red">1 350 р./т</span>
-								<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
-							</a>
-						</div>
-						<div class="popular-product">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
-								<figure class="popular-product__img popular-product__img_tag">
-									<img src="img/popular_bigcrashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
-								</figure>
-								<h3 class="popular-product__title">Гранитный щебень 20-30 мм</h3><br>
-								<span class="popular-product__cost_old">3 500 р./т</span>
-								<span class="popular-product__cost popular-product__cost_red">3 000 р./т</span>
-								<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
-							</a>
-						</div>
-						<div class="popular-product">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
-								<figure class="popular-product__img">
-									<img src="img/popular_smallcrashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
-								</figure>
-								<h3 class="popular-product__title">Гранитный щебень 0-5 мм (отсев)</h3>
-								<span class="popular-product__cost">1 200 р./т</span>
-								<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
-							</a>
-						</div>
-						<div class="popular-product">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
-								<figure class="popular-product__img">
-									<img src="img/popular_tinycrashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
-								</figure>
-								<h3 class="popular-product__title">Гранитный щебень 0-2 мм</h3><br>
-								<span class="popular-product__cost">950 р./т</span>
-								<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
-							</a>
+			<div class="popular-section-wrap">
+				<div class="container">
+					<div class="popular">
+						<h2 class="title-main">Популярные товары</h2>
+						<div class="popular-box">
+							<div class="popular-product">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
+									<div class="popular-product__img popular-product__img_tag">
+										<img src="img/popular_crashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
+									</div>
+									<h3 class="popular-product__title">Гранитный щебень 5-20 мм</h3><br>
+									<span class="popular-product__cost_old">1 500 р./т</span>
+									<span class="popular-product__cost popular-product__cost_red">1 350 р./т</span>
+									<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
+								</a>
+							</div>
+							<div class="popular-product">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
+									<div class="popular-product__img popular-product__img_tag">
+										<img src="img/popular_bigcrashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
+									</div>
+									<h3 class="popular-product__title">Гранитный щебень 20-30 мм</h3><br>
+									<span class="popular-product__cost_old">3 500 р./т</span>
+									<span class="popular-product__cost popular-product__cost_red">3 000 р./т</span>
+									<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
+								</a>
+							</div>
+							<div class="popular-product">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
+									<div class="popular-product__img">
+										<img src="img/popular_smallcrashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
+									</div>
+									<h3 class="popular-product__title">Гранитный щебень 0-5 мм (отсев)</h3>
+									<span class="popular-product__cost">1 200 р./т</span>
+									<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
+								</a>
+							</div>
+							<div class="popular-product">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="popular-product__link btn btn-primary">
+									<div class="popular-product__img">
+										<img src="img/popular_tinycrashed_stone.jpg" alt="Гранитный щебень 5-20 мм">
+									</div>
+									<h3 class="popular-product__title">Гранитный щебень 0-2 мм</h3><br>
+									<span class="popular-product__cost">950 р./т</span>
+									<span data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button popular-product__btn btn btn-primary">Купить</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</section>
 		<section id="services-section" class="services-section">
-			<div class="container">
-				<div class="services">
-					<h2 class="title-main">Наши услуги</h2>
-					<div class="services-box">
-						<div class="services-item">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="services-item__link services-item__link_icon1 btn btn-primary">
-								<h3 class="services-item__title">Аренда самосвала</h3>
-							</a>
-						</div>
-						<div class="services-item">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="services-item__link services-item__link_icon2 btn btn-primary">
-								<h3 class="services-item__title">Аренда спецтехники</h3>
-							</a>
-						</div>
-						<div class="services-item">
-							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="services-item__link services-item__link_icon3 btn btn-primary">
-								<h3 class="services-item__title">Рытье траншеи</h3>
-							</a>
+			<div class="services-section-wrap">
+				<div class="container">
+					<div class="services">
+						<h2 class="title-main">Наши услуги</h2>
+						<div class="services-box">
+							<div class="services-item">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="services-item__link services-item__link_icon1 btn btn-primary">
+									<h3 class="services-item__title">Аренда самосвала</h3>
+								</a>
+							</div>
+							<div class="services-item">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="services-item__link services-item__link_icon2 btn btn-primary">
+									<h3 class="services-item__title">Аренда спецтехники</h3>
+								</a>
+							</div>
+							<div class="services-item">
+								<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="services-item__link services-item__link_icon3 btn btn-primary">
+									<h3 class="services-item__title">Рытье траншеи</h3>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</section>
 		<section id="contacts-section" class="contacts-section">
-			<div class="container">
-				<button data-fancybox data-type="iframe" data-src="https://goo.gl/maps/XG17VG31se9oMxig7" href="javascript:;" class="contacts_btn"></button>
-				<div class="contacts">
-					<h2 class="title-main contacts__title">Контакты</h2>
-					<span class="contacts__tel">
-						<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">8 800 034-23-34</a><br>
-						<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">8 495 034-23-34</a><br>
-					</span>	
-					<p data-fancybox data-type="iframe" data-src="https://goo.gl/maps/XG17VG31se9oMxig7" href="javascript:;" class="contacts__adress">Московская обл. г. Балашиха,<br>пер. Столовой, д.23, кор. 34</p>
-					<a class="contacts__email">Info@stroika.ru</a href="email">
+			<div class="contacts-section-wrap">
+				<div class="container">
+					<button data-fancybox data-type="iframe" data-src="http://www.google.com.ua/maps" href="javascript:;" class="contacts_btn"></button>
+					<div class="contacts">
+						<h2 class="title-main contacts__title">Контакты</h2>
+						<span class="contacts__tel">
+							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">8 800 034-23-34</a><br>
+							<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">8 495 034-23-34</a><br>
+						</span>	
+						<p data-fancybox data-type="iframe" data-src="google.com.ua/maps" href="javascript:;" class="contacts__adress">Московская обл. г. Балашиха,<br>пер. Столовой, д.23, кор. 34</p>
+						<a class="contacts__email">Info@stroika.ru</a href="email">
+					</div>
 				</div>
-			</div>
+			</div>	
 		</section>
 	</main>
 	<footer class="footer-section">
-		<div class="container">
-			<div class="footer-wrap">
-				<div class="footer-copyright">
-					<h2 class="header-logo__title" lang="en">granit</h2>
-					<span class="header-logo__subtitle">Доставка нерудных материалов</span>
-					<span class="footer-copyright__text">&#169;2016. Гранит</span>
-				</div>
-				<div class="footer-contacts">
-					<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="header-contacts__number footer-contacts__number btn btn-primary">8 800 342-13-33</a><br>
-						<span class="header-contacts__text">Бесплатный звонок по России</span>
-					<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button header-contacts__btn footer-contacts__btn btn btn-primary">Обратный звонок</button>
+		<div class="footer-section-wrap">
+			<div class="container">
+				<div class="footer-wrap">
+					<div class="footer-copyright">
+						<h2 class="header-logo__title" lang="en">granit</h2>
+						<span class="header-logo__subtitle">Доставка нерудных материалов</span>
+						<span class="footer-copyright__text">&#169;2016. Гранит</span>
+					</div>
+					<div class="footer-contacts">
+						<a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="header-contacts__number footer-contacts__number btn btn-primary">8 800 342-13-33</a><br>
+							<span class="header-contacts__text">Бесплатный звонок по России</span>
+						<button data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="button header-contacts__btn footer-contacts__btn btn btn-primary">Обратный звонок</button>
+					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 	</footer>
 	<div id="animatedModal" class="hidden">
 		<p>Мы наполняем сайт новым контентом<br>Попробуйте позже
