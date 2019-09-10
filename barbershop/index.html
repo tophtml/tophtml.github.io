@@ -6,12 +6,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="style.css"> 
+	<link rel="stylesheet" type="text/css" href="index.css" />
 	<script src="script.js" type="text/javascript"></script>
 </head>
 <body>
 	<header class="main-header">
 		<div class="container">	
 			<nav class="main_nav">
+				<div class="hamburger">
+					<button class="hamburger_button visually_hidden" onclick="openMainmenu()"></button>
+					<ul id="js-hamburger_main" class="hamburger_main-list visually_hidden">
+						<li class="hamburger_main_nav-list visually_hidden">
+							<a>Информация</a>
+						</li>
+						<li class="hamburger_main_nav-list">
+							<a href="news.html">Новости</a>
+						</li>
+						<li class="hamburger_main_nav-list">
+							<a href="price-list.html">Прайс-лист</a>
+						</li>
+						<li class="hamburger_main_nav-list">
+							<a href="shop.html">Магазин</a>
+						</li>
+						<li class="hamburger_main_nav-list">
+							<a href="contacts.html">Контакты</a>
+						</li>
+						<li class="hamburger_main_nav-list" onclick="popUpShow()">Вход
+						</li>
+					</ul>
+				</div>
 				<div class="main_nav-site">
 					<ul>
 						<li class="main_nav-list selected">
@@ -137,13 +160,13 @@
 				<div class="footer-social">
 					<p class="footer-text">Давайте дружить!</p>
 					<div class="social-link">
-						<a onclick="socialMessageShow()" class="social-link-net" href="#">
+						<a onclick="socialMessageShow()" class="social-link-net" >
 							<img src="img/vk.png" alt="Vkontakte">
 						</a>
-						<a onclick="socialMessageShow()" class="social-link-net" href="#">
+						<a onclick="socialMessageShow()" class="social-link-net" >
 							<img src="img/fb.png" alt="Facebook">
 						</a>
-						<a onclick="socialMessageShow()" class="social-link-net" href="#">
+						<a onclick="socialMessageShow()" class="social-link-net" >
 							<img src="img/inst.png" alt="Instagram">
 						</a>
 					</div>
@@ -169,7 +192,7 @@
 				</span>
 				<div class="pop_up-sub_form">
 					<label class="pop_up-sub_form-remember">
-						<span class="pop_up-sub_form-text">Запомнить меня</span>
+						<span class="pop_up-sub_form-text pop_up-sub_form-text__small">Запомнить меня</span>
 						<input class="visually_hidden" type="checkbox" name="remember_me">
 						<span class="icon-check_box"></span>
 					</label>
@@ -195,7 +218,7 @@
 	</div>!-->
 	<div id="js-socialUpdate" class="social_update-overlay">
 		<div class="message-updating_social">
-			<p>Наши группы засияют по новому. Чуть-чуть потерпите</p>
+			<p>Наши группы засияют по-новому. Чуть-чуть потерпите</p>
 			<p class="message-ps">P.S. Красота требует жертв</p>
 			<button class="button_close" title="Закрыть" onclick="socialMessageClose()"></button>
 			<button class="button button-message" onclick="socialMessageClose()">Хорошо</button>

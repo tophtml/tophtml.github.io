@@ -72,8 +72,8 @@ a {
 .header-logo::before {
 	position: absolute;
 	content: "";
-	top: -9px;
-	left: -50px;
+	top: -3px;
+	left: -51px;
 	width: 38px;
 	height: 40px;
 	background: url(../img/icons/logo.svg) no-repeat;
@@ -100,7 +100,7 @@ a {
 	font-weight: 300;
 }
 .header-contacts__tel {
-	margin-right: 30px;
+	margin-right: 32px;
 	text-align: right;
 	float: left;
 }
@@ -110,8 +110,8 @@ a {
 	font-weight: 700;
 }
 .header-contacts__btn {
-	margin-top: -6px;
-	padding: 13px 20px;
+	margin-top: -3px;
+	padding: 11px 21px;
 	border: 2px solid #292929;
 	background: #ffffff;
 }
@@ -124,20 +124,21 @@ a {
 .header-nav-wrap {
 	position: relative;
 	z-index: 10;
-	margin-top: 31px;
+	margin-top: 26px;
 }
 .header-nav__list {
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
 	background-color: #ffcc00;
-	padding: 25px 0;
+	padding: 25px 50px 25px 70px;
 }
 .header-nav__item {
 	display: inline-block;
+	max-width: 160px;
 }
 .header-nav__link {
-	padding: 25px 38px;
+	padding: 25px 0;
 	color: #000000;
 	font-size: 14px;	
 }
@@ -154,7 +155,7 @@ a {
 }
 .header-banner {
 	margin-top: -32px;
-	padding: 170px 0 140px;
+	padding: 162px 0 140px;
 	background: #ffffff url(../img/header_bg.jpg) no-repeat;
 	background-position: center top;
 }
@@ -175,7 +176,7 @@ a {
 }
 .header-banner__btn {
 	display: inline-block;
-	margin-right: 31px;
+	margin-right: 25px;
 	padding: 20px 30px;
 }
 .header-banner__link_small {
@@ -202,7 +203,7 @@ a {
 	justify-content: space-between;
 }
 .available-section-wrap {
-	padding: 80px 0 116px;
+	padding: 75px 0 116px;
 }
 .available-product {
 	max-width: 300px;
@@ -223,14 +224,16 @@ a {
 	text-transform: uppercase;
 }
 .available__title {
-	margin-bottom: 50px;
+	margin-bottom: 73px;
 }
 .available-product__name {
-	margin: 25px auto 12px;
+	margin: 25px auto 16px;
 }
 .available-product__text {
+	padding: 0 10px;
 	color: #626262;
 	font-size: 13px;
+	line-height: 15px;
 }
 .available-product__link {
 	text-decoration: underline;
@@ -241,7 +244,7 @@ a {
 }
 .available-product__price {
 	display: block;
-	margin: 20px auto 25px;
+	margin: 32px auto 25px;
 	color: #0f0f0f;
 	font-size: 16px;
 }
@@ -251,11 +254,11 @@ a {
 	padding: 20px 55px;
 }
 .advantages-section-wrap {
-	padding: 80px 0;
+	padding: 37px 0 80px;
 	background-color: #f4f4f4;
 }
 .advantages__title {
-	margin-bottom: 50px;
+	margin-bottom: 62px;
 }
 .advantages-box {
 	display: grid;
@@ -270,6 +273,7 @@ a {
 	position: relative;
 	display: block;
 	padding: 120px 35px 35px;
+	line-height: 21px;
 }
 .advantages-item__link:hover {
 	background-color: #ffffff;
@@ -296,8 +300,8 @@ a {
 	left: 125px;
 }
 .advantages-item__title {
-	font-size: 15px;
 	margin-bottom: 12px;
+	font-size: 15px;
 }
 .advantages__text {
 	font-size: 12px;
@@ -311,7 +315,7 @@ a {
 	display: grid;
 	grid-template-columns: repeat(4, 220px);
 	grid-column-gap: 20px;
-	margin-top: 50px;
+	margin-top: 52px;
 }
 .popular-product {
 	border: 2px solid #f6f6f6;
@@ -345,7 +349,7 @@ a {
 	background-color: #ff0000;
 }
 .popular-product__title {
-	margin-bottom: 22px;
+	margin-bottom: 7px;
 	font-size: 13px;
 	font-weight: 300;
 	text-decoration: underline;
@@ -356,7 +360,7 @@ a {
 }
 .popular-product__cost {
 	display: inline-block;
-	margin-bottom: 20px;
+	margin-bottom: 24px;
 	color: #000000;
 	font-size: 16px;
 }
@@ -371,14 +375,14 @@ a {
 	text-decoration: line-through;
 }
 .services-section-wrap {
-	padding: 80px 0;
+	padding: 70px 0;
 	background-color: #f4f4f4;
 }
 .services-box {
 	display: grid;
 	grid-template-columns: repeat(3,300px);
 	grid-column-gap: 20px;
-	margin-top: 63px;
+	margin-top: 58px;
 	text-align: center;
 }
 .services-item {
@@ -391,14 +395,14 @@ a {
 .services-item__link {
 	position: relative;
 	display: block;
-	padding: 195px 39px 70px
+	padding: 195px 39px 40px
 }
 .services-item__link_icon1::before {
 	position: absolute;
 	content: "";
 	width: 255px;
 	height: 130px;
-	top: 50px;
+	top: 53px;
 	left: 22px;
 	background: url(../img/icons/track.png) no-repeat;
 }
@@ -407,7 +411,7 @@ a {
 	content: "";
 	width: 255px;
 	height: 130px;
-	top: 49px;
+	top: 56px;
 	left: 22px;
 	background: url(../img/icons/big_tractor.png) no-repeat;
 }	
@@ -416,8 +420,8 @@ a {
 	content: "";
 	width: 255px;
 	height: 130px;
-	top: 38px;
-	left: 50px;
+	top: 47px;
+	left: 59px;
 	background: url(../img/icons/small_tractor.png) no-repeat;
 }		
 .services-item__title {
@@ -429,7 +433,7 @@ a {
 }
 .contacts-section-wrap {
 	position: relative;
-	padding: 80px 0;
+	padding: 86px 0;
 	background: #292929 url(../img/contacts_bg.jpg) center top no-repeat;
 }
 .contacts_btn {
@@ -437,8 +441,8 @@ a {
 	content: "";
 	width: 28px;
 	height: 42px;
-	bottom: 265px;
-	left: 275px;
+	bottom: 256px;
+	left: 603px;
 	border: 0;
 	background: url(../img/icons/location_big.svg) no-repeat;
 	cursor: pointer;
@@ -449,7 +453,7 @@ a {
 .contacts {
 	max-width: 380px;
 	margin-left: auto;
-	padding: 60px 60px 70px;
+	padding: 58px 58px 69px;
 	background-color: #ffffff;
 }
 .contacts__title {
@@ -458,7 +462,7 @@ a {
 .contacts__tel {
 	position: relative;
 	display: block;
-	margin: 45px 0 35px 35px;
+	margin: 37px 0 0 35px;
 	line-height: 30px;
 	text-transform: uppercase;
 }
@@ -489,7 +493,7 @@ a {
 }
 .contacts__adress {
 	position: relative;
-	margin: 45px 0 35px 35px;
+	margin: 27px 0 38px 35px;
 	font-size: 14px;
 }
 .contacts__adress::before {
@@ -502,7 +506,7 @@ a {
 }
 .contacts__email {
 	position: relative;
-	margin: 45px 0 35px 35px;
+	margin: 0 35px;
 	font-size: 14px;
 	text-decoration: underline;
 	cursor: default;
@@ -512,7 +516,7 @@ a {
 	cursor: default;
 }
 .footer-section-wrap {
-	padding: 48px 0 38px;
+	padding: 40px 0 38px;
 	color: #ffffff;
 	background-color: #292929;
 }
@@ -523,7 +527,7 @@ a {
 }
 .footer-copyright {
 	position: relative;
-	margin-left: 50px;
+	margin: 6px 0 0 50px;
 }
 .footer-copyright::before {
 	position: absolute;
@@ -536,9 +540,12 @@ a {
 }
 .footer-copyright__text {
 	display: block;
-	margin-top: 40px;
+	margin: 50px 0 0 -48px;
 	font-size: 12px;
 	font-weight: 300;
+}
+.footer-contacts__number {
+	margin-left: 21px;
 }
 .footer-contacts__number:hover {
 	color: #ffd200;
@@ -546,7 +553,7 @@ a {
 }
 .footer-contacts__btn {
 	display: block;
-	margin-top: 18px;
+	margin: 29px 0 0 14px;
 	border: 2px solid #ffffff;
 	color: #ffffff;
 	background-color: transparent;
@@ -565,7 +572,6 @@ a {
 	height: 50px;
 	background: url(../img/icons/individual.png) no-repeat;
 }
-
 .fancybox-button:hover {
 	color: #ffd200;
 }
