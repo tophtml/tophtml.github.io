@@ -651,7 +651,7 @@ a {
 	.hamburger__btn_lines::after {
 		transform: translateY(6px);
 	}
-	/*.hamburger__btn_lines:hover {
+	.hamburger__btn_lines:hover {
 		height: 0;
 	}
 	.hamburger__btn_lines:hover::before {
@@ -661,7 +661,7 @@ a {
 	.hamburger__btn_lines:hover::after {
 		transform: rotate(-45deg);
 		transition: 0.4s
-	}*/
+	}
 	.hamburger__btn::before {
 		position: absolute;
 		content: "";
@@ -705,7 +705,7 @@ a {
 		animation-name: fadeIn;
 		animation-duration: 0.4s;
 	}
-	.hamburger__item:hover {
+	.hamburger-menu__link:hover {
 		color: #ffd200;
 	}
 	.header {
