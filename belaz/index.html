@@ -10,6 +10,23 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/styles<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script></script>
 	<link rel="stylesheet" href="css/styles.css">
+
+<style type="text/css">
+	.box {
+	
+		border: 2px solid green;
+		width: 100%;
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		overflow-scrolling: touch;
+
+	}
+
+
+
+</style>
+
 </head>
 <body>
 	<header class="header-section">
@@ -28,8 +45,8 @@
 							<a class="header-tel__link btn btn-primary" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">+7 (818) 247-47-25</a><br>
 							<a class="header-tel__link btn btn-primary" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">+7(818) 247-47-25</a>
 						</p>
-						<a class="button button_blue header-tel__btn btn btn-primary" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">Заказать звонок
-						</a>
+						<button class="button button_blue header-tel__btn btn btn-primary" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">Заказать звонок
+						</button>
 					</div>
 				</div>
 			</div>
@@ -51,22 +68,65 @@
 	</header>
 	<main>
 		<section class="price-section">
+
+			<div class="box">
+		<div class="div div1">
+			<h2>dsfsdfs dsfsdfdsfsdfdsfsdfy yryr </h2>
+			<p><q>werwerwerwrw</q>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. orem expedita similique repellendus, possimus ndita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellendudita similique repellenduemo eos dicta impedit!</p>
+		<button class="button">askdklasdjklajd</button>
+		</div>
+
 			<div class="price-section-wrap">
 				<div class="container">
 					<div class="price">
 						<h2 class="title-main price__title">Получите прайс прямо сейчас на электронную почту!</h2>
 						<form class="price-form" method="POST" action="#">
-							<input class="price-form__email" type="email" name="email" placeholder="Введите ваш e-mail">
-							<input class="price-form__tel" type="tel" name="tel" placeholder="Введите ваш телефон">
-							<a class="button button_blue price-form_btn btn btn-primary" type="submit" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">Получить прайс</a>
+							<input class="form-main price-form__email" type="email" name="email" placeholder="Введите ваш e-mail">
+							<input class="form-main price-form__tel details-form__tel" type="tel" name="tel" placeholder="Введите ваш телефон">
+							<button class="button button_blue price-form_btn btn btn-primary" type="submit" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">Получить прайс</button>
 						</form>
 						<span class="price__info">Прайс придет к Вам на почту в течение 5 минут!</span>
 					</div>
 				</div>
 			</div>
 		</section>
-
-
+		<section class="sparepart-section">
+			<div class="sparepart-wrap">
+				<div class="container">
+					<div class="sparepart">
+						<h2 class="title-main sparepart__title">Вам не придется ждать!</h2>
+						<p class="subtitle-main sparepart__subtitle">Любые запчасти для всех моделей Белаз всегда в наличии!</p>
+						<div class="sparepart-features">
+							<span class="sparepart-features__text sparepart-features__text_1">Любые типы деталей от&#160;шайбы до двигателя!</span>
+							<span class="sparepart-features__text sparepart-features__text_2">Все модификации Белаз от&#160;45т до 450 т</span>
+							<span class="sparepart-features__text sparepart-features__text_3">Отгружаем в день заказа!</span>
+							<span class="sparepart-features__text sparepart-features__text_4">Доставим в любое место!</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="details-section">
+			<div class="details-wrap">
+				<div class="container">
+					<div class="details">
+						<h2 class="title-main details__title">Ищете конкретную деталь?</h2>
+						<p class="subtitle-main details__subtitle">Если у Вас есть артикул - введите его в поле ниже и получите цену <strong class="details__subtitle_now">ПРЯМО СЕЙЧАС!</strong>
+						</p>
+						<form>
+							<div class="details-form">
+								<input class="form-main details-form__detail" type="text" name="detail" placeholder="Введите артикул детали">
+								<input class="form-main details-form__tel" type="tel" name="tel" placeholder="Введите ваш телефон">
+								<button class="button button_yellow details-form_btn btn btn-primary" type="submit" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">Узнать цену</button>
+							</div>
+						</form>
+						<p class="details__text details__text_first">Мы перезвоним вам в течение 3 минут и назовем цену детали!</p>
+						<p class="details__text">Или Вы можете перезвонить нам сами:</p>
+						<a class="tel-main details__tel btn btn-primary" type="submit" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">+7 (818) 247-47-25</a>
+					</div>	
+				</div>
+			</div>
+		</section>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
