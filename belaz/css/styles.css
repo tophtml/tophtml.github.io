@@ -67,6 +67,9 @@ a {
 	font-size: 30px;
 	font-weight: 700;
 }
+.subtitle-main {
+	font-size: 20px;
+}
 .container {
 	max-width: 1170px;
 	margin: 0 auto;
@@ -117,6 +120,7 @@ a {
 .header-banner-wrap {
 	min-height: 860px;
 	background: url(../img/banner-bg.jpg) center top no-repeat;
+	background-size: cover;
 }
 .header-banner {
 	max-width: 570px;
@@ -173,6 +177,7 @@ a {
 	min-height: 500px;
 	padding: 100px 0;
 	background: url(../img/price_bg.png) 55% 10% no-repeat;
+	background-size: cover;
 }
 .price {
 	position: relative;
@@ -188,34 +193,31 @@ a {
 .price-form__email {
 	background: #f2f2f2 url(../img/icons/envelope_grey.png) no-repeat;
 }
-.price-form__tel {
-	margin-left: 30px;
+.details-form__tel {
 	background: #f2f2f2 url(../img/icons/tel_grey.png) no-repeat;
 }
-.price-form__email,
 .price-form__tel {
+	margin-left: 30px;
+}
+.form-main {
 	width: 365px;
 	padding: 30px 60px 30px 30px;
 	border: 0;
 	color: #000000;
 	background-position: 92% 50%;
 }
-.price-form__email::-webkit-input-placeholder,
-.price-form__tel::-webkit-input-placeholder,
-.price-form__email::-moz-placeholder,
-.price-form__tel::-moz-placeholder {
+.form-main::-webkit-input-placeholder,
+.form-main::-moz-placeholder {
 	color: #818181;
 	font-size: 13px;
 	text-transform: uppercase;
 }
-.price-form__email:-ms-input-placeholder,
-.price-form__tel:-ms-input-placeholder {
+.form-main {
 	color: #818181;
 	font-size: 13px;
 	text-transform: uppercase;
 }
-.price-form__email:focus,
-.price-form__tel:focus {	
+.form-main:focus {	
 	outline: 2px solid #f7b516;
 }
 .price-form_btn {
@@ -241,4 +243,100 @@ a {
 	width: 30px;
 	height: 30px;
 	background: url(../img/icons/clock_black.png) no-repeat;
+}
+.sparepart-wrap {
+	padding: 100px 0;
+	text-align: center;
+	color: #ffffff;
+	background-color: #08243e;
+} 
+.sparepart__title {
+	max-width: 430px;
+	margin: 0 auto 25px;
+	font-size: 36px;
+}
+.sparepart__subtitle {
+	max-width: 410px;
+	margin: 0 auto 240px;
+}
+.sparepart-features {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.sparepart-features__text {
+	position: relative;
+	width: 230px;
+}
+.sparepart-features__text_1::before,
+.sparepart-features__text_2::before,
+.sparepart-features__text_3::before,
+.sparepart-features__text_4::before {
+	position: absolute;
+	content: "";
+	top: -140px;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	transform: translateX(-50%);
+}
+.sparepart-features__text_1::before {
+	background: url(../img/icons/engine.png) no-repeat;
+}
+.sparepart-features__text_2::before {
+	top: -130px;
+	background: url(../img/icons/dump-truck.png) no-repeat;
+}
+.sparepart-features__text_3::before {
+	background: url(../img/icons/calendar_white.png) no-repeat;
+}
+.sparepart-features__text_4::before {
+	background: url(../img/icons/location_white.png) no-repeat;
+}
+.details-wrap {
+	min-height: 580px;
+	padding: 100px 0 70px;
+	text-align: center;
+	color: #ffffff;
+	background: #08243e url(../img/details_bg.jpg) center top no-repeat;
+	background-size: cover;
+}
+.details__title {
+	max-width: 410px;
+	margin: 0 auto 25px;
+}
+.details__subtitle {
+	max-width: 648px;
+	margin: 0 auto 55px;
+}
+.details__subtitle_now {
+	text-transform: uppercase;
+}
+.details-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 55px;
+}
+.details-form_btn {
+	width: 370px;
+	padding: 28px 120px;
+	font-size: 17px;
+}
+.details__text {
+	font-size: 14px;
+}
+.details__text_first {
+	margin-bottom: 25px;
+}
+.tel-main {
+	display: block;
+	font-size: 30px;
+	font-weight: 700;
+}
+.tel-main:hover {
+	color: #f7b516;
+}
+.details__tel {
+	margin-top: 16px;
 }
