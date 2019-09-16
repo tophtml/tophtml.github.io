@@ -817,20 +817,8 @@ button {
 	.header-img {
 		max-width: 50px;
 	}
-	
-	.product-list {
-		width: 800px;
-		white-space: nowrap;
-	}
 	.product {
-		width: 100%;
-		white-space: nowrap;
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-	}
-	.product::-webkit-scrollbar {
-		display: none;
+		max-width: 80px;
 	}
 	.description {
 		padding-top: 20px;
