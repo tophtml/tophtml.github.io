@@ -8,7 +8,6 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="css/styles<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script></script>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -19,6 +18,11 @@
 					<div class="header-logo">
 						<img src="img/logo.png" alt="Eddie's-Car" lang="eng">
 					</div>
+					<span class="hamburger-btn hidden" onclick="overlay()">
+					<span class="hamburger-btn_brd hidden"></span>	
+
+					</span>
+					
 					<div class="header-schedule">
 						<p class="header-schedule__text">c 9:00 до 21:00<br><span class="header-schedule__text_small">без выходных</span>
 						</p>
@@ -36,7 +40,7 @@
 		</div>	
 		<div class="header-banner-wrap">
 			<div class="container">
-				<div class="header-banner">
+				<div id="main-section" class="header-banner">
 					<h1 class="header-banner__title">Оригинальные запчасти для&#160;Белаз</h1>
 					<span class="header-banner__subtitle">с бесплатной доставкой в Ваш город!</span>
 					<ul>
@@ -50,7 +54,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="price-section">
+		<section id="price-section" class="price-section">
 			<div class="price-section-wrap">
 				<div class="container">
 					<div class="price">
@@ -81,7 +85,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="details-section">
+		<section id="details-section" class="details-section">
 			<div class="details-wrap">
 				<div class="container">
 					<div class="details">
@@ -102,7 +106,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="waranty-section">
+		<section id="waranty-section" class="waranty-section">
 			<div class="waranty-wrap">
 				<div class="container">
 					<div class="waranty">
@@ -134,7 +138,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="discount-section">
+		<section id="discount-section" class="discount-section">
 			<div class="discount-section-wrap">
 				<div class="container">
 					<div class="discount">
@@ -183,7 +187,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="service-section">
+		<section id="service-section" class="service-section">
 			<div class="service-wrap">
 				<div class="container">
 					<div class="service">
@@ -212,7 +216,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="contacts-section">
+		<section id="contacts-section" class="contacts-section">
 			<div class="contacts-wrap">
 				<div class="container">
 					<div class="contacts">
@@ -252,12 +256,40 @@
 			</div>
 		</div>
 	</footer>
+	<div id="js-overlay" class="overlay hidden">
+		<div class="hamburger">
+			<ul class="hamburger__list">
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#main-section">Главная</a>
+				</li>
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#price-section">Прайс-лист</a>
+				</li>
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#details-section">Поиск деталей</a>
+				</li>
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#waranty-section">Гарантия</a>
+				</li>
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#discount-section">Бонусная схема</a>
+				</li>
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#service-section">Сервисное обслуживание</a>
+				</li>
+				<li class="hamburger__item">
+					<a class="hamburger__link" href="#contacts-section">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<div id="animatedModal" class="hidden">
 		<p>Мы устанавливаем на сайте новые детали<br>Попробуйте позже
 		</p>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
