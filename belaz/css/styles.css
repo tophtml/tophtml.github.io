@@ -619,7 +619,7 @@ a {
 	color: #ffffff;
 }
 .fancybox-button:hover {
-	color: #f7b516;
+	color: #0d324d;
 }
 
 @media (max-width: 997px) {
@@ -1047,7 +1047,7 @@ a {
 	text-align: center;
 	padding: 90px 30px 30px;
 	line-height: 40px;
-	background: rgba(52,67,240,0.5) url(../img/icons/popup.png) center 15% no-repeat;
+	background: rgba(247, 181, 22,0.8) url(../img/icons/popup.png) center 15% no-repeat;
 	background-size: 60px 60px;
 	color: #ffffff;
 }

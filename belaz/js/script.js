@@ -3,9 +3,4 @@ function overlay() {
 	showOverlay.classList.toggle('show-overlay');
 }
 
-$('.hamburger-btn').on('click', function(e) { 
-	e.preventDefault;
-	$(this).toggleClass('menu-btn_active');
-	document.querySelector('.hamburger-btn_brd').style.display="none";
-}); 
 
