@@ -807,7 +807,7 @@ a {
 		width: 30px;
 		height: 4px;
 		top: 50%;
-		right: 10px;
+		right: 20px;
 		background-color: #f7b516;
 		transform: translateY(-50%);
 		transform: rotate(90deg);
@@ -860,7 +860,7 @@ a {
 		animation-duration: 0.5s;
 	}
 	.hamburger__list {
-		margin: 130px 0 0 30px;
+		margin: 105px 0 0 30px;
 	}
 	.hamburger__item {
 		margin: 30px 0;
