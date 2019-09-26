@@ -72,3 +72,37 @@ function playAlbum(choice) {
 	iframeAlbumThird.display = "block";
  }
 }
+
+function showVideo(choice) {
+	let video = document.querySelector('.compositions-img__video').style;
+	let poster = document.querySelector('.compositions-img__poster').style;
+
+	if(choice == 1) {
+		poster.display = "none";
+		video.display = "block";
+		
+	} 
+	// else if(choice == 2) {
+	// 	posterSecond.display = "none";
+	// 	videoSecond.display = "block";
+	// 	videoFirst.display = "none";
+	// 	videoThird.display = "none"; 
+	// }
+	// else if(choice == 3) {
+	// 	posterThird.display = "none";
+	// 	videoThird.display = "block"; 
+	// 	videoFirst.display = "none";
+	// 	videoSecond.display = "none";
+	// }
+}
+
+
+
+
+
+$(function(){
+	$('.history-carousel-box').slick({
+   	slidesToShow: 3,
+  	slidesToScroll: 1,
+	});
+});
