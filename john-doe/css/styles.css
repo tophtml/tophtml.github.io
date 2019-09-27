@@ -208,15 +208,23 @@ a {
 	box-shadow: 0 0 5px 1px #acacac;
 	transition: 0.3s;
 }
-.discography-description__btn_first {
+.discography-description__btn_first-smalldev,
+.discography-description__btn_second-smalldev,
+.discography-description__btn_third-smalldev {
+	display: none;
+}
+.discography-description__btn_first,
+.discography-description__btn_first-smalldev {
 	background: #acacac url(../img/discography-btn_third.jpg);
 	background-size: cover;
 }
-.discography-description__btn_second {
+.discography-description__btn_second,
+.discography-description__btn_second-smalldev {
 	background: #acacac url(../img/discography-btn_second.jpg);
 	background-size: cover;
 }
-.discography-description__btn_third {
+.discography-description__btn_third,
+.discography-description__btn_third-smalldev {
 	margin-bottom: 0;
 	background: #acacac url(../img/discography-btn_third.jpg);
 	background-size: cover;
@@ -370,7 +378,7 @@ a {
 	content: "";
 	top: 32px;
 	left: 0;
-	width: 395px;
+	width: 100%;
 	height: 2px;
 	background-color: #000000;
 }
@@ -972,3 +980,225 @@ a {
 .show_overlay {
 	display: block;
 }
+
+
+
+@media (max-width: 1200px) {
+	.header-nav__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.header-nav__list .header-nav__item:nth-child(n+2) {
+		margin-left: 25px;
+	}
+	.header-nav__link {
+	font-size: 16px;
+    letter-spacing: 1px;
+	}
+	.compositions-info__list {
+		margin: 20px 0 0 40px;
+	}
+	.compositions-info__list.compositions-info__item:nth-child(2n) {
+		margin-left: 50px;
+	}
+	.compositions-img {
+		margin: auto 0;
+	}
+	.tracks-box {
+		margin: 0 auto 35px;
+	}
+	.contacts-form::after {
+		right: -20px;
+	}
+}
+
+@media (max-width: 997px) {
+	.header-wrap {
+		min-height: 960px;
+	}
+	.discography-wrap {
+		padding: 20px 0 270px;
+	}
+	.discography__subtitle,
+	.concert__subtitle,
+	.compositions__subtitle {
+		margin: 0 auto 90px;
+	}
+	.concert-wrap,
+	.tracks {
+		padding: 50px 0 0;
+	}
+	.beginning {
+		min-height: 580px;
+		padding: 70px 0;
+	}
+	.concert {
+		min-height: 540px;
+		padding: 20px 0 100px;
+		background-size: 120% 120%;
+	}
+	.concert__title:before {
+		width: 60%;
+	}
+	.concert-description__text {
+		max-width: 485px;
+		color: #000000;
+	}
+	.compositions-wrap,
+	.events-wrap,
+	.contacts-wrap {
+		padding: 70px 0;
+	}
+	.compositions__title::before {
+		width: 80%;
+	}
+	.compositions-info__title {
+		font-size: 21px;
+	}
+	.compositions-info__name,
+	.title-main,
+	.compositions-info__text,
+	.tracks__album,
+	.events-wrap,
+	.contacts__subtitle {
+		margin-bottom: 20px;
+	}
+	.tracks-box {
+		min-height: 400px;
+	}
+	.tracks-album_number {
+		margin-top: 20px;
+	}
+	.events__date {
+		margin: 80px 0 140px;
+	}
+	.events__date_first::after {
+		height: 100px;
+	}
+	.events__title {
+		font-size: 36px;
+	}
+	.history-wrap {
+		padding-bottom: 200px;
+		background-position: center 25%;
+	}
+	.history-wrap .title-main::before {
+		width: 30%;
+	}
+	.history__subtitle {
+		margin: 50px auto;
+	}
+	.slick-arrow {
+		right: 35%;
+	}
+	.slick-prev {
+		left: 35%;
+	}
+	.slick-prev::before,
+	.slick-prev::after,
+	.contacts-form::after {
+		display: none;
+	}
+	.title-main.contacts__title::before {
+		left: 30%;
+		width: 65%;
+	}
+	.contacts-form__text,
+	.contacts-form__email,
+	.contacts-form__message {
+		width: 300px;
+	}
+	.contacts-social {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+	.contacts-social__link {
+		margin-right: 50px;
+	}
+}
+
+@media (max-width: 767px) {
+	*:focus,
+	*:active {
+		outline: none;
+	}
+	.header-wrap {
+		min-height: 400px;
+    	background-size: 860px 460px;
+	}
+	.header-nav__list {
+		display: none;
+	}
+	.discography-wrap {
+		margin: 0 auto 20px;
+	}
+	.title-main {
+		font-size: 35px;
+		line-height: 20.27px;
+	}
+	.title-main:before {
+		width: 95%;
+	}
+	.discography__subtitle {
+		margin-bottom: 20px;
+		letter-spacing: 0.2px;
+	}
+	.discography-data,
+	.discography-description {
+		width: 100%;
+	}
+	.discography-data__year,
+	.discography-data__name {
+		font-size: 12px;
+	}
+	.discography-description__title {
+		margin: 20px auto;
+		font-size: 16px;
+		text-align: center;
+	}
+	.discography-description__text,
+	.concert__subtitle,
+	.concert-description__text {
+		text-align: justify;
+	}
+	.discography-description__btn {
+		display: block;
+		margin: 20px auto;
+	}
+	.discography-wrap,
+	.concert-wrap {
+		padding: 20px 0;
+	}
+	.discography-wrap {
+		background-position: 100% 110%;
+		background-size: 700px 550px;
+	}
+	.discography-description__btn_first,
+	.discography-description__btn_second,
+	.discography-description__btn_third {
+		display: none;
+	}		
+	.discography-description__btn_first-smalldev,
+	.discography-description__btn_second-smalldev,
+	.discography-description__btn_third-smalldev {
+		display: block;
+	}
+	.concert {
+	    min-height: 640px;
+	    padding: 20px 0 20px;
+	    background-position: 56% 33%;
+	    background-size: 700px 550px;
+	}
+	.concert__title {
+		font-size: 30px;
+	}
+	.concert__subtitle,
+	.concert__name {
+		margin-bottom: 20px;
+	}
+
+
+}
+

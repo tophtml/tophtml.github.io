@@ -61,6 +61,9 @@ function playAlbum(choice) {
 	let iframeAlbumFirst = document.querySelector('.discography-data__iframe_first').style;
 	let iframeAlbumSecond = document.querySelector('.discography-data__iframe_second').style;
 	let iframeAlbumThird = document.querySelector('.discography-data__iframe_third').style;
+	let iframeAlbumForth = document.querySelector('.discography-data__iframe_first-smalldev').style;
+	let iframeAlbumFifth = document.querySelector('.discography-data__iframe_second-smalldev').style;
+	let iframeAlbumSixth = document.querySelector('.discography-data__iframe_third-smalldev').style;
 
  if (choice == 1) {
  	iframeAlbumFirst.display = "block";
@@ -76,6 +79,18 @@ function playAlbum(choice) {
  	iframeAlbumFirst.display = "none";
 	iframeAlbumSecond.display = "none";
 	iframeAlbumThird.display = "block";
+ } else if (choice == 4) {
+ 	iframeAlbumForth.display = "block";
+	iframeAlbumFifth.display = "none";	
+	iframeAlbumSixth.display = "none";
+ } else if (choice == 5) {
+ 	iframeAlbumForth.display = "none";
+	iframeAlbumFifth.display = "block";	
+	iframeAlbumSixth.display = "none";
+ } else if (choice == 6) {
+ 	iframeAlbumForth.display = "none";
+	iframeAlbumFifth.display = "none";	
+	iframeAlbumSixth.display = "block";
  }
 }
 
