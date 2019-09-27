@@ -139,10 +139,34 @@ function sendForm() {
 	}
 }
 
+let hamburgerMenu = document.querySelector('.overlay-hamburger');
+
+function openMenu() {
+	hamburgerMenu.classList.toggle('show_menu');
+}
+
 $(function(){
 	$('.history-carousel-box').slick({
    	slidesToShow: 3,
   	slidesToScroll: 1,
   	centerMode: true,
 	});
+});
+
+var sld = function() {
+  if ($(window).width() < 768) {
+
+   $('.history-carousel-box').slick({
+   	slidesToShow: 1,
+  	slidesToScroll: 1,
+  	centerMode: true,
+	});
+  } 
+};
+sld();
+$(window).resize(sld);
+
+$('.hamburger').on('click', function(e) {
+	e.preventDefault;
+	$(this).toggleClass('hamburger__decor_active');
 });

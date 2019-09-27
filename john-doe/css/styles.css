@@ -883,7 +883,8 @@ a {
 	background: url(../img/icons/twit_hover.svg) no-repeat;
 	transition: 0.3s;
 }
-.overlay {
+.overlay,
+.overlay-hamburger {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -980,8 +981,6 @@ a {
 .show_overlay {
 	display: block;
 }
-
-
 
 @media (max-width: 1200px) {
 	.header-nav__list {
@@ -1128,15 +1127,80 @@ a {
 		min-height: 400px;
     	background-size: 860px 460px;
 	}
-	.header-nav__list {
+	.header-nav__list,
+	.modal-main_btn::before,
+	.modal-main_btn::after,
+	.home_btn {
 		display: none;
 	}
-	.discography-wrap {
-		margin: 0 auto 20px;
+	.hamburger {
+		display: block;
+		position: fixed;
+		z-index: 200;
+		top: 1%;
+		left: 85%;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: rgba(120,120,120,0.1);
+	}
+	.hamburger__decor,
+	.hamburger__decor::before,
+	.hamburger__decor::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 20px;
+		height: 2px;
+		background-color: rgba(120,120,120,0.5);
+		transform: translate(-50%, -50%);
+	}
+	.hamburger__decor::before {
+		content: "";
+		transform: translate(-50%, -6px);
+	}
+	.hamburger__decor::after {
+		content: "";
+		transform: translate(-50%, 4px);
+	}
+	.hamburger__decor_active {
+		top: 1%;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		background: url(../img/icons/disc.svg) no-repeat;
+		animation: discRound 2s infinite linear;
+	}
+	.hamburger__decor_active .hamburger__decor::before,
+	.hamburger__decor_active .hamburger__decor::after,
+	.hamburger__decor_active .hamburger__decor {
+		opacity: 0;
+	}
+	.show_menu {
+		display: block;
+	}
+	.overlay-hamburger {
+		animation: fadeInHamburger .5s;
+	}
+	.hamburger-nav__list {
+		margin: 20px 40px;
+		color: #ffffff;
+		text-transform: uppercase;
+	}
+	.hamburger-nav__item {
+		margin-bottom: 20px;
+	}
+	@keyframes fadeInHamburger {
+		0% {
+			left:-100%;
+		}
+		100% {
+			left: 0;
+		}
 	}
 	.title-main {
 		font-size: 35px;
-		line-height: 20.27px;
+		line-height: 24.27px;
 	}
 	.title-main:before {
 		width: 95%;
@@ -1146,21 +1210,36 @@ a {
 		letter-spacing: 0.2px;
 	}
 	.discography-data,
-	.discography-description {
+	.discography-description,
+	.concert__date::after,
+	.compositions-info,
+	.compositions-img,
+	.tracks__date::after,
+	.events__name::after {
 		width: 100%;
 	}
 	.discography-data__year,
-	.discography-data__name {
+	.discography-data__name,
+	.compositions-info__date,
+	.compositions-info__name,
+	.tracks__date,
+	.tracks__album {
 		font-size: 12px;
 	}
-	.discography-description__title {
+	.discography-description__title,
+	.compositions-info__title,
+	.tracks__title,
+	.events__name {
 		margin: 20px auto;
 		font-size: 16px;
 		text-align: center;
 	}
 	.discography-description__text,
 	.concert__subtitle,
-	.concert-description__text {
+	.concert-description__text,
+	.compositions__subtitle,
+	.tracks__text,
+	.events__text {
 		text-align: justify;
 	}
 	.discography-description__btn {
@@ -1168,7 +1247,12 @@ a {
 		margin: 20px auto;
 	}
 	.discography-wrap,
-	.concert-wrap {
+	.concert-wrap,
+	.compositions-wrap,
+	.beginning,
+	.tracks,
+	.events-wrap,
+	.contacts-wrap {
 		padding: 20px 0;
 	}
 	.discography-wrap {
@@ -1186,17 +1270,166 @@ a {
 		display: block;
 	}
 	.concert {
-	    min-height: 640px;
+	    min-height: 560px;
 	    padding: 20px 0 20px;
-	    background-position: 56% 33%;
+	    background-position: 56% 35px;
 	    background-size: 700px 550px;
 	}
 	.concert__title {
 		font-size: 30px;
 	}
 	.concert__subtitle,
-	.concert__name {
+	.concert__name,
+	.compositions__subtitle,
+	.beginning__text,
+	.events__text,
+	.history__subtitle {
 		margin-bottom: 20px;
+		letter-spacing: 0;
+	}
+	.compositions__title,
+	.events__title {
+		font-size: 28px;
+		text-align: center;
+		letter-spacing: 1.9px;
+	}
+	.title-main.compositions__title:before,
+	.events-wrap .title-main::before {
+		width: 100%;
+		left: 50%;
+	}
+	.compositions-info {
+		padding: 10px 5px;
+	}
+	.compositions-info__text {
+		max-height: 100%;
+		text-align: justify;
+		letter-spacing: 0;
+	}
+	.compositions-info__btn {
+		margin: 0 auto;
+		padding: 12px 35px 12px 25px;
+	}
+	.compositions-info__list {
+		width: 100%;
+		margin: 10px auto 10px 30px;
+		font-size: 0;
+		text-align: center;
+	}
+	.compositions-info__item {
+		font-size: 12px;
+		margin-right: 50px;
+	}
+	.compositions-info__list .compositions-info__item:last-child {
+		margin-right: 0;
+	}
+	.compositions-info__list_listened::before {
+		right: 50px;
+	}
+	.compositions-img_second {
+		order: 2;
+	}
+	.beginning {
+    	min-height: 480px;
+    }
+	.beginning__subtitle {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+	.beginning-btn-wrap {
+		bottom: 50px;
+	}
+	.beginning__btn {
+		width: 13px;
+		height: 13px;
+	}
+	.tracks-box {
+		padding: 10px;
+	}
+	.tracks-box_sixth {
+		margin-bottom: 0;
+		background-position: 100% 10%;
+	}
+	.tracks__title {
+		margin: 5px auto;
+	}
+	.tracks__text {
+    	min-height: 245px;
+    	font-size: 12px;
+    	letter-spacing: 0;
+	}
+	.tracks-album_number {
+		margin: 30px -15px 0 auto;
+		line-height: 48px;
+	}
+	.events-wrap {
+		background-position: 40% bottom;
+	}
+	.events {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.events__date {
+		margin: 70px auto;
+	}
+	.events__date_first::after {
+		height: 50px;
+	}
+	.events__date_second {
+		margin-bottom: 0;
+	}
+	.history-wrap {
+		padding-bottom: 120px;
+	}
+	.history-wrap .title-main::before {
+		width: 60%
+	}
+	.history__subtitle {
+		margin: 20px auto 10px;
+		text-align: justify;
+	}
+	.history-carousel__title {
+		margin-bottom: 10px;
+	}
+	.history-carousel {
+		opacity: 0;
+	}
+	.slick-center {
+		opacity: 1;
+	}
+	.slick-arrow {
+		right: 12%;
+		width: 12px;
+		height: 12px;
+	}
+	.slick-prev {
+		left: 12%;
+	}
+	.contacts-wrap {
+		background-position: 66% bottom;
+	}
+	.contacts {
+		max-width: 100%;
+		text-align: center;
+	}
+	.contacts__title {
+		text-align: center;
+	}
+	.title-main.contacts__title::before {
+		left: 50%;
+	}
+	.contacts-social {
+		margin: 20px auto 60px;
+	}
+	.modal-main {
+		padding: 20px 0;
+	}
+	.modal-main .modal-main__form {
+		margin: 10px 0 30px;
+	}
+	.modal-main__text,
+	.modal-main__form {
+		width: 300px;
 	}
 
 
