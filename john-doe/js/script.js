@@ -1,61 +1,67 @@
 let modalText = document.querySelector('.overlay');
+let popup = document.querySelector('.modal-main');
 
-let buttonFirst = document.querySelector('.beginning__btn_first').style;
-let buttonSecond = document.querySelector('.beginning__btn_second').style;
-let buttonThird = document.querySelector('.beginning__btn_third').style;
-
-let contentFirst = document.querySelector('.beginning-box_first').style;
-let contentSecond = document.querySelector('.beginning-box_second').style;
-let contentThird = document.querySelector('.beginning-box_third').style;
-
-let iframeAlbumFirst = document.querySelector('.discography-data__iframe_first').style;
-let iframeAlbumSecond = document.querySelector('.discography-data__iframe_second').style;
-let iframeAlbumThird = document.querySelector('.discography-data__iframe_third').style;
-
-function modalWin() {
+function openModal() {
 	modalText.classList.add('show_overlay');
 }
 function removeModal() {
 	modalText.classList.remove('show_overlay');
 }
 
+window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+   modalText.classList.remove('show_overlay');
+  }
+})
+
 function beginningOpen(choice) {
+	let buttonFirst = document.querySelector('.beginning__btn_first').style;
+	let buttonSecond = document.querySelector('.beginning__btn_second').style;
+	let buttonThird = document.querySelector('.beginning__btn_third').style;
+
+	let contentFirst = document.querySelector('.beginning-box_first').style;
+	let contentSecond = document.querySelector('.beginning-box_second').style;
+	let contentThird = document.querySelector('.beginning-box_third').style;
+
 	if (choice == 1) {
-	contentFirst.display = "block";	
-	contentSecond.display = "none";
-	contentThird.display = "none";
-	buttonFirst.background = "transparent";
-	buttonSecond.background = "#ffffff";
-	buttonThird.background = "#ffffff";
-	buttonFirst.cursor = "default";
-	buttonSecond.cursor = "pointer";
-	buttonThird.cursor = "pointer";
-	}
-	else if (choice == 2) {
-	contentFirst.display = "none";	
-	contentSecond.display = "block";
-	contentThird.display = "none";
-	buttonFirst.background = "#ffffff";
-	buttonSecond.background = "transparent";
-	buttonThird.background = "#ffffff";
-	buttonFirst.cursor = "pointer";
-	buttonSecond.cursor = "default";
-	buttonThird.cursor = "pointer";
-	}
-	else if (choice == 3) {
-	contentFirst.display = "none";	
-	contentSecond.display = "none";
-	contentThird.display = "block";
-	buttonFirst.background = "#ffffff";
-	buttonSecond.background = "#ffffff";
-	buttonThird.background = "transparent";
-	buttonFirst.cursor = "pointer";
-	buttonSecond.cursor = "pointer";
-	buttonThird.cursor = "default";	
+		contentFirst.display = "block";	
+		contentSecond.display = "none";
+		contentThird.display = "none";
+		buttonFirst.background = "transparent";
+		buttonSecond.background = "#ffffff";
+		buttonThird.background = "#ffffff";
+		buttonFirst.cursor = "default";
+		buttonSecond.cursor = "pointer";
+		buttonThird.cursor = "pointer";
+
+	}	else if (choice == 2) {
+		contentFirst.display = "none";	
+		contentSecond.display = "block";
+		contentThird.display = "none";
+		buttonFirst.background = "#ffffff";
+		buttonSecond.background = "transparent";
+		buttonThird.background = "#ffffff";
+		buttonFirst.cursor = "pointer";
+		buttonSecond.cursor = "default";
+		buttonThird.cursor = "pointer";
+	}	else if (choice == 3) {
+		contentFirst.display = "none";	
+		contentSecond.display = "none";
+		contentThird.display = "block";
+		buttonFirst.background = "#ffffff";
+		buttonSecond.background = "#ffffff";
+		buttonThird.background = "transparent";
+		buttonFirst.cursor = "pointer";
+		buttonSecond.cursor = "pointer";
+		buttonThird.cursor = "default";	
 	}
 }
 
 function playAlbum(choice) {
+	let iframeAlbumFirst = document.querySelector('.discography-data__iframe_first').style;
+	let iframeAlbumSecond = document.querySelector('.discography-data__iframe_second').style;
+	let iframeAlbumThird = document.querySelector('.discography-data__iframe_third').style;
+
  if (choice == 1) {
  	iframeAlbumFirst.display = "block";
 	iframeAlbumSecond.display = "none";	
@@ -74,35 +80,54 @@ function playAlbum(choice) {
 }
 
 function showVideo(choice) {
-	let video = document.querySelector('.compositions-img__video').style;
-	let poster = document.querySelector('.compositions-img__poster').style;
+	let videoFirst = document.querySelector('.compositions-img__video_first').style;
+	let posterFirst = document.querySelector('.compositions-img__poster_first').style;
 
-	if(choice == 1) {
-		poster.display = "none";
-		video.display = "block";
-		
-	} 
-	// else if(choice == 2) {
-	// 	posterSecond.display = "none";
-	// 	videoSecond.display = "block";
-	// 	videoFirst.display = "none";
-	// 	videoThird.display = "none"; 
-	// }
-	// else if(choice == 3) {
-	// 	posterThird.display = "none";
-	// 	videoThird.display = "block"; 
-	// 	videoFirst.display = "none";
-	// 	videoSecond.display = "none";
-	// }
+	let videoSecond = document.querySelector('.compositions-img__video_second').style;
+	let posterSecond = document.querySelector('.compositions-img__poster_second').style;
+
+	let videoThird = document.querySelector('.compositions-img__video_third').style;
+	let posterThird = document.querySelector('.compositions-img__poster_third').style;
+	
+	switch(choice) {
+		case 1:
+		posterFirst.display = "none";
+		videoFirst.display = "block";
+		break;
+		case 2:
+		posterSecond.display = "none";
+		videoSecond.display = "block";
+		break;
+		case 3:
+		posterThird.display = "none";
+		videoThird.display = "block";
+		break;
+	}
 }
 
+function sendForm() {
+	let nameForm = document.querySelector('.contacts-form__text').value;
+	let emailForm = document.querySelector('.contacts-form__email').value;
+	let messageForm = document.querySelector('.contacts-form__message').value;
 
+	let modalMessage = document.querySelector('.modal-main__text').style;
+	let formMessage = document.querySelector('.modal-main__form').style;
 
-
+	if(nameForm == "" || emailForm == "" || messageForm == "") {
+		modalText.classList.add('show_overlay');
+		modalMessage.display = "none";
+		formMessage.display = "block";
+	} else {
+		formMessage.display = "none";
+		modalMessage.display = "block";
+		modalText.classList.add('show_overlay');	
+	}
+}
 
 $(function(){
 	$('.history-carousel-box').slick({
    	slidesToShow: 3,
   	slidesToScroll: 1,
+  	centerMode: true,
 	});
 });

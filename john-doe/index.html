@@ -9,7 +9,6 @@
 	<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -59,7 +58,7 @@
 						<div class="discography-data">
 							<time class="discography-data__year" datetime="2010">2010</time>
 							<span class="discography-data__name">Joy and silence</span>
-							<iframe class="discography-data__iframe_first hidden" allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ca/album/start-over/1411625594?i=1411629153"></iframe>
+							<iframe class="discography-data__iframe_first hidden" frameborder="0" src="https://embed.music.apple.com/ca/album/start-over/1411625594?i=1411629153"></iframe>
 						</div>
 						<div class="discography-description">
 							<h3 class="discography-description__title">Joy and Silence is an EP by Las Vegas rock group</h3>
@@ -69,7 +68,7 @@
 						<div class="discography-data">
 							<time class="discography-data__year" datetime="2012">2012</time>
 							<span class="discography-data__name">Night Visions</span>
-							<iframe class="discography-data__iframe_second hidden" allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/every-night/1440873107?i=1440873593"></iframe>
+							<iframe class="discography-data__iframe_second hidden" frameborder="0" src="https://embed.music.apple.com/us/album/every-night/1440873107?i=1440873593"></iframe>
 						</div>
 						<div class="discography-description">
 							<h3 class="discography-description__title">Night Visions is the debut studio album by American rock band</h3>
@@ -79,7 +78,7 @@
 						<div class="discography-data">
 							<time class="discography-data__year" datetime="2015">2015</time>
 							<span class="discography-data__name">Smoke + Mirrors</span>
-							<iframe autoplay class="discography-data__iframe_third hidden" allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/shots/1440831203?i=1440831209"></iframe>
+							<iframe class="discography-data__iframe_third hidden" frameborder="0" src="https://embed.music.apple.com/us/album/shots/1440831203?i=1440831209"></iframe>
 						</div>
 						<div class="discography-description">
 							<h3 class="discography-description__title">The album was recorded during 2014 at the band's home studio in Las Vegas, Nevada</h3>
@@ -103,7 +102,7 @@
 						<div class="concert-description">
 							<h3 class="concert-description__title">2015–present</h3>
 							<p class="concert-description__text">At Lollapalooza in Sao Paulo, Brazil, the last date on the Into the Night Tour, the band announced a rest, and complemented saying, "This is our last show for a while, and had no better place to end this tour". The conclusion of the Into the Night Tour signaled the end of the Night Visions album cycle. Lead singer Dan Reynolds joked about the end of the Night Visions cycle, saying that "We're always writing on the road, so that second album will come. I don't know when it will be, but it may come"</p>
-							<button class="button concert-description__btn" onclick="modalWin()">Buy online</button>
+							<button class="button concert-description__btn" onclick="openModal()">Buy online</button>
 						</div>
 					</div>
 				</div>
@@ -131,18 +130,22 @@
 							</div>	
 						</div>
 						<div class="compositions-img" onclick="showVideo(1)">
-							<!-- <a target="_blank" class="compositions-img__link" href="https://www.youtube.com/watch?v=rCqQGgM0Y5I"></a> -->
-								<div class="compositions-img__poster">
+								<div class="compositions-img__poster compositions-img__poster_first">
 									<img src="img/indian_summer.jpg" alt="Indian summer">
 								</div>
-								<iframe class="compositions-img__video hidden" width="100%" height="100%" src="https://www.youtube.com/embed/rCqQGgM0Y5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<video class="compositions-img__video compositions-img__video_first hidden" src="video/compositions-img__video_first.mp4" controls="controls" preload="metadata">
+									<!-- <a target="_blank" class="compositions-img__link hidden" href="https://www.youtube.com/watch?v=rCqQGgM0Y5I"></a> -->
+								</video>
 						</div>
 					</div>	
 					<div class="compositions-box">
-						<div class="compositions-img">
-							<a target="_blank" class="compositions-img__link" href="https://www.youtube.com/watch?v=ZTEHNRGqcxA">
+						<div class="compositions-img" onclick="showVideo(2)">
+							<div class="compositions-img__poster compositions-img__poster_second">
 								<img src="img/indian-summer_remix.jpg" alt="Indian summer Remix">
-							</a>
+							</div>
+							<video class="compositions-img__video compositions-img__video_second hidden" src="video/compositions-img__video_second.mp4" controls="controls" preload="metadata">
+								<!-- <a target="_blank" class="compositions-img__link" href="https://www.youtube.com/watch?v=ZTEHNRGqcxA"></a> -->
+							</video>
 						</div>
 						<div class="compositions-info compositions-info_right">
 							<time class="date compositions-info__date" datetime="2015-07-20">20.07.2015</time>
@@ -176,11 +179,14 @@
 								</ul>
 							</div>
 						</div>
-						<div class="compositions-img">
-							<a target="_blank" target="_blank" class="compositions-img__link" href="https://www.youtube.com/watch?v=2bSAPFkxJKg">
+						<div class="compositions-img" onclick="showVideo(3)">
+							<div class="compositions-img__poster compositions-img__poster_third" onclick="showVideo(3)">	
 								<img src="img/let_it_go.jpg" alt="Let It Go">
-							</a>
-						</div>
+							</div>		
+							<video class="compositions-img__video compositions-img__video_third hidden" src="video/compositions-img__video_third.mp4" controls="controls" preload="metadata">
+								<!-- <a target="_blank" target="_blank" class="compositions-img__link" href="https://www.youtube.com/watch?v=2bSAPFkxJKg"></a> -->
+							</video>	
+						</div>	
 					</div>
 				</div>
 			</div>
@@ -309,7 +315,7 @@
 							</div>
 							<div class="history-carousel history-carousel_fifth">
 								<h3 class="history-carousel__title">jul 25</h3>
-								<p class="history-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Tel. +1(778) 288 5180</p>
+								<p class="history-carousel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 
 							</div>
 						</div>
@@ -325,17 +331,17 @@
 						<p class="contacts__subtitle">Canada Island, Division No. 23, Unorganized, MB, Canada<br>Tel. +1(778) 288 5180</p>
 						<div class="contacts-box">
 							<div class="contacts-form">
-								<form>
+								<form novalidate="">
 									<input class="contacts-form__text" type="text" name="name" placeholder="Name">
 									<input class="contacts-form__email" type="email" name="email" placeholder="E-mail">
 									<textarea class="contacts-form__message" placeholder="Message"></textarea>
-									<a class="contacts-form__btn" type="submit" onclick="modalWin()">Send</a>
+									<a class="contacts-form__btn" type="submit" onclick="sendForm()">Send</a>
 								</form>
 							</div>
 							<div class="contacts-social">
-								<a class="contacts-social__link contacts-social__link_fb" onclick="modalWin()" aria-label="Link on Facebook"></a>
-								<a class="contacts-social__link contacts-social__link_inst" onclick="modalWin()" aria-label="Link on Instagram"></a>
-								<a class="contacts-social__link contacts-social__link_twit" onclick="modalWin()" aria-label="Link on Twitter"></a>
+								<a class="contacts-social__link contacts-social__link_fb" onclick="openModal()" aria-label="Link on Facebook"></a>
+								<a class="contacts-social__link contacts-social__link_inst" onclick="openModal()" aria-label="Link on Instagram"></a>
+								<a class="contacts-social__link contacts-social__link_twit" onclick="openModal()" aria-label="Link on Twitter"></a>
 							</div>
 						</div>
 					</div>
@@ -343,16 +349,13 @@
 			</div>
 		</section>
 	</main>
-
-
-
 	<div class="overlay hidden">
 		<div class="modal-main">
 			<p class="modal-main__text">The option is unavailable now<br> Please try later</p>
+			<p class="modal-main__form hidden">Please fill all fields</p>
 			<button class="button  modal-main_btn" onclick="removeModal()">Ok</button>
 		</div>
 	</div>
-	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>

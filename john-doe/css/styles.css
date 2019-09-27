@@ -171,6 +171,12 @@ a {
 .discography-data__name {
 	display: block;
 }
+.discography-data__iframe_first,
+.discography-data__iframe_second,
+.discography-data__iframe_third {
+	width: 100%;
+	background:transparent;
+}
 .discography-description {
 	width: 60%;
 }
@@ -326,6 +332,7 @@ a {
 }
 .compositions-img__poster {
 	position: relative;
+	cursor: pointer;
 }
 .compositions-img__poster::before {
 	position: absolute;
@@ -665,17 +672,67 @@ a {
 }
 .history-wrap {
 	z-index: -10;
-	padding: 0 0 605px;
+	padding: 0 0 305px;
 	text-align: center;
-	background: url(../img/history_bg.jpg) bottom center no-repeat;
+	background: url(../img/history_bg.jpg) top center no-repeat;
 }
 .history-wrap .title-main::before {
 	z-index: 0;
 	width: 25%;
 }
+.history {
+	position: relative;
+}
+.slick-prev {
+	position: absolute;
+	z-index: 5;
+	top: 17%;
+	left: 40%;
+	width: 10px;
+	height: 10px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: #000000;
+	cursor: pointer;
+}
+.slick-prev::before {
+	position: absolute;
+	content: "";
+	top: 4px;
+	left: -120px;
+	width: 100px;
+	height: 2px;
+	background-color: #787878;
+}
+.slick-prev::after {
+	position: absolute;
+	content: "";
+	top: 4px;
+	right: -345px;
+	width: 100px;
+	height: 2px;
+	background-color: #787878;
+}
+.slick-arrow {
+	position: absolute;
+	z-index: 5;
+	top: 17%;
+	right: 40%;
+	width: 10px;
+	height: 10px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: #000000;
+	cursor: pointer;
+}
+.slick-prev:hover,
+.slick-arrow:hover {
+	background-color:transparent;
+	border: 1px solid #000000;;
+}
 .history__subtitle {
 	max-width: 810px;
-	margin: 50px auto 195px;
+	margin: 50px auto 165px;
 	letter-spacing: 1.65px;
 }
 .history-carousel__text {
@@ -692,8 +749,12 @@ a {
 	letter-spacing: 4.19px;
 }
 .history-carousel__text {
+	opacity: 0;
 	color: #5a5a58;
 	line-height: 19.27px;
+}
+.slick-center p {
+	opacity: 1;
 }
 .contacts-wrap {
 	z-index: -10;
@@ -732,10 +793,10 @@ a {
 .contacts-form::after {
 	position: absolute;
 	content: "";
-	top: 15px;
+	top: 0;
 	right: -105px;
 	width: 2px;
-	height: 190px;
+	height: 100%;
 	background: #000000;
 }
 .contacts-form__text,
@@ -762,7 +823,7 @@ a {
 	font-size: 20px;
 	font-weight: 700;
 	border: 0;
-	background: transparent;
+	background-color: transparent;
 	text-transform: uppercase;
 	cursor: pointer;
 }
@@ -849,6 +910,9 @@ a {
 	height: 30px;
 	background: url(../img/icons/disc.svg) no-repeat;
 	animation: discRoundBack 2s infinite linear;
+}
+.modal-main__form {
+	margin: 15px 30px 30px 30px;
 }
 @keyframes discRound {
 	0% {
