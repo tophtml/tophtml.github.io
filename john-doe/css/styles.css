@@ -1137,12 +1137,12 @@ a {
 		display: block;
 		position: fixed;
 		z-index: 200;
-		top: 1%;
+		top: 2%;
 		left: 85%;
 		width: 40px;
 		height: 40px;
 		border-radius: 50%;
-		background-color: rgba(120,120,120,0.1);
+		background-color: rgba(120,120,120,0.2);
 	}
 	.hamburger__decor,
 	.hamburger__decor::before,
@@ -1164,7 +1164,7 @@ a {
 		transform: translate(-50%, 4px);
 	}
 	.hamburger__decor_active {
-		top: 1%;
+		top: 2%;
 		right: 0;
 		width: 40px;
 		height: 40px;
@@ -1404,6 +1404,10 @@ a {
 	}
 	.slick-prev {
 		left: 12%;
+	}
+	.slick-arrow:hover,
+	.slick-prev:hover {
+		background-color: #000000;
 	}
 	.contacts-wrap {
 		background-position: 66% bottom;
