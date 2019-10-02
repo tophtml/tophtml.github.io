@@ -1180,7 +1180,7 @@ main {
 		}
 		.furniture__img, 
 		.decor__img {
-			max-height: 80%;
+			width: 232px;
 			margin-bottom: 10px;
 		}
 		.products::before {
