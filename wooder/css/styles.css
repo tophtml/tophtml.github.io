@@ -1181,6 +1181,7 @@ main {
 		.furniture__img, 
 		.decor__img {
 			width: 232px;
+			height: 150px;
 			margin-bottom: 10px;
 		}
 		.products::before {
