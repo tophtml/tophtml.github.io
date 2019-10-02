@@ -1272,6 +1272,10 @@ main {
 		max-width: 175px;
 		font-size: 0.8rem;
 	}
+	.footer-main__design_light {
+		display: block;
+		width: 100%;
+	}
 }
 
 
