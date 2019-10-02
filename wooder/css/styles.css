@@ -1237,6 +1237,7 @@ main {
 		padding-bottom: 15px;
 	}
 	.about-us__img {
+		max-width: 100%;
 		width: 280px;
 		height: 190px;
 		margin: 10px auto 0 auto;
