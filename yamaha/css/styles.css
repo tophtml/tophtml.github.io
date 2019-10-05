@@ -37,6 +37,9 @@ button {
 	display: flex;
 	flex-wrap: wrap;
 }
+.header-img {
+	padding-top: 8px;
+	}
 .nav__item {
 	display: inline-block;
 	width: 157px;
@@ -307,6 +310,7 @@ button {
 	cursor: pointer;
 }
 .features__item_selected {
+	color: #ee3b33;
 	cursor: default;
 }
 .features__item::before,
@@ -328,9 +332,6 @@ button {
 }
 .features__item_energy::before {
 	content: "\e9b5";
-}
-.features__item_scale::before {
-	content: "\e9ba";
 }
 .features__item_scale::before {
 	content: "\ea82";
@@ -385,11 +386,10 @@ button {
 	margin-bottom: 11px;
 	font-size: 17px;
 }
-.features-desc__text {
+.features-desc__text,
+.features-desc__text_default {
 	font-size: 15px;
 	line-height: 25px;
-}
-.features-desc__text_first {
 	margin-bottom: 46px;
 }
 .section-accessory {
