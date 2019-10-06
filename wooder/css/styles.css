@@ -948,6 +948,10 @@ main {
 	}
 }
 @media (max-width: 767px) {
+	*:focus,
+	*:active {
+		outline: none;
+	}
 	.main-nav-wrap,
 	.nav-lang__link,
 	.header-main__logo,

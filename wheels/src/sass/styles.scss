@@ -1,0 +1,538 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  color: $color-text;
+  font-size: $fsize-text;
+  font-family: $font-main;
+}
+img {
+  max-width: 100%
+}
+ul li {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+button {
+  display: block;
+  border: 0;
+  cursor: pointer;
+}
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header-section {
+  position: relative;
+  min-height: 1080px;
+  padding: 50px 0 365px;
+  color: $color-header;
+  background: #000000 url(../img/header-bg.jpg) center bottom no-repeat;
+  &::after {
+    @include pseudoel;
+    bottom: 80px;
+    left: 50%;
+    width: 45px;
+    height: 67px;
+    background: url(../img/icons/mouse.png) no-repeat;
+    transform: translateX(-50%);
+  }
+}
+.header {
+  @include flexsb;
+    &__logo {
+      @include title;
+      cursor: default;
+  }
+}
+.nav-main {
+  position: relative;
+  width: 105px;
+  cursor: pointer;
+  &__name {
+    margin-right: 25px;
+    color: $color-header;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3.58px;
+    &:hover {
+    color: $color-hover;
+  }
+  }
+  &__btn {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    width: 19px;
+    height: 18px;
+    border-top: 4px solid $color-header;
+    border-bottom: 4px solid $color-header;
+    border-radius: 1px;
+    background-color: transparent;
+    &:hover {
+      border-top: 4px solid $color-hover;
+      border-bottom: 4px solid $color-hover;
+      &::before {
+        background-color: $color-hover;
+      }
+    }
+    &::before {
+      @include pseudoel;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-header;
+      border-radius: 1px;
+      transform: translateY(-50%);
+    }
+  }
+}
+.banner {
+  max-width: 630px;
+  margin: 370px 0 0 auto;
+  &__title {
+    font-size: 48px;
+    font-weight: $extra-bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: right;
+  }
+  &__text {
+    max-width: 410px;
+    margin: 20px 0 0 auto;
+    font-size: 24px;
+    font-weight: $regular;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-align: right;
+  &_italic {
+    font-size: $fsize-subtitle;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: $spacing-subtitle;
+  }
+  }
+}
+.sticky_menu-section {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 27px rgba(0, 0, 0, 0.16);
+  z-index: 99;
+}
+.sticky_menu {
+  @include flexsb;
+  align-items: center;
+  padding: 20px 0;
+  &__logo {
+    @extend .header__logo;
+    color: $color-nav;
+    &:hover {
+      @include hover;
+    }
+  }
+}
+.sticky-nav {
+  margin-left: auto;
+  &__list {
+    font-size: 0;
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 90px;
+    font-size: $fsize-subtitle;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+    letter-spacing: $spacing-subtitle;
+  }
+  &__link {
+    padding: 10px 0;
+    &:hover {
+      @include hover;
+    }
+  }
+  .sticky-nav__list .sticky-nav__item:last-child {
+    margin-right: 0;
+  }
+}
+.title {
+  @include title-inner;
+}
+.subtitle {
+  @include subtitle-inner;
+}
+.about_us {
+  padding: 40px 0 60px;
+  &__title {
+     @extend .title;
+  }
+  &__subtitle {
+    position: relative;
+    @extend .subtitle;
+    &::after {
+      @include pseudoel;
+      top: 30px;
+      left: 50%;
+      width: 88px;
+      height: 49px;
+      transform: translateX(-50%);
+      background: url(../img/icons/bike.png) no-repeat;
+    }
+  }
+  &__text {
+    max-width: 1340px;
+    margin: 70px auto 0;
+    letter-spacing: $spacing-text;
+  }
+}
+.statisctics-section {
+  min-height: 450px;
+  background: url(../img/statistics-bg.jpg) no-repeat;
+}
+.statisctics {
+  padding: 85px 0 100px;
+  color: #ededed;
+  &__title {
+    @extend .title;
+    margin: 0 auto 15px;
+  }
+  &__subtitle {
+    @extend .subtitle;
+     max-width: 870px;
+     margin-bottom: 75px;
+  }
+}
+.numbers-wrap {
+  @include flexsb;
+}
+.numbers {
+  width: 235px;
+  font-weight: $semi-bold;
+  text-align: center;
+  text-transform: uppercase;
+  &__value {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 72px;
+    letter-spacing: 9px;
+  }
+  &__item {
+    font-size: 24px;
+  }
+}
+.products {
+  padding: 42px 0 45px;
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    @extend .subtitle;
+    margin-bottom: 35px;
+  }
+}
+.bikes-wrap {
+  @include flexsb;
+  max-width: 1350px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bikes {
+  margin-bottom: 25px;
+  font-weight: $semi-bold;
+  &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  &__img {
+    @extend .bikes__price;
+    margin: 5px auto;
+    cursor: pointer;
+  }
+  &__price {
+    display: block;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  &__link {
+    display: block;
+    margin-top: 15px;
+    font-size: $fsize-subtitle;
+    text-decoration: underline;
+    letter-spacing: $spacing-subtitle;
+    &:hover {
+      @include hover;
+    }
+  }
+}
+.team-section {
+  background-color: #ededed;
+}
+.team {
+  padding: 45px 0;
+  text-align: center;
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    @extend .subtitle;
+    margin-bottom: 50px;
+  }
+}
+.members-wrap {
+  @include flexsb;
+  max-width: 1190px;
+  margin: 0 auto;
+}
+.members {
+  margin-bottom: 10px;
+  &__name {
+    display: block;
+    margin: 25px auto 15px;
+    @extend .title;
+  }
+  &__position {
+    display: block;
+    @extend .subtitle;
+  }
+}
+.blog {
+  padding: 55px 0 50px;
+  &__title {
+    @extend .title;
+  }
+  &__subtitle {
+    @extend .subtitle;
+    margin-bottom: 50px;
+  }
+  &__text {
+    margin: 45px auto 0;
+    font-size: 24px;
+    font-weight: $extra-bold;
+    text-align: center;
+    text-transform: uppercase;
+    &_link {
+      text-decoration: underline;
+      &:hover {
+        @include hover;
+      }
+    }
+  }
+}
+.blog_article-wrap {
+  @include flexsb;
+}
+.blog-article {
+  width: 25%;
+  margin-bottom: 10px;
+  &__img {
+    position: relative;
+    &:hover {
+      animation-name: fadeInBlog;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    &_name {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      margin: 0 auto;
+      color: #ededed;
+      font-size: 24px;
+      font-weight: $weight-black;
+      text-align: center;
+      opacity: 0;
+      text-transform: uppercase;
+      transform: translateY(-50%);
+      &:hover {
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+  }
+  @keyframes fadeInBlog {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+}
+.contact-section {
+  color: #ededed;
+  background-color: #1e1e1e;
+}
+.contact {
+  padding: 50px 0 90px;
+  &__title {
+    @extend .title;
+  }
+}
+.contact-inner-wrap {
+  @include flexsb;
+  margin-top: 135px;
+}
+.contact-links {
+  text-transform: uppercase;
+  &__title {
+    @extend .subtitle;
+    font-weight: $weight-black;
+    margin-bottom: 22px;
+    text-align: left;
+  }
+   &__item {
+    @extend .subtitle;
+    margin-bottom: 12px;
+    text-align: left;
+    &:hover {
+      @include hover;
+    }
+   }
+}
+.contact-social {
+  &__title {
+    @extend .subtitle;
+    margin-bottom: 22px;
+    font-weight: $weight-black;
+    text-transform: uppercase;
+  }
+}
+.social {
+  &:last-child {
+    margin-right: 0;
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    padding: 5px;
+    &::after {
+      @include pseudoel;
+      top: 0px;
+      left: 0px;
+      width: 25px;
+      height: 25px;
+    }
+
+  }
+  @each $social in(fb,linkedin,inst,twit){
+    .social__link_#{$social}::after {
+      background: url(../img/icons/#{$social}.svg);
+    }
+  }
+  @each $social in(fb,linkedin,inst,twit){
+    .social__link_#{$social}:hover::after {
+      background: url(../img/icons/#{$social}_hover.svg);
+      transition: 0.3s;
+    }
+  }
+}
+.contact-map {
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+}
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  padding: 50px 70px;
+  color: $color-header;
+  font-size: 24px;
+  font-weight: $semi-bold;
+  line-height: 40px;
+  text-align: center;
+  background-color: #424242;
+  border-radius: 10px;
+  transform: translate(-50%,-40%);
+  z-index: 110;
+  &__text {
+    margin-bottom: 15px;
+  }
+  &__btn {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 60px;
+    font-size: 18px;
+    font-weight: $semi-bold;
+    background-color: $color-header;
+    border: none;
+    border-radius: 10px;
+    &:hover {
+      @include hover;
+      box-shadow: 0 0 5px $color-header;
+    }
+  }
+}
+.modal-map {
+  max-width: 800px;
+  height: 500px;
+  margin: 75px auto 0;
+  &__iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &__btn {
+    @extend .modal__btn;
+    margin-top: 10px;
+  }
+}
+.modal-product {
+  height: 100vh;
+  margin: 75px auto 0;
+  background-color: rgba(0,0,0,0.8);
+  &__img {
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+  &__name {
+    @extend .title;
+   &_gold {
+    color: #c98e02;
+   }
+   &_green {
+    color: #5dd045;
+   }
+   &_blue {
+    color: #0296d0;
+   }
+   &_pink {
+    color: #dc2e87;
+   }
+   &_darkpink {
+    color: #b202cd;
+   }
+   &_grey {
+    color: #656565;
+   }
+  }
+}

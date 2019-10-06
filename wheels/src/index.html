@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600,800,900&display=swap" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header id="home-link" class="header-section">
+		<div class="container">
+			<div class="header">
+				<h1 class="header__logo">Wheels</h1>
+				<nav class="nav-main">
+					<span class="nav-main__name">Menu</span>
+					<button class="nav-main__btn" arial-label="burger-menu"></button>
+					<div class="burger hidden">
+						<ul class="burger__list">
+							<li class="burger__item">
+								<a href="#about_us-link" class="burger__link">About us</a>
+							</li>
+							<li class="burger__item">
+								<a href="#products-link" class="burger__link">Products</a>
+							</li>
+							<li class="burger__item">
+								<a href="#services-link" class="burger__link">Services</a>
+							</li>
+							<li class="burger__item">
+								<a href="#team-link" class="burger__link">Our team</a>
+							</li>
+							<li class="burger__item">
+								<a href="#blog-link" class="burger__link">Blog</a>
+							</li>
+							<li class="burger__item">
+								<a href="#contact-link" class="burger__link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="banner">
+				<h2 class="banner__title">Welcome to Wheels</h2>
+				<p class="banner__text">Your best wheels are perfect for your next big idea <br><span class="banner__text_italic">by Pawel Betkowski</span></p>
+			</div>
+		</div>
+	</header>
+		<div class="sticky_menu-section">
+			<div class="container">
+				<div class="sticky_menu">
+					<a class="sticky_menu__logo" href="#home-link">Wheels</a>
+					<nav class="sticky-nav">
+						<ul class="sticky-nav__list">
+							<li class="sticky-nav__item">
+								<a href="#about_us-link" class="sticky-nav__link">About us</a>
+							</li>
+							<li class="sticky-nav__item">
+								<a href="#products-link" class="sticky-nav__link">Products</a>
+							</li>
+							<li class="sticky-nav__item">
+								<a href="#services-link" class="sticky-nav__link">Services</a>
+							</li>
+							<li class="sticky-nav__item">
+								<a href="#team-link" class="sticky-nav__link">Our team</a>
+							</li>
+							<li class="sticky-nav__item">
+								<a href="#blog-link" class="sticky-nav__link">Blog</a>
+							</li>
+							<li class="sticky-nav__item">
+								<a href="#contact-link" class="sticky-nav__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>	
+			</div>
+		</div>
+	<main>
+		<section id="about_us-link">
+			<div class="container">
+				<div class="about_us">
+					<h2 class="about_us__title">About us</h2>
+					<p class="about_us__subtitle">Let's talk about what makes your company great.</p>
+					<p class="about_us__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quia accusantium, adipisci debitis, maxime enim eveniet ex quam voluptas et optio cum. Error voluptatum accusantium repellat, et repellendus adipisci atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consequatur architecto incidunt, cumque qui laborum repellat praesentium, numquam fugit id, nihil sapiente reiciendis illo error deleniti doloremque quisquam recusandae optio!</p>
+				</div>
+			</div>
+		</section>
+		<div id="services-link" class="statisctics-section">
+			<div class="container">
+				<div class="statisctics">
+					<h2 class="statisctics__title">Some statistics</h2>
+					<p class="statisctics__subtitle">Showing what your company already acomplished is always a good selling point.</p>
+					<div class="numbers-wrap">
+						<div class="numbers">
+							<span class="numbers__value">409</span>
+							<span class="numbers__item">Bikes sold</span>
+						</div>
+						<div class="numbers">
+							<span class="numbers__value">2012</span>
+							<span class="numbers__item">year the company started</span>
+						</div>
+						<div class="numbers">
+							<span class="numbers__value">0</span>
+							<span class="numbers__item">unsatisfied customers</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section id="products-link">
+			<div class="container">
+				<div class="products">
+					<h2 class="products__title">featured products</h2>
+					<p class="products__subtitle">Your chance to shine</p>
+					<div class="bikes-wrap">
+						<div class="bikes bikes-first">
+							<figure class="bikes__img" onclick="showBigImg(1)">
+								<img src="img/bikes/orangez.jpg" alt="Orangez bike">
+								<figcaption>Orangez</figcaption>
+							</figure>
+							<span class="bikes__price">&#36;399</span>
+							<a class="bikes__link" href="bikes.html">Learn more</a>
+						</div>
+						<div class="bikes bikes-second" onclick="showBigImg(2)">
+							<figure class="bikes__img">
+								<img src="img/bikes/green-angel.jpg" alt="Green Angel bike">
+								<figcaption>Green Angel</figcaption>
+							</figure>
+							<span class="bikes__price">&#36;399</span>
+							<a class="bikes__link" href="bikes.html">Learn more</a>
+						</div>
+						<div class="bikes bikes-third" onclick="showBigImg(3)">
+							<figure class="bikes__img">
+								<img src="img/bikes/blue-lagoon.jpg" alt="Blue Lagoon bike">
+								<figcaption>Blue Lagoon</figcaption>
+							</figure>
+							<span class="bikes__price">&#36;399</span>
+							<a class="bikes__link" href="bikes.html">Learn more</a>
+						</div>
+						<div class="bikes bikes-forth" onclick="showBigImg(4)">
+							<figure class="bikes__img">
+								<img src="img/bikes/pink-lady.jpg" alt="Pink Lady bike">
+								<figcaption>Pink Lady</figcaption>
+							</figure>
+							<span class="bikes__price">&#36;399</span>
+							<a class="bikes__link" href="bikes.html">Learn more</a>
+						</div>
+						<div class="bikes bikes-fifth" onclick="showBigImg(5)">
+							<figure class="bikes__img">
+								<img src="img/bikes/purple-rain.jpg" alt="Purple Rain bike">
+								<figcaption>Purple Rain</figcaption>
+							</figure>
+							<span class="bikes__price">&#36;399</span>
+							<a class="bikes__link" href="bikes.html">Learn more</a>
+						</div>
+						<div class="bikes bikes-sixth" onclick="showBigImg(6)">
+							<figure class="bikes__img">
+								<img src="img/bikes/mist.jpg" alt="The Mist bike">
+								<figcaption>The Mist</figcaption>
+							</figure>
+							<span class="bikes__price">&#36;399</span>
+							<a class="bikes__link" href="bikes.html">Learn more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="team-link" class="team-section">
+			<div class="container">
+				<div class="team">
+					<h2 class="team__title">Meet the team</h2>
+					<p class="team__subtitle">People who make the magic happen</p>
+					<div class="members-wrap">
+						<div class="members">
+							<div class="members__img">
+								<img src="img/founder.png" alt="Founder, CEO">
+							</div>
+							<span class="members__name">Ian</span>
+							<span class="members__position">Founder, CEO</span>
+						</div>
+						<div class="members">
+							<div class="members__img">
+								<img src="img/designer.png" alt="Designer">
+							</div>
+							<span class="members__name">Sarah</span>
+							<span class="members__position">Designer</span>
+						</div>
+						<div class="members">
+							<div class="members__img">
+								<img src="img/office-wizard.png" alt="Office Wizard">
+							</div>
+							<span class="members__name">Juan</span>
+							<span class="members__position">Office Wizard</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="blog-link">
+			<div class="container">
+				<div class="blog">
+					<h2 class="blog__title">#social showcase</h2>
+					<p class="blog__subtitle">Show your customers why your Instagram account is the one they should follow </p>
+					<div class="blog_article-wrap">
+						<article class="blog-article">
+							<a class="blog-article__link" href="#">
+								<figure class="blog-article__img">
+									<img src="img/blog_first.jpg" alt="Article-blog">
+									<figcaption class="blog-article__img_name">Manchester's country</figcaption>
+								</figure>
+							</a>
+						</article>
+						<article class="blog-article">
+							<a class="blog-article__link" href="#">
+								<figure class="blog-article__img">
+									<img src="img/blog_second.jpg" alt="Article-blog">
+									<figcaption class="blog-article__img_name">Autumn jorney</figcaption>
+								</figure>
+							</a>
+						</article>
+						<article class="blog-article">
+							<a class="blog-article__link" href="#">
+								<figure class="blog-article__img">
+									<img src="img/blog_third.jpg" alt="Article-blog">
+									<figcaption class="blog-article__img_name">What I take for a trip</figcaption>
+								</figure>
+							</a>
+						</article>
+						<article class="blog-article">
+							<a class="blog-article__link" href="#">
+								<figure class="blog-article__img">
+									<img src="img/blog_forth.jpg" alt="Article-blog">
+									<figcaption class="blog-article__img_name">Bikes fashion</figcaption>
+								</figure>
+							</a>
+						</article>
+					</div>
+					<p class="blog__text">follow <a target="_blank" href="https://www.instagram.com" class="blog__text_link" href="#">@wheelz</a> on instagram</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer id="contact-link" class="contact-section">
+		<div class="container">
+			<div class="contact">
+				<h2 class="contact__title">WHEELS</h2>
+				<div class="contact-inner-wrap">
+					<div class="contact-links">
+						<h3 class="contact-links__title">quick links</h3>
+						<ul class="contact-links__list">
+							<li class="contact-links__item">
+								<a href="#about_us-link" class="contact-links__link __link_selected">About us</a>
+							</li>
+							<li class="contact-links__item">
+								<a href="#products-link" class="contact-links__link">products</a>
+							</li>
+							<li class="contact-links__item">
+								<a href="#services-link" class="contact-links__link">services</a>
+							</li>
+							<li class="contact-links__item">
+								<a href="#team-link" class="contact-links__link">our team</a>
+							</li>
+							<li class="contact-links__item">
+								<a href="#blog-link" class="contact-links__link">blog</a>
+							</li>
+							<li class="contact-links__item">
+								<a href="#" class="contact-links__link">contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="contact-links">
+						<h3 class="contact-links__title">quick links 2</h3>
+						<ul class="contact-links__list">
+							<li class="contact-links__item">
+								<a class="contact-links__link" onclick="modalRules()">faq</a>
+							</li>
+							<li class="contact-links__item">
+								<a class="contact-links__link" onclick="modalRules()">terms &amp; Conditions</a>
+							</li>
+							<li class="contact-links__item">
+								<a class="contact-links__link" onclick="modalRules()">something else</a>
+							</li>
+							<li class="contact-links__item">
+								<a class="contact-links__link" onclick="modalRules()">anything</a>
+							</li>
+							<li class="contact-links__item">
+								<a class="contact-links__link" onclick="modalRules()">your ideas</a>
+							</li>
+							<li class="contact-links__item">
+								<a class="contact-links__link" onclick="modalRules()">right here</a>
+							</li>
+						</ul>
+					</div>
+					<div class="contact-social">
+						<h3 class="contact-social__title">let’s get social!</h3>
+						<div class="social">
+							<a target="_blank" class="social__link social__link_fb" href="https://facebook.com" arial-label="Link to Facebook"></a>
+							<a target="_blank" class="social__link social__link_linkedin" href="https://linkedin.com" arial-label="Link to Linked_in"></a>
+							<a target="_blank" href="https://www.instagram.com" class="social__link social__link_inst" href="#" arial-label="Link to Instagram"></a>
+							<a target="_blank" href="https://twitter.com" class="social__link social__link_twit" href="#" arial-label="Link to Twitter"></a>
+						</div>
+					</div>
+					<div class="contact-map" onclick="modalMap()">
+						<img src="img/contact-map.png" alt="Wheels address">
+					</div>	
+				</div>
+			</div>	
+		</div>
+	</footer>
+	<div class="overlay">
+		<div class="modal modal-rules hidden">
+			<p class="modal__text">The site is not real.<br>We don't have rules ... yet</p>
+			<button class="modal__btn" onclick="closeModal()">Close</button>
+		</div>
+		<div class="modal-map hidden">
+			<iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151986.0055178231!2d-2.3635472959751493!3d53.47236790495476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2z0JzQsNC90YfQtdGB0YLQtdGALCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sua!4v1570382358792!5m2!1sru!2sua" allowfullscreen=""></iframe>
+			<button class="modal-map__btn" onclick="closeModal()">Close</button>
+		</div>
+		<div class="modal-product">
+			<figure class="modal-product__img bikes-modal-first">
+				<img src="img/bikes/big_pictures/orangez_big.jpg" alt="Orangez bike">
+				<figcaption class="modal-product__name modal-product__name_gold">Orangez</figcaption>
+			</figure>
+			<!-- <figure class="modal-product__img bikes-modal-second hidden">
+				<img src="img/bikes/green-angel.jpg" alt="Green Angel">
+				<figcaption class="modal-product__name">Green Angel</figcaption>
+			</figure>
+			<figure class="modal-product__img bikes-modal-third hidden">
+				<img src="img/bikes/blue-lagoon.jpg" alt="Blue Lagoon bike">
+				<figcaption class="modal-product__name">Blue Lagoon</figcaption>
+			</figure>
+			<figure class="modal-product__img bikes-modal-forth hidden">
+				<img src="img/bikes/pink-lady.jpg" alt="Pink Lady bike">
+				<figcaption class="modal-product__name">Pink Lady</figcaption>
+			</figure>
+			<figure class="modal-product__img bikes-modal-fifth hidden">
+				<img src="img/bikes/purple-rain.jpg" alt="Purple Rain bike">
+				<figcaption class="modal-product__name">Purple Rain</figcaption>
+			</figure>
+			<figure class="modal-product__img bikes-modal-sixth hidden">
+				<img src="img/bikes/mist.jpg" alt="The Mist bike">
+				<figcaption class="modal-product__name">The Mist</figcaption>
+			</figure> -->
+			<button class="modal__btn" onclick="closeModal()">Close</button>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

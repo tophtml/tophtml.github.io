@@ -1,0 +1,46 @@
+@import "_variables.scss";
+
+
+@mixin flexsb {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@mixin pseudoel {
+	position: absolute;
+	content: "";
+}
+
+@mixin title {
+	font-size: $fsize-title;
+	font-weight: 800;
+	letter-spacing: $spacing-title;
+	text-transform: uppercase;
+}
+
+@mixin title-inner {
+	margin: 0 auto 15px;
+	font-size: $fsize-title;
+	font-weight: 800;
+	letter-spacing: $spacing-title;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@mixin subtitle-inner {
+	max-width: 860px;
+	margin: 0 auto;
+	font-size: $fsize-subtitle;
+	font-weight: $semi-bold;
+	letter-spacing: $spacing-subtitle;
+	text-align: center;
+}
+
+@mixin hover {
+	color: $color-hover;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+
