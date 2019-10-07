@@ -309,43 +309,43 @@
 			</div>	
 		</div>
 	</footer>
-	<div class="overlay">
+	<div class="overlay hidden" onclick="closeModalOutter()">
 		<div class="modal modal-rules hidden">
 			<p class="modal__text">The site is not real.<br>We don't have rules ... yet</p>
 			<button class="modal__btn" onclick="closeModal()">Close</button>
 		</div>
-		<div class="modal-map hidden">
-			<iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151986.0055178231!2d-2.3635472959751493!3d53.47236790495476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2z0JzQsNC90YfQtdGB0YLQtdGALCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sua!4v1570382358792!5m2!1sru!2sua" allowfullscreen=""></iframe>
-			<button class="modal-map__btn" onclick="closeModal()">Close</button>
-		</div>
-		<div class="modal-product">
+	</div>
+	<div class="modal-map hidden">
+		<iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151986.0055178231!2d-2.3635472959751493!3d53.47236790495476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2z0JzQsNC90YfQtdGB0YLQtdGALCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sua!4v1570382358792!5m2!1sru!2sua" allowfullscreen=""></iframe>
+		<button class="modal-map__btn" onclick="closeModalMap()">Close</button>
+	</div>	
+		<div class="modal-product hidden">
 			<figure class="modal-product__img bikes-modal-first">
 				<img src="img/bikes/big_pictures/orangez_big.jpg" alt="Orangez bike">
 				<figcaption class="modal-product__name modal-product__name_gold">Orangez</figcaption>
 			</figure>
-			<!-- <figure class="modal-product__img bikes-modal-second hidden">
-				<img src="img/bikes/green-angel.jpg" alt="Green Angel">
-				<figcaption class="modal-product__name">Green Angel</figcaption>
+			<figure class="modal-product__img bikes-modal-second hidden">
+				<img src="img/bikes/big_pictures/green-angel_big.jpg" alt="Green Angel">
+				<figcaption class="modal-product__name modal-product__name_green">Green Angel</figcaption>
 			</figure>
 			<figure class="modal-product__img bikes-modal-third hidden">
-				<img src="img/bikes/blue-lagoon.jpg" alt="Blue Lagoon bike">
-				<figcaption class="modal-product__name">Blue Lagoon</figcaption>
+				<img src="img/bikes/big_pictures/blue-lagoon_big.jpg" alt="Blue Lagoon bike">
+				<figcaption class="modal-product__name modal-product__name_blue">Blue Lagoon</figcaption>
 			</figure>
 			<figure class="modal-product__img bikes-modal-forth hidden">
-				<img src="img/bikes/pink-lady.jpg" alt="Pink Lady bike">
-				<figcaption class="modal-product__name">Pink Lady</figcaption>
+				<img src="img/bikes/big_pictures/pink-lady_big.jpg" alt="Pink Lady bike">
+				<figcaption class="modal-product__name modal-product__name_pink">Pink Lady</figcaption>
 			</figure>
 			<figure class="modal-product__img bikes-modal-fifth hidden">
-				<img src="img/bikes/purple-rain.jpg" alt="Purple Rain bike">
-				<figcaption class="modal-product__name">Purple Rain</figcaption>
+				<img src="img/bikes/big_pictures/purple-rain_big.jpg" alt="Purple Rain bike">
+				<figcaption class="modal-product__name modal-product__name_purple">Purple Rain</figcaption>
 			</figure>
 			<figure class="modal-product__img bikes-modal-sixth hidden">
-				<img src="img/bikes/mist.jpg" alt="The Mist bike">
-				<figcaption class="modal-product__name">The Mist</figcaption>
-			</figure> -->
-			<button class="modal__btn" onclick="closeModal()">Close</button>
+				<img src="img/bikes/big_pictures/mist_big.jpg" alt="The Mist bike">
+				<figcaption class="modal-product__name modal-product__name_grey">The Mist</figcaption>
+			</figure> 
+			<button class="modal__btn" onclick="closeBigImg()">Close</button>
 		</div>
-	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
