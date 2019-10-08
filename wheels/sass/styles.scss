@@ -60,20 +60,55 @@ button {
       cursor: default;
   }
 }
+@keyframes moveMenu {
+  0% {
+    margin-right: 25px;
+  }
+  8%,70% {
+    margin-right: 150px;
+  }
+  100% {
+    margin-right: 25px;
+  }
+}
+.animation-menu {
+  animation-name: moveMenu;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
 .nav-main {
   position: relative;
   width: 105px;
+  margin-right: 25px;
   cursor: pointer;
   &__name {
-    margin-right: 25px;
     color: $color-header;
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3.58px;
+    &::before {
+      @include pseudoel;
+      top: -12px;
+      left: -60px;
+      width: 60px;
+      height: 48px;
+      background: url(../img/icons/bike-burger.svg) no-repeat;
+    }
+     &:hover::before {
+      background: url(../img/icons/bike-burger_hover.svg) no-repeat;
+    }
     &:hover {
-    color: $color-hover;
-  }
+      color: $color-hover;
+    }
+    &:hover .nav-main__btn {
+      border-top: 4px solid $color-hover;
+      border-bottom: 4px solid $color-hover;
+      &::before {
+        background-color: $color-hover;
+      }
+    }
   }
   &__btn {
     position: absolute;
@@ -103,6 +138,38 @@ button {
       transform: translateY(-50%);
     }
   }
+}
+.burger {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  @extend .subtitle;
+  text-transform: uppercase;
+    &__item {
+     padding-bottom: 25px;
+      font-size: 20px;
+      text-align: left;
+      &:hover {
+        color: $color-hover;
+        transition: 0.4s;
+      }
+    }
+}
+@keyframes openBurger {
+  0% {
+    right: -50px;
+    opacity: 0;
+  }
+  100% {
+    right: -22px;
+    opacity: 1;
+  }
+}
+.open-burger {
+  display: block;
+  animation-name: "openBurger";
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .banner {
   max-width: 630px;
@@ -205,7 +272,7 @@ button {
 }
 .statisctics-section {
   min-height: 450px;
-  background: url(../img/statistics-bg.jpg) no-repeat;
+  background: url(../img/statistics-bg.jpg) center top no-repeat;
 }
 .statisctics {
   padding: 85px 0 100px;
@@ -345,10 +412,20 @@ button {
   margin-bottom: 10px;
   &__img {
     position: relative;
+    &:hover::after {
+      @include pseudoel;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.2);
+      z-index: 1;
+    }
     &:hover {
-      animation-name: fadeInBlog;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
+      & .blog-article__img_name {
+        opacity: 1;
+        transition: 0.8s;
+      }
     }
     &_name {
       position: absolute;
@@ -356,7 +433,7 @@ button {
       left: 0;
       width: 100%;
       margin: 0 auto;
-      color: #ededed;
+      color: #fff;
       font-size: 24px;
       font-weight: $weight-black;
       text-align: center;
@@ -367,14 +444,6 @@ button {
         opacity: 1;
         transition: 0.4s;
       }
-    }
-  }
-  @keyframes fadeInBlog {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.7;
     }
   }
 }

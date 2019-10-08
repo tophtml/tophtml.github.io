@@ -122,3 +122,10 @@ window.addEventListener('keydown', function (event) {
     openModalProduct.style.display = 'none';
   }
 })
+
+function openBurger() {
+	let burger = document.querySelector('.burger');
+	let menu = document.querySelector('.nav-main');
+	menu.classList.toggle('animation-menu');
+	burger.classList.toggle('open-burger');
+}

@@ -68,19 +68,59 @@ button {
     text-transform: uppercase;
     cursor: default; }
 
+@-webkit-keyframes moveMenu {
+  0% {
+    margin-right: 25px; }
+  8%,70% {
+    margin-right: 150px; }
+  100% {
+    margin-right: 25px; } }
+
+@keyframes moveMenu {
+  0% {
+    margin-right: 25px; }
+  8%,70% {
+    margin-right: 150px; }
+  100% {
+    margin-right: 25px; } }
+.animation-menu {
+  -webkit-animation-name: moveMenu;
+          animation-name: moveMenu;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+
 .nav-main {
   position: relative;
   width: 105px;
+  margin-right: 25px;
   cursor: pointer; }
   .nav-main__name {
-    margin-right: 25px;
     color: #ededed;
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3.58px; }
+    .nav-main__name::before {
+      position: absolute;
+      content: "";
+      top: -12px;
+      left: -60px;
+      width: 60px;
+      height: 48px;
+      background: url(../img/icons/bike-burger.svg) no-repeat; }
+    .nav-main__name:hover::before {
+      background: url(../img/icons/bike-burger_hover.svg) no-repeat; }
     .nav-main__name:hover {
       color: #cba74e; }
+    .nav-main__name:hover .nav-main__btn {
+      border-top: 4px solid #cba74e;
+      border-bottom: 4px solid #cba74e; }
+      .nav-main__name:hover .nav-main__btn::before {
+        background-color: #cba74e; }
   .nav-main__btn {
     position: absolute;
     top: 5px;
@@ -107,6 +147,44 @@ button {
       border-radius: 1px;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
+
+.burger {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  text-transform: uppercase; }
+  .burger__item {
+    padding-bottom: 25px;
+    font-size: 20px;
+    text-align: left; }
+    .burger__item:hover {
+      color: #cba74e;
+      -webkit-transition: 0.4s;
+      transition: 0.4s; }
+
+@-webkit-keyframes openBurger {
+  0% {
+    right: -50px;
+    opacity: 0; }
+  100% {
+    right: -22px;
+    opacity: 1; } }
+
+@keyframes openBurger {
+  0% {
+    right: -50px;
+    opacity: 0; }
+  100% {
+    right: -22px;
+    opacity: 1; } }
+.open-burger {
+  display: block;
+  -webkit-animation-name: "openBurger";
+          animation-name: "openBurger";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 .banner {
   max-width: 630px;
@@ -191,7 +269,7 @@ button {
   text-align: center;
   text-transform: uppercase; }
 
-.subtitle, .about_us__subtitle, .statisctics__subtitle, .products__subtitle, .team__subtitle, .members__position, .blog__subtitle, .contact-links__title, .contact-links__item, .contact-social__title {
+.subtitle, .burger, .about_us__subtitle, .statisctics__subtitle, .products__subtitle, .team__subtitle, .members__position, .blog__subtitle, .contact-links__title, .contact-links__item, .contact-social__title {
   max-width: 860px;
   margin: 0 auto;
   font-size: 18px;
@@ -220,7 +298,7 @@ button {
 
 .statisctics-section {
   min-height: 450px;
-  background: url(../img/statistics-bg.jpg) no-repeat; }
+  background: url(../img/statistics-bg.jpg) center top no-repeat; }
 
 .statisctics {
   padding: 85px 0 100px;
@@ -362,20 +440,26 @@ button {
   margin-bottom: 10px; }
   .blog-article__img {
     position: relative; }
-    .blog-article__img:hover {
-      -webkit-animation-name: fadeInBlog;
-              animation-name: fadeInBlog;
-      -webkit-animation-duration: 1s;
-              animation-duration: 1s;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
+    .blog-article__img:hover::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 1; }
+    .blog-article__img:hover .blog-article__img_name {
+      opacity: 1;
+      -webkit-transition: 0.8s;
+      transition: 0.8s; }
     .blog-article__img_name {
       position: absolute;
       top: 50%;
       left: 0;
       width: 100%;
       margin: 0 auto;
-      color: #ededed;
+      color: #fff;
       font-size: 24px;
       font-weight: 900;
       text-align: center;
@@ -387,16 +471,7 @@ button {
         opacity: 1;
         -webkit-transition: 0.4s;
         transition: 0.4s; }
-@-webkit-keyframes fadeInBlog {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0.7; } }
-@keyframes fadeInBlog {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0.7; } }
+
 .contact-section {
   color: #ededed;
   background-color: #1e1e1e; }
