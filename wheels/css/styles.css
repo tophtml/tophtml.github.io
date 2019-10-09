@@ -1,3 +1,87 @@
+.blog-wrap {
+  background: url(../img/blog/blog2-bg.jpg) center top fixed no-repeat; }
+
+.blog-wrap-autumn {
+  background: url(../img/blog/blog-bg.jpg) center top fixed no-repeat;
+  background-size: cover; }
+
+.content-wrap {
+  padding: 30px 100px; }
+
+.article {
+  margin: 0 100px;
+  background: rgba(255, 255, 255, 0.9); }
+  .article__title {
+    padding: 50px 0; }
+  .article__subtitle {
+    display: inline-block;
+    max-width: 540px;
+    margin: 0 auto 0 100px;
+    color: #ff6304;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic; }
+  .article__date {
+    display: inline-block;
+    float: right;
+    margin: 0 100px 0 auto;
+    font-size: 18px;
+    vertical-align: top;
+    font-weight: 600;
+    font-style: italic; }
+  .article__inner-title {
+    font-size: 24px !important; }
+  .article__text {
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: justify; }
+
+.article-manchester_first, .article-trip_first, .article-fasion_first, .article-autumn_first {
+  max-width: 275px;
+  float: right;
+  margin: 5px 0 5px 20px; }
+
+.article-manchester_second {
+  max-width: 575px;
+  float: left;
+  margin: 5px 20px 5px 0; }
+
+.article-list-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 20px;
+  margin: 30px 100px 0; }
+
+.article-trip_second {
+  max-width: 450px;
+  float: left;
+  margin: 5px 20px 5px 0; }
+
+.article-fashion_img {
+  max-width: 400px;
+  margin: 0 auto; }
+
+.article-autumn_first {
+  max-width: 270px;
+  margin: 0 0 5px; }
+
+.article-autumn_second {
+  max-width: 500px;
+  float: left;
+  margin: 5px 20px 5px 0; }
+
+.article-autumn_third {
+  max-width: 450px;
+  float: right;
+  margin: 5px 0 5px 20px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -261,7 +345,7 @@ button {
   .sticky-nav .sticky-nav__list .sticky-nav__item:last-child {
     margin-right: 0; }
 
-.title, .about_us__title, .statisctics__title, .products__title, .team__title, .members__name, .blog__title, .contact__title, .modal-product__name {
+.title, .article__title, .article__inner-title, .about_us__title, .statisctics__title, .products__title, .team__title, .members__name, .blog__title, .contact__title, .modal-product__name {
   margin: 0 auto 15px;
   font-size: 30px;
   font-weight: 800;

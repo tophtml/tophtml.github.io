@@ -1,0 +1,92 @@
+
+.blog-wrap {
+	background: url(../img/blog/blog2-bg.jpg) center top fixed no-repeat;
+}
+.blog-wrap-autumn {
+	background: url(../img/blog/blog-bg.jpg) center top fixed no-repeat;
+	background-size: cover;
+}
+.content-wrap {
+	padding: 30px 100px;
+}
+.article {
+	margin: 0 100px;
+	background: rgba(255,255,255,0.9);
+	&__title {
+		@extend .title;
+		padding: 50px 0;
+	}
+	&__subtitle {
+		display: inline-block;
+		max-width: 540px;
+		margin: 0 auto 0 100px;
+		color: #ff6304;
+		font-size: 24px;
+		font-weight: $semi-bold;
+		font-style: italic;
+	}
+	&__date {
+		display: inline-block;
+		float: right;
+		margin: 0 100px 0 auto;
+		font-size: 18px;
+		vertical-align: top;
+		font-weight: $semi-bold;
+		font-style: italic;
+	}
+	&__inner-title {
+		@extend .title;
+		font-size: 24px !important;
+	}
+	&__text {
+		padding-bottom: 10px;
+		font-size: 20px;
+		line-height: 40px;
+		font-weight: $regular;
+		text-align: justify;	
+	}
+	&__img {
+	}
+}
+.article-manchester_first {
+	max-width: 275px;
+	@include float-right;
+}
+.article-manchester_second {
+	max-width: 575px;
+	@include float-left;
+}
+.article-list-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-bottom: 20px;
+	margin: 30px 100px 0;
+}
+.article-trip_first {
+	@extend .article-manchester_first;
+}
+.article-trip_second {
+	max-width: 450px;
+	@include float-left;
+}
+.article-fasion_first {
+	@extend .article-manchester_first;
+}
+.article-fashion_img {
+	max-width: 400px;
+	margin: 0 auto;
+}
+.article-autumn_first {
+	@extend .article-manchester_first;
+	max-width: 270px;
+	margin: 0 0 5px;
+}
+.article-autumn_second {
+	max-width: 500px;
+	@include float-left;
+}
+.article-autumn_third {
+	max-width: 450px;
+	@include float-right;
+}
