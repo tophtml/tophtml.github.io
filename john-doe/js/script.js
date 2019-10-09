@@ -1,10 +1,15 @@
 let modalText = document.querySelector('.overlay');
 let popup = document.querySelector('.modal-main');
+let modalMessage = document.querySelector('.modal-main__text').style;
+let formMessage = document.querySelector('.modal-main__form').style;
 
 function openModal() {
 	modalText.classList.add('show_overlay');
+	modalMessage.display = "block";
+	formMessage.display = "none";
 }
 function removeModal() {
+	let messageForm = document.querySelector('.contacts-form__message');
 	modalText.classList.remove('show_overlay');
 }
 
@@ -124,9 +129,6 @@ function sendForm() {
 	let nameForm = document.querySelector('.contacts-form__text').value;
 	let emailForm = document.querySelector('.contacts-form__email').value;
 	let messageForm = document.querySelector('.contacts-form__message').value;
-
-	let modalMessage = document.querySelector('.modal-main__text').style;
-	let formMessage = document.querySelector('.modal-main__form').style;
 
 	if(nameForm == "" || emailForm == "" || messageForm == "") {
 		modalText.classList.add('show_overlay');
