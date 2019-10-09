@@ -115,12 +115,12 @@ button {
     .nav-main__name:hover::before {
       background: url(../img/icons/bike-burger_hover.svg) no-repeat; }
     .nav-main__name:hover {
-      color: #cba74e; }
+      color: #ffd700; }
     .nav-main__name:hover .nav-main__btn {
-      border-top: 4px solid #cba74e;
-      border-bottom: 4px solid #cba74e; }
+      border-top: 4px solid #ffd700;
+      border-bottom: 4px solid #ffd700; }
       .nav-main__name:hover .nav-main__btn::before {
-        background-color: #cba74e; }
+        background-color: #ffd700; }
   .nav-main__btn {
     position: absolute;
     top: 5px;
@@ -132,10 +132,10 @@ button {
     border-radius: 1px;
     background-color: transparent; }
     .nav-main__btn:hover {
-      border-top: 4px solid #cba74e;
-      border-bottom: 4px solid #cba74e; }
+      border-top: 4px solid #ffd700;
+      border-bottom: 4px solid #ffd700; }
       .nav-main__btn:hover::before {
-        background-color: #cba74e; }
+        background-color: #ffd700; }
     .nav-main__btn::before {
       position: absolute;
       content: "";
@@ -158,7 +158,7 @@ button {
     font-size: 20px;
     text-align: left; }
     .burger__item:hover {
-      color: #cba74e;
+      color: #ffd700;
       -webkit-transition: 0.4s;
       transition: 0.4s; }
 
@@ -235,7 +235,7 @@ button {
   .sticky_menu__logo {
     color: #1c1c1c; }
     .sticky_menu__logo:hover {
-      color: #cba74e;
+      color: #ffd700;
       cursor: pointer;
       -webkit-transition: 0.2s;
       transition: 0.2s; }
@@ -254,7 +254,7 @@ button {
   .sticky-nav__link {
     padding: 10px 0; }
     .sticky-nav__link:hover {
-      color: #cba74e;
+      color: #ffd700;
       cursor: pointer;
       -webkit-transition: 0.2s;
       transition: 0.2s; }
@@ -373,7 +373,7 @@ button {
     text-decoration: underline;
     letter-spacing: 2.25px; }
     .bikes__link:hover {
-      color: #cba74e;
+      color: #ffd700;
       cursor: pointer;
       -webkit-transition: 0.2s;
       transition: 0.2s; }
@@ -420,7 +420,7 @@ button {
     .blog__text_link {
       text-decoration: underline; }
       .blog__text_link:hover {
-        color: #cba74e;
+        color: #ffd700;
         cursor: pointer;
         -webkit-transition: 0.2s;
         transition: 0.2s; }
@@ -500,7 +500,7 @@ button {
     margin-bottom: 12px;
     text-align: left; }
     .contact-links__item:hover {
-      color: #cba74e;
+      color: #ffd700;
       cursor: pointer;
       -webkit-transition: 0.2s;
       transition: 0.2s; }
@@ -605,7 +605,7 @@ button {
     border: none;
     border-radius: 10px; }
     .modal__btn:hover, .modal-map__btn:hover {
-      color: #cba74e;
+      color: #ffd700;
       cursor: pointer;
       -webkit-transition: 0.2s;
       transition: 0.2s;
