@@ -1,0 +1,101 @@
+.bikes-list-wrap {
+	background: url(../img/bikes/bikes-bg.jpg) center top fixed no-repeat;
+	background-size: cover;
+}
+.bikes-list {
+	@extend .article;
+	&__title {
+		@extend .title;
+		@extend .article__title;
+	}
+}
+.bikes-list-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 50px;
+}
+.bikes-img-wrap {
+
+}
+.bikes-list__img {
+	width: 400px;
+}
+.bikes-btn-wrap {
+	@include flexsb;
+	width: 300px;
+	margin: 30px auto;
+	.bikes-btn {
+		width: 25px;
+		height: 25px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		&_first {
+			background-color: #c98e02;
+		}
+		&_second {
+			background-color: #5dd045;
+		}
+		&_third {
+			background-color: #0296d0;
+		}
+		&_forth {
+			background-color: #dc2e87;
+		}
+		&_fifth {
+			background-color: #b202cd;
+		}
+		&_sixth {
+			background-color: #656565;
+		}
+		&:hover {
+		border: 1px solid #333333;
+		transition: 0.4s;
+		}
+	}
+}
+.bikes-description {
+	width: 50%;
+}
+.bikes-tabs {
+	@extend .subtitle;
+	&__list {
+		font-size: 0;
+		text-align: left;
+	}
+	&__item {
+		display: inline-block;
+		margin-right: 10px;
+		padding: 0 30px 50px 0;
+		font-size: 24px;
+		cursor: pointer;
+		&_selected {
+			color: #4263ee;
+			&:hover {
+				color: #4263ee !important;
+				cursor: default;
+			}
+		}
+		&:hover {
+			color: $color-hover;
+			transition: 0.3s;
+		}
+	}
+	&__list li:last-child {
+		margin-right: 0;
+		padding-right: 0;
+	}
+}
+.bikes-content {
+	@extend .article__text;
+	margin-bottom: 30px;
+}
+.bikes-content__price {
+	margin-bottom: 30px;
+	color: #4263ee;
+	font-weight: $semi-bold;
+}
+
+
+// https://www.trackandtrail.in/cycles/montra/montra-trance-pro-2019?id=3059
+// https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/trail-mountain-bikes/fuel-ex/fuel-ex-9-8/p/29090/?colorCode=teal_tealdark#trekProductSpecificationsComponent
