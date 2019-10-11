@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="../img/icons/favicon.ico" type="../image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600,800,900&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -27,7 +26,7 @@
 							<a href="../index.html#products-link" class="sticky-nav__link">Products</a>
 						</li>
 						<li class="sticky-nav__item">
-							<a href="../index.html#services-link" class="sticky-nav__link">Services</a>
+							<a class="sticky-nav__link sticky-nav__link_selected">Shop</a>
 						</li>
 						<li class="sticky-nav__item">
 							<a href="../index.html#team-link" class="sticky-nav__link">Our team</a>
@@ -47,76 +46,91 @@
 						<h1 class="bikes-list__title">Wheels for you</h1>
 						<div class="bikes-list-content">
 							<div class="bikes-img-wrap">
-								<div class="bikes-list__img bikes__img" onclick="showBigImg(1)">
-									<img src="../img/bikes/orangez.jpg" alt="Orangez bike">
+								<div class="bikes-list__img bikes-list__img_first" onclick="showBigImg(1)">
+									<img class="bikes__img" src="../img/bikes/orangez.jpg" alt="Orangez bike">
 								</div>
-								<div class="bikes-list__img bikes__img" onclick="showBigImg(2)">
-									<img class="hidden" src="../img/bikes/green-angel.jpg" alt="Green Angel bike">
+								<div class="bikes-list__img bikes-list__img_second hidden" onclick="showBigImg(2)">
+									<img class="bikes__img" src="../img/bikes/green-angel.jpg" alt="Green Angel bike">
 								</div>
-								<div class="bikes-list__img bikes__img" onclick="showBigImg(3)">
-									<img class="hidden" src="../img/bikes/blue-lagoon.jpg" alt="Blue Lagoon bike">
+								<div class="bikes-list__img bikes-list__img_third hidden" onclick="showBigImg(3)">
+									<img class="bikes__img" src="../img/bikes/blue-lagoon.jpg" alt="Blue Lagoon bike">
 								</div>
-								<div class="bikes-list__img bikes__img" onclick="showBigImg(4)">
-									<img class="hidden" src="../img/bikes/pink-lady.jpg" alt="Pink Lady bike">
+								<div class="bikes-list__img bikes-list__img_forth hidden" onclick="showBigImg(4)">
+									<img class="bikes__img" src="../img/bikes/pink-lady.jpg" alt="Pink Lady bike">
 								</div>
-								<div class="bikes-list__img bikes__img" onclick="showBigImg(5)">
-									<img class="hidden" src="../img/bikes/purple-rain.jpg" alt="Purple Rain bike">
+								<div class="bikes-list__img bikes-list__img_fifth hidden" onclick="showBigImg(5)">
+									<img class="bikes__img" src="../img/bikes/purple-rain.jpg" alt="Purple Rain bike">
 								</div>
-								<div class="bikes-list__img bikes__img" onclick="showBigImg(6)">
-									<img class="hidden" src="../img/bikes/mist.jpg" alt="The Mist bike">
+								<div class="bikes-list__img bikes-list__img_sixth hidden" onclick="showBigImg(6)">
+									<img class="bikes__img" src="../img/bikes/mist.jpg" alt="The Mist bike">
 								</div>
 								<div class="bikes-btn-wrap">
-									<button class="bikes-btn bikes-btn_first" arial-label="orange color"></button>
-									<button class="bikes-btn bikes-btn_second" arial-label="green color"></button>
-									<button class="bikes-btn bikes-btn_third" arial-label="blue color"></button>
-									<button class="bikes-btn bikes-btn_forth" arial-label="pink color"></button>
-									<button class="bikes-btn bikes-btn_fifth" arial-label="purple color"></button>
-									<button class="bikes-btn bikes-btn_sixth" arial-label="grey color"></button>
+									<button class="bikes-btn bikes-btn_first" arial-label="orange color" onclick="changeColorBike(1)"></button>
+									<button class="bikes-btn bikes-btn_second" arial-label="green color" onclick="changeColorBike(2)"></button>
+									<button class="bikes-btn bikes-btn_third" arial-label="blue color" onclick="changeColorBike(3)"></button>
+									<button class="bikes-btn bikes-btn_forth" arial-label="pink color" onclick="changeColorBike(4)"></button>
+									<button class="bikes-btn bikes-btn_fifth" arial-label="purple color" onclick="changeColorBike(5)"></button>
+									<button class="bikes-btn bikes-btn_sixth" arial-label="grey color" onclick="changeColorBike(6)"></button>
 								</div>
 							</div>
 							<div class="bikes-description">
 								<div class="bikes-tabs">
 									<ul class="bikes-tabs__list">
-										<li class="bikes-tabs__item bikes-tabs__item_selected bikes-tabs_item_first">Overview</li>
-										<li class="bikes-tabs__item bikes-tabs_item_second">Features</li>
-										<li class="bikes-tabs__item bikes-tabs_item_third">Specifications</li>
+										<li class="bikes-tabs__item bikes-tabs__item_selected bikes-tabs_item_first" onclick="changeTabs(1)">Overview</li>
+										<li class="bikes-tabs__item bikes-tabs_item_second" onclick="changeTabs(2)">Features</li>
+										<li class="bikes-tabs__item bikes-tabs_item_third" onclick="changeTabs(3)">Specification</li>
 									</ul>
 								</div>
 								<div class="bikes-content bikes-content_first">
 									<p class="bikes-content__text">It is the carbon trail bike that can fly through singletrack, throw down with the rowdy trail crew, and crush miles during marathon races.</p> 
 									<p class="bikes-content__text">A lightweight full OCLV Mountain Carbon frame, 1x12 SRAM GX Eagle drivetrain, carbon wheels, and FOX Performance Float suspension with Trek's exclusive RE:aktiv with Thru Shaft shock make it the perfect choice for all  shredders who want a single bike that does it all.</p>
 								</div>
-								<div class="bikes-content bikes-content_second hidden">
-									<ul class="bikes-content__list">
-										<li class="bikes-content__item">Frame: 700C</li>
-										<li class="bikes-content__item">Fork: Rigid Steel</li>
-										<li class="bikes-content__item">Front Derailleur: Shimano-AFDTY510TSM6-Clamp Dia 31.8mm</li>
-										<li class="bikes-content__item">Rear Derailleur: Shimano-ARDTY500D-6/7 Speed</li>
-										<li class="bikes-content__item">Tires: Wanda-P1024-700 x 35c</li>
-									</ul>
+								<div class="bikes-content bikes-features bikes-content_second hidden">
+									<table class="bikes-features__table">
+										<tbody>
+											<tr class="bikes-features__row">
+												<td class="bikes-features__data bikes-features__data_bold bikes-features__data_frame">Frame:</td>
+												<td class="bikes-features__data">700C</td>
+											</tr>
+											<tr class="bikes-features__row">
+												<td class="bikes-features__data bikes-features__data_bold bikes-features__data_fork">Fork:</td>
+												<td class="bikes-features__data">Rigid Steel</td>
+											</tr>
+											<tr class="bikes-features__row">
+												<td class="bikes-features__data bikes-features__data_bold bikes-features__data_front">Front:</td>
+												<td class="bikes-features__data">Wheels-Clamp 31.8mm</td>
+											</tr>
+											<tr class="bikes-features__row">
+												<td class="bikes-features__data bikes-features__data_bold bikes-features__data_tires">Tires:</td>
+												<td class="bikes-features__data">Milen-P1024-700 x 35c</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 								<div class="bikes-content bikes-content_third hidden">
 									<table class="bikes-table">
-										<tr class="bikes-table__row">
-											<td class="bikes-table__data">Gears</td>
-											<td class="bikes-table__data">Geared</td>
-										</tr>
-										<tr class="bikes-table__row">
-											<td class="bikes-table__data">Frame</td>
-											<td class="bikes-table__data">700C, 21 Speed, Rigid Fork Hybrid, 6061 Alloy</td>
-										</tr>
-										<tr class="bikes-table__row">
-											<td class="bikes-table__data">Bottom Bracket</td>
-											<td class="bikes-table__data">BB Cartridge-Sealed Bearing-Cold Forged Boron Axle, Plastic cups, Steel Body</td>
-										</tr>
-										<tr class="bikes-table__row">
-											<td class="bikes-table__data">Chain</td>
-											<td class="bikes-table__data">KMC-Z7-1/2"x 3/32"x 112 Links</td>
-										</tr>
-										<tr class="bikes-table__row">
-											<td class="bikes-table__data">Rims</td>
-											<td class="bikes-table__data">700C, 35x622, 14Gx36H, H - 25mm, Double wall, w/Safety line</td>
-										</tr>
+										<tbody>
+											<tr class="bikes-table__row">
+												<td class="bikes-table__data bikes-table__data_bold">Gears</td>
+												<td class="bikes-table__data">Geared</td>
+											</tr>
+											<tr class="bikes-table__row">
+												<td class="bikes-table__data bikes-table__data_bold">Frame</td>
+												<td class="bikes-table__data">700C, 21 Speed, Rigid Fork Hybrid, 6061 Alloy</td>
+											</tr>
+											<tr class="bikes-table__row">
+												<td class="bikes-table__data bikes-table__data_bold">Bracket</td>
+												<td class="bikes-table__data">BB Cartridge-Sealed Bearing-Cold Forged Boron Axle, Plastic cups, Steel Body</td>
+											</tr>
+											<tr class="bikes-table__row">
+												<td class="bikes-table__data bikes-table__data_bold">Chain</td>
+												<td class="bikes-table__data">KMC-Z7-1/2"x 3/32"x 112 Links</td>
+											</tr>
+											<tr class="bikes-table__row">
+												<td class="bikes-table__data bikes-table__data_bold">Rims</td>
+												<td class="bikes-table__data">700C, 35x622, 14Gx36H, H - 25mm, Double wall</td>
+											</tr>
+										</tbody>
 									</table>
 								</div>
 								<span class="bikes__price bikes-content__price">Price: $ 399</span>

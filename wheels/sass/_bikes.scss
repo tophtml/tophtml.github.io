@@ -13,13 +13,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	padding: 50px;
-}
-.bikes-img-wrap {
-
+	padding: 0 50px 50px;
 }
 .bikes-list__img {
 	width: 400px;
+	border: 2px solid $color-product;
 }
 .bikes-btn-wrap {
 	@include flexsb;
@@ -66,13 +64,13 @@
 	&__item {
 		display: inline-block;
 		margin-right: 10px;
-		padding: 0 30px 50px 0;
+		padding: 0 30px 30px 0;
 		font-size: 24px;
 		cursor: pointer;
 		&_selected {
-			color: #4263ee;
+			color: $color-product;
 			&:hover {
-				color: #4263ee !important;
+				color: $color-product !important;
 				cursor: default;
 			}
 		}
@@ -95,7 +93,56 @@
 	color: #4263ee;
 	font-weight: $semi-bold;
 }
-
-
-// https://www.trackandtrail.in/cycles/montra/montra-trance-pro-2019?id=3059
-// https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/trail-mountain-bikes/fuel-ex/fuel-ex-9-8/p/29090/?colorCode=teal_tealdark#trekProductSpecificationsComponent
+.bikes-features {
+	&__table {
+		border-collapse: collapse;
+		line-height: 52px;
+	}
+	&__data {
+		position: relative;
+		margin-left: 60px;
+		&_frame::before {
+			position: absolute;
+			content: "";
+			top: 10px;
+			left: -60px;
+			width: 30px;
+			height: 30px;
+			background: url(../img/icons/frame.svg) no-repeat; 
+		}
+		&_fork::before {
+			@extend .bikes-features__data_frame;
+			background: url(../img/icons/fork.svg) no-repeat;
+		}
+		&_front::before {
+			@extend .bikes-features__data_frame;
+			background: url(../img/icons/front.svg) no-repeat;
+		}
+		&_tires::before {
+			@extend .bikes-features__data_frame;
+			background: url(../img/icons/tires.svg) no-repeat;
+		}
+	&_bold {
+		display: inline-block;
+		margin-right: 15px;
+		font-weight: $extra-bold;
+		}	
+	}
+}
+.bikes-table {
+	border-collapse: collapse;
+	&__row:nth-child(odd) {
+		background-color: rgba(200,200,200,0.5);
+	}
+	&__row:nth-child(even) {
+		background-color: rgba(255,255,255,0.6);
+	}
+	&__data {
+		padding: 5px 10px;
+		border: 2px solid #3b3b3b;
+		&_bold {
+			width: 125px;
+			font-weight: $extra-bold;
+		}
+	}
+}

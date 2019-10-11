@@ -20,7 +20,6 @@ function closeModalOutter() {
 	openModal.style.display = 'none';
 	modalMap.style.display = 'none';
 	openModalProduct.style.display = 'none';
-	
 }
 
 function modalMap() {
@@ -128,4 +127,101 @@ function openBurger() {
 	let menu = document.querySelector('.nav-main');
 	menu.classList.toggle('animation-menu');
 	burger.classList.toggle('open-burger');
+}
+
+function changeTabs(choice) {
+	let tabFirst = document.querySelector('.bikes-content_first');
+	let tabSecond = document.querySelector('.bikes-content_second');
+	let tabThird = document.querySelector('.bikes-content_third');
+
+	let tabItemFirst = document.querySelector('.bikes-tabs_item_first');
+	let tabItemSecond = document.querySelector('.bikes-tabs_item_second');
+	let tabItemThird = document.querySelector('.bikes-tabs_item_third');
+
+	switch(choice) {
+		case 1:
+			tabFirst.style.display = 'block';
+			tabSecond.style.display = 'none';
+			tabThird.style.display = 'none';
+			tabItemFirst.classList.add('bikes-tabs__item_selected');
+			tabItemSecond.classList.remove('bikes-tabs__item_selected');
+			tabItemThird.classList.remove('bikes-tabs__item_selected');
+			break;
+		case 2:
+			tabFirst.style.display = 'none';
+			tabSecond.style.display = 'block';
+			tabThird.style.display = 'none';
+			tabItemSecond.classList.add('bikes-tabs__item_selected');
+			tabItemFirst.classList.remove('bikes-tabs__item_selected');
+			tabItemThird.classList.remove('bikes-tabs__item_selected');
+			break;
+		case 3:
+			tabFirst.style.display = 'none';
+			tabSecond.style.display = 'none';
+			tabThird.style.display = 'block';
+			tabItemThird.classList.add('bikes-tabs__item_selected');
+			tabItemFirst.classList.remove('bikes-tabs__item_selected');
+			tabItemSecond.classList.remove('bikes-tabs__item_selected');
+			break;
+	}
+}
+
+function changeColorBike(choice) {
+	let bikeFirst = document.querySelector('.bikes-list__img_first');
+	let bikeSecond = document.querySelector('.bikes-list__img_second');
+	let bikeThird = document.querySelector('.bikes-list__img_third');
+	let bikeForth = document.querySelector('.bikes-list__img_forth');
+	let bikeFifth = document.querySelector('.bikes-list__img_fifth');
+	let bikeSixth = document.querySelector('.bikes-list__img_sixth');
+
+	switch(choice) {
+		case 1:
+		bikeFirst.style.display = 'block';
+		bikeSecond.style.display = 'none';
+		bikeThird.style.display = 'none';
+		bikeForth.style.display = 'none';
+		bikeFifth.style.display = 'none';
+		bikeSixth.style.display = 'none';
+		break;
+		case 2:
+		bikeFirst.style.display = 'none';
+		bikeSecond.style.display = 'block';
+		bikeThird.style.display = 'none';
+		bikeForth.style.display = 'none';
+		bikeFifth.style.display = 'none';
+		bikeSixth.style.display = 'none';
+		break;
+		case 3:
+		bikeFirst.style.display = 'none';
+		bikeSecond.style.display = 'none';
+		bikeThird.style.display = 'block';
+		bikeForth.style.display = 'none';
+		bikeFifth.style.display = 'none';
+		bikeSixth.style.display = 'none';
+		break;
+		case 4:
+		bikeFirst.style.display = 'none';
+		bikeSecond.style.display = 'none';
+		bikeThird.style.display = 'none';
+		bikeForth.style.display = 'block';
+		bikeFifth.style.display = 'none';
+		bikeSixth.style.display = 'none';
+		break;
+		case 5:
+		bikeFirst.style.display = 'none';
+		bikeSecond.style.display = 'none';
+		bikeThird.style.display = 'none';
+		bikeForth.style.display = 'none';
+		bikeFifth.style.display = 'block';
+		bikeSixth.style.display = 'none';
+		break;
+		case 6:
+		bikeFirst.style.display = 'none';
+		bikeSecond.style.display = 'none';
+		bikeThird.style.display = 'none';
+		bikeForth.style.display = 'none';
+		bikeFifth.style.display = 'none';
+		bikeSixth.style.display = 'block';
+		break;
+	}
 }

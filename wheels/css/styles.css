@@ -94,10 +94,11 @@
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 50px; }
+  padding: 0 50px 50px; }
 
 .bikes-list__img {
-  width: 400px; }
+  width: 400px;
+  border: 2px solid #4263ee; }
 
 .bikes-btn-wrap {
   display: -webkit-box;
@@ -141,7 +142,7 @@
 .bikes-tabs__item {
   display: inline-block;
   margin-right: 10px;
-  padding: 0 30px 50px 0;
+  padding: 0 30px 30px 0;
   font-size: 24px;
   cursor: pointer; }
   .bikes-tabs__item_selected {
@@ -164,6 +165,44 @@
   margin-bottom: 30px;
   color: #4263ee;
   font-weight: 600; }
+
+.bikes-features__table {
+  border-collapse: collapse;
+  line-height: 52px; }
+.bikes-features__data {
+  position: relative;
+  margin-left: 60px; }
+  .bikes-features__data_frame::before, .bikes-features__data_fork::before, .bikes-features__data_front::before, .bikes-features__data_tires::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -60px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/icons/frame.svg) no-repeat; }
+  .bikes-features__data_fork::before {
+    background: url(../img/icons/fork.svg) no-repeat; }
+  .bikes-features__data_front::before {
+    background: url(../img/icons/front.svg) no-repeat; }
+  .bikes-features__data_tires::before {
+    background: url(../img/icons/tires.svg) no-repeat; }
+  .bikes-features__data_bold {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 800; }
+
+.bikes-table {
+  border-collapse: collapse; }
+  .bikes-table__row:nth-child(odd) {
+    background-color: rgba(200, 200, 200, 0.5); }
+  .bikes-table__row:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.6); }
+  .bikes-table__data {
+    padding: 5px 10px;
+    border: 2px solid #3b3b3b; }
+    .bikes-table__data_bold {
+      width: 125px;
+      font-weight: 800; }
 
 * {
   margin: 0;
@@ -420,6 +459,11 @@ button {
     letter-spacing: 2.25px; }
   .sticky-nav__link {
     padding: 10px 0; }
+    .sticky-nav__link_selected {
+      color: #ffd700;
+      cursor: default !important; }
+      .sticky-nav__link_selected:hover {
+        color: #3b3b3b !important; }
     .sticky-nav__link:hover {
       color: #ffd700;
       cursor: pointer;
@@ -447,7 +491,8 @@ button {
 .about_us {
   padding: 40px 0 60px; }
   .about_us__subtitle {
-    position: relative; }
+    position: relative;
+    margin-bottom: 70px; }
     .about_us__subtitle::after {
       position: absolute;
       content: "";
@@ -460,7 +505,7 @@ button {
       background: url(../img/icons/bike.png) no-repeat; }
   .about_us__text {
     max-width: 1340px;
-    margin: 70px auto 0;
+    margin: 0 auto;
     letter-spacing: 1.75px; }
 
 .statisctics-section {
