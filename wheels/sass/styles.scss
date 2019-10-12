@@ -235,7 +235,7 @@ button {
   &__link {
     padding: 10px 0;
     &_selected {
-      color: $color-hover;
+      color: $color-hover!important;
       cursor: default !important;
        &:hover {
         color: $color-text !important;
@@ -278,6 +278,7 @@ button {
   &__text {
     max-width: 1340px;
     margin: 0 auto;
+    line-height: 24px;
     letter-spacing: $spacing-text;
   }
 }
@@ -587,9 +588,9 @@ button {
   top: 0;
   left: 50%;
   z-index: 110;
-  width: 800px;
-  height: 500px;
-  margin: 75px auto 0;
+  width: 60%;
+  height: 70%;
+  margin: 50px auto 0;
   transform: translateX(-50%);
   &__iframe {
     display: block;
@@ -636,3 +637,4 @@ button {
   }
 }
 
+@import "media";
