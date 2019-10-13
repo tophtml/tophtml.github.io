@@ -77,7 +77,7 @@
 		@extend .section;
 	}
 	.bikes {
-		max-width: 300px;
+		max-width: 305px;
 		&__img {
 			font-size: $fsize-subtitle1200;
 		}
@@ -115,6 +115,15 @@
 		&__item {
 			font-size: $fsize-text;
 		}
+	}
+	.bikes-list {
+		margin: 0 10px !important;
+	}
+	.bikes-list-content {
+		padding: 0 20px;
+	}
+	.bikes__price.bikes-content__price {
+		font-size: $fsize-title320 !important;
 	}
 }
 
@@ -283,8 +292,9 @@
 		font-size: $fsize-title320;
 	}
 	.header-section {
+		height: 100vh;
 		background-position: -75px 125px;
-		background-size: 120% 100%;
+		background-size: 180% 80%;
 	}
 	.header {
 		position: fixed;
@@ -292,7 +302,7 @@
 		width: 100%;
 		margin-left: -5px;
 		padding: 10px;
-		background: rgba(0,0,0,0.5);
+		background: rgba(0,0,0,0.7);
 		z-index: 90;
 		&__logo {
 			font-size: $fsize-title996;
@@ -306,7 +316,53 @@
 			&::before {
 				left: -32px;
 			}
+			&:hover::before {
+				background-image: url(../img/icons/bike-burger.svg);
+			}
+			&:hover .nav-main__btn {
+			border-top-color: $color-header;
+			border-bottom-color: $color-header;
+				&::before {
+					background-color: $color-header !important;
+				}
+			}
 		}
+		&__btn:hover::before  {
+			background-color: $color-header !important;
+		}
+	}
+	.burger {
+		position: fixed;
+		top: 50px;
+		width: 112vw;
+		height: 100vh;
+		margin-top: -4px;
+		background-color: rgba(0,0,0,0.7);
+		&__list {
+			position: absolute;
+			top: 0;
+			right: 7%;
+			margin-top: 5px;
+		}
+		&__item {
+			margin-bottom: 15px;
+		}
+	}
+	.open-burger {
+		animation-duration: 15s;
+  		animation-fill-mode: forwards;
+  		animation-timing-function: ease-in-out;
+	}
+		@keyframes openBurger {
+	 0% {
+	    margin-right: 10px;
+	  }
+	  8%,70% {
+	    margin-right: 40px;
+	  }
+	  100% {
+	    margin-right: 30px;
+	}
 	}
 	@keyframes moveMenu {
 	  0% {
@@ -326,6 +382,7 @@
 			text-align: center;
 		}
 		&__text {
+			margin: 20px auto 0;
 			font-size: $fsize-text;
 			text-align: center;
 		}
@@ -436,10 +493,13 @@
 			      top: 0;
 			      left: 0;
 			      width: 100%;
-			      height: 100%;
+			      height: 98%;
 			      background-color: rgba(0,0,0,0.2);
 			      z-index: 1;
 			}
+			&:hover::after {
+				height: 98%;
+			}	
 			&_name {
 				opacity: 1;
 				font-size: $fsize-subtitle1200;
@@ -497,6 +557,26 @@
 		width: 50%;
 		margin-bottom: 10px;
 	}
-
-
+	.modal {
+		width: 90%;
+		padding: 40px 20px; 
+		&__text {
+			margin-bottom: 20px;
+			font-size: $fsize-subtitle1200;
+			line-height: 30px;
+		}
+		&__btn {
+			padding: 10px 40px;
+			font-size: $fsize-subtitle1200;
+		}
+	}
+	.modal-product {
+		width: 90%;
+	}
+	.modal-map {
+		width: 90%;
+	}
+	.bikes-list {
+		margin: 0 10px;
+	}
 }

@@ -949,7 +949,7 @@ button {
   .numbers__item {
     font-size: 20px; }
   .bikes {
-    max-width: 300px; }
+    max-width: 305px; }
     .bikes__img {
       font-size: 16px; }
     .bikes__price, .bikes__img {
@@ -965,7 +965,13 @@ button {
   .contact-inner-wrap {
     margin: 60px 0 0 0; }
   .contact-links__item {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .bikes-list {
+    margin: 0 10px !important; }
+  .bikes-list-content {
+    padding: 0 20px; }
+  .bikes__price.bikes-content__price, .bikes-content__price.bikes__img {
+    font-size: 20px !important; } }
 
 @media (max-width: 997px) {
   .title, .article__title, .bikes-list__title, .article__inner-title, .about_us__title, .statisctics__title, .products__title, .team__title, .members__name, .blog__title, .contact__title, .modal-product__name {
@@ -1083,15 +1089,16 @@ button {
   .title, .article__title, .bikes-list__title, .article__inner-title, .about_us__title, .statisctics__title, .products__title, .team__title, .members__name, .blog__title, .contact__title, .modal-product__name {
     font-size: 20px; }
   .header-section {
+    height: 100vh;
     background-position: -75px 125px;
-    background-size: 120% 100%; }
+    background-size: 180% 80%; }
   .header {
     position: fixed;
     top: 0;
     width: 100%;
     margin-left: -5px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 90; }
     .header__logo, .sticky_menu__logo {
       font-size: 22px; }
@@ -1102,6 +1109,50 @@ button {
       font-size: 0; }
       .nav-main__name::before {
         left: -32px; }
+      .nav-main__name:hover::before {
+        background-image: url(../img/icons/bike-burger.svg); }
+      .nav-main__name:hover .nav-main__btn {
+        border-top-color: #ededed;
+        border-bottom-color: #ededed; }
+        .nav-main__name:hover .nav-main__btn::before {
+          background-color: #ededed !important; }
+    .nav-main__btn:hover::before {
+      background-color: #ededed !important; }
+  .burger {
+    position: fixed;
+    top: 50px;
+    width: 112vw;
+    height: 100vh;
+    margin-top: -4px;
+    background-color: rgba(0, 0, 0, 0.7); }
+    .burger__list {
+      position: absolute;
+      top: 0;
+      right: 7%;
+      margin-top: 5px; }
+    .burger__item {
+      margin-bottom: 15px; }
+  .open-burger {
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+  @-webkit-keyframes openBurger {
+    0% {
+      margin-right: 10px; }
+    8%, 70% {
+      margin-right: 40px; }
+    100% {
+      margin-right: 30px; } }
+  @keyframes openBurger {
+    0% {
+      margin-right: 10px; }
+    8%, 70% {
+      margin-right: 40px; }
+    100% {
+      margin-right: 30px; } }
   @-webkit-keyframes moveMenu {
     0% {
       margin-right: 10px; }
@@ -1122,6 +1173,7 @@ button {
       font-size: 20px;
       text-align: center; }
     .banner__text {
+      margin: 20px auto 0;
       font-size: 14px;
       text-align: center; }
   .sticky_menu {
@@ -1202,9 +1254,11 @@ button {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 98%;
       background-color: rgba(0, 0, 0, 0.2);
       z-index: 1; }
+    .blog-article__img:hover::after {
+      height: 98%; }
     .blog-article__img_name {
       opacity: 1;
       font-size: 16px; }
@@ -1251,4 +1305,20 @@ button {
     -ms-flex-order: -2;
     order: -2;
     width: 50%;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .modal {
+    width: 90%;
+    padding: 40px 20px; }
+    .modal__text {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 30px; }
+    .modal__btn, .modal-map__btn {
+      padding: 10px 40px;
+      font-size: 16px; }
+  .modal-product {
+    width: 90%; }
+  .modal-map {
+    width: 90%; }
+  .bikes-list {
+    margin: 0 10px; } }
