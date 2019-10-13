@@ -23,6 +23,7 @@
 		font-size: 24px;
 		font-weight: $semi-bold;
 		font-style: italic;
+		line-height: 26px;
 	}
 	&__date {
 		display: inline-block;
@@ -32,10 +33,11 @@
 		vertical-align: top;
 		font-weight: $semi-bold;
 		font-style: italic;
+		line-height: 26px;
 	}
 	&__inner-title {
 		@extend .title;
-		font-size: 24px !important;
+		font-size: 24px;
 	}
 	&__text {
 		padding-bottom: 10px;

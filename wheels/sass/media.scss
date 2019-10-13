@@ -116,17 +116,65 @@
 			font-size: $fsize-text;
 		}
 	}
-	.bikes-list {
-		margin: 0 10px !important;
+	.article {
+		margin: 0 120px;
+		&__title {
+			padding: 20px 0;
+		}
+		&__inner-title {
+			font-size: $fsize-title996;
+		}
+		&__subtitle {
+			max-width: 500px;
+			margin-left: 0;
+			padding-left: 40px;
+			font-size: $fsize-subtitle;
+		}
+		&__date {
+			margin-right: 0;
+			padding-right: 40px;
+		}
+		&__text {
+			font-size: $fsize-subtitle1200;
+		}
 	}
-	.bikes-list-content {
-		padding: 0 20px;
+	.article-fashion_img,
+	.article-fashion_img,
+	.article-fashion_img {
+		max-width: 300px;
+	}
+	.bikes-list {
+		margin: 0 25px;
+	}
+	.bikes-list-content,
+	.content-wrap {
+		padding: 20px 40px;
+	}
+	.bikes-description {
+		width: 60%;
+	}
+	.bikes-list__img {
+		max-width: 300px;
+		margin-right: 15px;
 	}
 	.bikes__price.bikes-content__price {
-		font-size: $fsize-title320 !important;
+		font-size: $fsize-title320;
+	}
+	.bikes-tabs__item {
+		padding-right: 10px;
+		font-size: $fsize-subtitle;
+	}
+	.bikes-content__text {
+		font-size: $fsize-subtitle1200;
+	}
+	.bikes-table {
+		font-size: $fsize-subtitle1200;
+	}
+	.contact .contact-inner-wrap {
+		margin-top: 60px;
 	}
 }
-
+		
 @media (max-width: 997px) {
 	.title {
 		font-size: $fsize-title996;
@@ -262,9 +310,9 @@
 	}
 	.contact-social {
 		width: 25%;
-	&__title {
-		font-size: $fsize-text;
-	}
+		&__title {
+			font-size: $fsize-text;
+		}
 	}
 	.social {
 		text-align: center;
@@ -279,7 +327,67 @@
 	.contact-map {
 		width: 20%;
 	}
-}
+	.content-wrap {
+		padding: 10px 40px 20px;
+	}
+	.article {
+		margin: 0 20px;
+		&__inner-title {
+			font-size: $fsize-title320;
+		}
+		&__subtitle {
+			max-width: 400px;
+			font-size: $fsize-subtitle1200;
+		}
+		&__text {
+			line-height: 34px;
+		}
+	}
+	.article-manchester_first,
+	.article-autumn_first,
+	.article-trip_first,
+	.article-fasion_first {
+		max-width: 220px;
+	}
+	.article-manchester_second,
+	.article-autumn_second,
+	.article-autumn_third,
+	.article-trip_second {
+		max-width: 380px;
+	}
+	.article-fashion_img,
+	.article-fashion_img,
+	.article-fashion_img {
+		max-width: 280px;
+	}
+	.blog-article {
+		width: 32%;
+	}
+	.bikes-list-content {
+		margin: 0 20px;
+		padding: 20px 20px;
+	}
+	.bikes-list__title,
+	.article__title {
+		padding: 30px 0 10px;
+	}
+	.bikes-img-wrap {
+		width: 100%;
+	}
+	.bikes-description {
+		width: 100%;
+	}
+	.bikes-list__img {
+		margin: 0 auto;
+	}
+	.bikes-tabs__item {
+		padding-bottom: 15px;
+	}
+	.bikes-content {
+		margin-bottom: 10px;
+	}
+}	
+
 @media (max-width: 767px) {
 	*:focus,
 	*:active {
@@ -541,13 +649,14 @@
 		}
 	}
 	.social {
-		text-align: center;
+		text-align: left;
 		&__link {
 			margin-right: 15px;
+			padding-left: 0;
 			&::after {
 				width: 15px;
 				height: 15px;
-				left: -15px;
+				left: 0;
 				margin: 0 auto;
 			}
 		}	
@@ -576,7 +685,105 @@
 	.modal-map {
 		width: 90%;
 	}
-	.bikes-list {
-		margin: 0 10px;
+	.article {
+		margin: 0 -5px;
+		&__title {
+			font-size: $fsize-title320;
+		}
+		&__inner-title {
+			font-size: $fsize-subtitle;
+		}
+		&__subtitle {
+			max-width: 400px;
+			font-size: $fsize-subtitle;
+		}
+		&__date {
+			font-size: 12px;
+		}
+		&__text {
+			font-size: $fsize-subtitle1200;
+		}
 	}
+	.article-manchester_first,
+	.article-autumn_first,
+	.article-trip_first,
+	.article-fasion_first {
+		float: left;
+		max-width: 160px;
+		margin: 0 15px 0 0;		
+	}
+	.article-manchester_second,
+	.article-autumn_second,
+	.article-autumn_third,
+	.article-trip_second {
+		display: block;
+		float: none;
+		max-width: 100%;
+		margin: 5px auto;
+	}
+	.article-fashion_img,
+	.article-fashion_img,
+	.article-fashion_img {
+		max-width: 220px;
+	}
+	.article-list-box {
+		margin: 10px 0 0;
+	}
+	.blog-article {
+		width: 31%;
+	}
+	.bikes-list {
+		margin: 0 -5px 0;
+		&__title {
+			font-size: $fsize-title320;
+			padding: 20px 0;
+		}
+	}
+	.bikes-list-content {
+		margin: 0;
+		padding: 0 5px;
+	}
+	.bikes-tabs__list {
+		@include flexsb;
+		font-size: 0;
+	}
+	.bikes-tabs__item {
+		padding: 0 0 10px;
+    	font-size: 13px;
+	}
+	.bikes-content {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		&__text {
+			text-align: justify;
+			font-size: $fsize-text;
+			line-height: 30px;
+		}
+	}
+	.bikes-description .bikes__price {
+		font-size: $fsize-subtitle1200;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.bikes-features__table {
+		font-size: $fsize-text;
+	}
+	.bikes-table {
+		margin-bottom: 10px;
+		font-size: $fsize-text;
+		line-height: 30px;
+	}
+	.contact .contact-inner-wrap {
+		margin-top: 20px;
+	}
+	.blog-wrap {
+		background-position: 75% 65%;
+	}
+	.content-wrap {
+		margin: 25px 0 0;
+		padding: 10px 5px;
+	}
+	
+
+
 }
