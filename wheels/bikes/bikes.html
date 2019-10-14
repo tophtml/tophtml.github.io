@@ -10,6 +10,38 @@
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+	<div class="header-inner-wrap hidden">
+		<div class="header header-inner">
+			<h1 class="header__logo header-inner__logo">Wheels</h1>
+			<nav class="nav-main">
+				<span class="nav-main__name" onclick="openBurger()">Menu
+					<button class="nav-main__btn" arial-label="burger-menu"></button>
+				</span>
+				<div class="burger burger-inner hidden">
+					<ul class="burger__list">
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#home-link" class="burger__link">Home</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#about_us-link" class="burger__link">About us</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#products-link" class="burger__link">Products</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#team-link" class="burger__link">Our team</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#blog-link" class="burger__link">Blog</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#contact-link" class="burger__link">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
 	<div class="sticky_menu-section">
 		<div class="container">
 			<div class="sticky_menu">
@@ -43,7 +75,7 @@
 			<div class="bikes-list-wrap">
 				<div class="container">
 					<div class="bikes-list">
-						<h1 class="bikes-list__title">Wheels for you</h1>
+						<h2 class="bikes-list__title">Wheels for you</h2>
 						<div class="bikes-list-content">
 							<div class="bikes-img-wrap">
 								<div class="bikes-list__img bikes-list__img_first" onclick="showBigImg(1)">

@@ -10,6 +10,41 @@
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+	<div class="header-inner-wrap hidden">
+		<div class="header header-inner">
+			<h1 class="header__logo header-inner__logo">Wheels</h1>
+			<nav class="nav-main">
+				<span class="nav-main__name" onclick="openBurger()">Menu
+					<button class="nav-main__btn" arial-label="burger-menu"></button>
+				</span>
+				<div class="burger burger-inner hidden">
+					<ul class="burger__list">
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#home-link" class="burger__link">Home</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#about_us-link" class="burger__link">About us</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#products-link" class="burger__link">Products</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../bikes/bikes.html" class="burger__link">Shop</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#team-link" class="burger__link">Our team</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#blog-link" class="burger__link">Blog</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#contact-link" class="burger__link">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
 	<div class="sticky_menu-section">
 		<div class="container">
 			<div class="sticky_menu">
@@ -44,7 +79,7 @@
 			<div class="article-wrap">
 				<div class="container">
 					<div class="article">
-						<h1 class="article__title">Manchester's country</h1>
+						<h2 class="article__title">Manchester's country</h2>
 						<p class="article__subtitle">If you are tired of living in a big city, take the wheels and enjoy the countryside</p>
 						<time class="article__date" datetime="2019-06-24">June 24, 2019</time>
 						<div class="content-wrap">
@@ -67,7 +102,7 @@
 		<aside class="artilces-list-section">
 			<div class="container">
 				<div class="article-list-box">
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="autumn-trip.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_second.jpg" alt="Article-blog">
@@ -75,7 +110,7 @@
 							</figure>
 						</a>
 					</article>
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="what-I-take-to-a-trip.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_third.jpg" alt="Article-blog">
@@ -83,7 +118,7 @@
 							</figure>
 						</a>
 					</article>
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="fashion.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_forth.jpg" alt="Article-blog">

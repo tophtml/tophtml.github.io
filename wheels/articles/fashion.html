@@ -10,6 +10,41 @@
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+	<div class="header-inner-wrap hidden">
+		<div class="header header-inner">
+			<h1 class="header__logo header-inner__logo">Wheels</h1>
+			<nav class="nav-main">
+				<span class="nav-main__name" onclick="openBurger()">Menu
+					<button class="nav-main__btn" arial-label="burger-menu"></button>
+				</span>
+				<div class="burger burger-inner hidden">
+					<ul class="burger__list">
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#home-link" class="burger__link">Home</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#about_us-link" class="burger__link">About us</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#products-link" class="burger__link">Products</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../bikes/bikes.html" class="burger__link">Shop</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#team-link" class="burger__link">Our team</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#blog-link" class="burger__link">Blog</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#contact-link" class="burger__link">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
 	<div class="sticky_menu-section">
 		<div class="container">
 			<div class="sticky_menu">
@@ -44,7 +79,7 @@
 			<div class="article-wrap">
 				<div class="container">
 					<div class="article">
-						<h1 class="article__title">Bike's fashion</h1>
+						<h2 class="article__title">Bike's fashion</h2>
 						<p class="article__subtitle">Do you want to be on a top of bike fashion? This article for you</p>
 						<time class="article__date" datetime="2019-09-07">September 07, 2019</time>
 						<div class="content-wrap">
@@ -52,17 +87,17 @@
 								<img src="../img/blog/fashion_in_city.png" alt="Charlton lake">
 							</div>
 							<p class="article__text">Propelled by the advancing popularity of transit and urban riding, along with an ever-broadening definition of how bicycles fit into our daily lives, clothing makers are throwing the boundaries of cycling’s sartorial territory wide open—a tailored pencil skirt unzips to reveal a gusset for easy pedaling, a rear zip pocket finds common ground with a shirt collar and covered button placket. With so many options, everybody wins in the race for personal self-expression. Don't think that fashion is only about bikes. Of course bike is a good thing, but there is something else. Clothes. Yes, clothes is really important for you when you ride the bike in the twenty first century and especially when we talk about England. It's a place where clothes can talk a lot about you and your personality.  Let's look at the most popular styles of fashion and find out trends for today and for future.</p>
-							<h2 class="article__inner-title">Minimalism</h2>
+							<h3 class="article__inner-title">Minimalism</h3>
 							<div class="article__img article-fashion_img">
 								<img src="../img/blog/men-fashion.jpg" alt="Casual and bikes">
 							</div>
 							<p class="article__text">The most refined designs are less about what is added than about how much has been subtracted. For decades, bold graphics and bright colors defined the image of road cycling, but the new minimalist aesthetic whittles away everything but the essentials of performance and comfort. In the pursuit of design purity, fine knits, muted solids, and subtle touches, such as hidden vents at the collarbones or stylish quilt stitching at the shoulder, speak louder than logos—and permit a discreet and seamless transition from the road to daily modern living.</p>
-							<h2 class="article__inner-title">Women's fashion</h2>
+							<h3 class="article__inner-title">Women's fashion</h3>
 							<div class="article__img article-fashion_img">
 								<img src="../img/blog/women-fashion.jpg" alt="Women's fashion">
 							</div>
 							<p class="article__text">Ruled in recent years by the impulse to “pink it and shrink it,” women’s riding apparel is reclaiming the innovative spirit that fueled a fashion revolution during the first golden age of bicycling more than a century ago. (Women seeking an alternative to skirts drove the popularity of bloomers, as the pants were called.) Young, often-urban entrepreneurs who are largely independent of the mainstream cycling industry are creating stylish and practical solutions to challenges they themselves encounter, from achieving flattering, day-into-night versatility to maintaining safety and visibility in traffic. For many, growing a business also means building a movement to attract more women to cycling's freedom, fitness, and fun.</p>
-							<h2 class="article__inner-title">Classic's forever</h2>
+							<h3 class="article__inner-title">Classic's forever</h3>
 							<div class="article__img article-fashion_img">
 								<img src="../img/blog/suit_and_bike.jpg" alt="Classics forever">
 							</div>
@@ -75,7 +110,7 @@
 		<aside class="artilces-list-section">
 			<div class="container">
 				<div class="article-list-box">
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="manchester-country.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_first.jpg" alt="Article-blog">
@@ -83,7 +118,7 @@
 							</figure>
 						</a>
 					</article>
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="autumn-trip.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_second.jpg" alt="Article-blog">
@@ -91,7 +126,7 @@
 							</figure>
 						</a>
 					</article>
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="what-I-take-to-a-trip.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_third.jpg" alt="Article-blog">

@@ -10,6 +10,41 @@
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+	<div class="header-inner-wrap hidden">
+		<div class="header header-inner">
+			<h1 class="header__logo header-inner__logo">Wheels</h1>
+			<nav class="nav-main">
+				<span class="nav-main__name" onclick="openBurger()">Menu
+					<button class="nav-main__btn" arial-label="burger-menu"></button>
+				</span>
+				<div class="burger burger-inner hidden">
+					<ul class="burger__list">
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#home-link" class="burger__link">Home</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#about_us-link" class="burger__link">About us</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#products-link" class="burger__link">Products</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../bikes/bikes.html" class="burger__link">Shop</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#team-link" class="burger__link">Our team</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#blog-link" class="burger__link">Blog</a>
+						</li>
+						<li class="burger__item burger-inner__item">
+							<a href="../index.html#contact-link" class="burger__link">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
 	<div class="sticky_menu-section">
 		<div class="container">
 			<div class="sticky_menu">
@@ -44,7 +79,7 @@
 			<div class="article-wrap">
 				<div class="container">
 					<div class="article">
-						<h1 class="article__title">Autumn jorney</h1>
+						<h2 class="article__title">Autumn jorney</h2>
 						<p class="article__subtitle">Autumn is the best season for a great jorney, Everything is gold and red. Is it the most amazing time in the year?</p>
 						<time class="article__date" datetime="2019-10-09">October 09, 2019</time>
 						<div class="content-wrap">
@@ -56,7 +91,7 @@
 								<img src="../img/blog/highway.jpg" alt="Highway in autumn">
 							</div>
 							<p class="article__text">Rides can be punctuated by the chance to stop and pick blackberries - or collect bags of apple and plum windfalls left out for passersby at the roadside. Soon, there will also be chestnuts and beech nuts. Roadside larders such as the one below are abundant with produce in return for a contribution to the honesty box. One of the many joys of being on a bike is being able to spot and stop spontaneously for such delights, as long as you are forearmed with something to carry them home in without their being squashed!</p>
-							<h2 class="article__inner-title">Sights, smells and sounds of the changing seasons</h2>
+							<h3 class="article__inner-title">Sights, smells and sounds of the changing seasons</h3>
 							<p class="article__text">In some areas, the leaves are starting to change colour, heralding the spectacular displays of foliage we'll be admiring in the days ahead. Familiar scenery is transformed by autumn tints, while areas that are normally too boggy and damp for riding off-road might still be dry. Harvests are already being gathered in, gigantic machines suddenly roaring into life above the hedgerows, leaving massive hay bales in their wake and easy pickings for the soon-to-be-departing flocks of birds. A sense of things coming to a close pervades the atmosphere and the smell of woodsmoke enhances the feeling that the Northern Hemisphere is beginning to tilt into the shadow of the sun again. For cyclists and mountain bikers, who are closely attuned to the seasons and the changing landscapes, autumn is a truly special time of year: sights, sounds and smells are intensified against the backdrop of darkening skies.</p>
 							<div class="article__img article-autumn_third">
 								<img src="../img/blog/england_autumn.jpg" alt="England autumn">
@@ -71,7 +106,7 @@
 		<aside class="artilces-list-section">
 			<div class="container">
 				<div class="article-list-box">
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="manchester-country.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_first.jpg" alt="Article-blog">
@@ -79,7 +114,7 @@
 							</figure>
 						</a>
 					</article>
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="what-I-take-to-a-trip.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_third.jpg" alt="Article-blog">
@@ -87,7 +122,7 @@
 							</figure>
 						</a>
 					</article>
-					<article class="blog-article">
+					<article class="blog-article blog-article-inner">
 						<a class="blog-article__link" href="fashion.html">
 							<figure class="blog-article__img">
 								<img src="../img/blog_forth.jpg" alt="Article-blog">

@@ -995,9 +995,12 @@ button {
     padding: 20px 40px; }
   .bikes-description {
     width: 60%; }
+  .bikes-list__img .bikes__img {
+    margin: 0; }
   .bikes-list__img {
-    max-width: 300px;
-    margin-right: 15px; }
+    max-width: 280px;
+    margin-right: 15px;
+    padding: 0 2px; }
   .bikes__price.bikes-content__price, .bikes-content__price.bikes__img {
     font-size: 20px; }
   .bikes-tabs__item {
@@ -1141,7 +1144,7 @@ button {
   .article-fashion_img,
   .article-fashion_img {
     max-width: 280px; }
-  .blog-article {
+  .blog-article-inner {
     width: 32%; }
   .bikes-list-content {
     margin: 0 20px;
@@ -1167,6 +1170,8 @@ button {
     padding: 0 5px 0; }
   .title, .article__title, .bikes-list__title, .article__inner-title, .about_us__title, .statisctics__title, .products__title, .team__title, .members__name, .blog__title, .contact__title, .modal-product__name {
     font-size: 20px; }
+  .header-inner-wrap {
+    display: block; }
   .header-section {
     height: 100vh;
     background-position: -75px 125px;
@@ -1181,6 +1186,12 @@ button {
     z-index: 90; }
     .header__logo, .sticky_menu__logo {
       font-size: 22px; }
+  .header-inner {
+    margin-left: 0;
+    color: #ededed;
+    background: rgba(0, 0, 0, 0.5); }
+    .header-inner__logo {
+      color: #ededed; }
   .nav-main {
     width: 40px;
     margin-right: 10px; }
@@ -1211,6 +1222,10 @@ button {
       margin-top: 5px; }
     .burger__item {
       margin-bottom: 15px; }
+  .burger-inner {
+    background: rgba(0, 0, 0, 0.5); }
+    .burger-inner__item {
+      color: #ededed; }
   .open-burger {
     -webkit-animation-duration: 15s;
     animation-duration: 15s;
@@ -1401,8 +1416,11 @@ button {
   .modal-map {
     width: 90%; }
   .article, .bikes-list {
-    margin: 0 -5px; }
+    margin: 0 -5px;
+    padding: 45px 0 0; }
     .article__title, .bikes-list__title {
+      padding-right: 5px;
+      padding-left: 5px;
       font-size: 20px; }
     .article__inner-title {
       font-size: 18px; }
@@ -1434,10 +1452,14 @@ button {
     max-width: 220px; }
   .article-list-box {
     margin: 10px 0 0; }
-  .blog-article {
+  .blog-article-inner {
     width: 31%; }
+  .blog-article-inner .blog-article__img_name {
+    padding: 0 2px;
+    font-size: 10px; }
   .bikes-list {
-    margin: 0 -5px 0; }
+    margin: 0 -5px 0;
+    padding-top: 45px; }
     .bikes-list__title {
       font-size: 20px;
       padding: 20px 0; }
@@ -1450,9 +1472,9 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-size: 0; }
   .bikes-tabs__item {
     padding: 0 0 10px;
@@ -1477,7 +1499,8 @@ button {
   .contact .contact-inner-wrap {
     margin-top: 20px; }
   .blog-wrap {
-    background-position: 75% 65%; }
+    background-position: 75% 65%;
+    background-attachment: fixed; }
   .content-wrap {
     margin: 25px 0 0;
     padding: 10px 5px; } }
