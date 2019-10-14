@@ -6,43 +6,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet/less" type="text/css" href="less/styles.less">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<header id="home-link">
 		<div class="header-section">
+			<div class="header-bg">
+				<img src="img/banner.jpg" alt="Индивидуальный пошив для взрослых и детей">
+			</div>
 			<div class="container">
-				<div class="logo">
-					<img src="img/icons/logo.svg" alt="Friends Family logo">
-					<span class="logo__title"><span class="logo__title_pink">Friends</span>Family</span>
+				<div class="header-wrap">
+					<div class="logo">
+						<div class="logo__img">
+							<img src="img/icons/logo.svg" alt="Friends Family logo">
+						</div>
+						<span class="logo__title"><span class="logo__title_pink">Friends </span>Family</span>
+					</div>
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__item main-nav__item_selected">
+								<a class="main-nav__link">Главная</a>
+							</li>
+							<li class="main-nav__item">
+								<a class="main-nav__link">Преимущества</a>
+							</li>
+							<li class="main-nav__item">
+								<a class="main-nav__link">Отзывы</a>
+							</li>
+							<li class="main-nav__item">
+								<a class="main-nav__link">Контакты</a>
+							</li>
+						</ul>
+						<button class="main-nav__btn" aria-label="Menu button" onclick="showNav()"></button>
+					</nav>
 				</div>
-				<nav class="main-nav">
-					<ul class="main-nav__list">
-						<li class="main-nav__item">
-							<a class="main-nav__link main-nav__link_selected">Главная</a>
-						</li>
-						<li class="main-nav__item">
-							<a class="main-nav__link">Преимущества</a>
-						</li>
-						<li class="main-nav__item">
-							<a class="main-nav__link">Отзывы</a>
-						</li>
-						<li class="main-nav__item">
-							<a class="main-nav__link">Контакты</a>
-						</li>
-					</ul>
-					<button class="main-nav__btn" aria-label="Menu button"></button>
-				</nav>
 				<div class="banner">
-					<div class="banner-left">
-						<h1 class="banner__title">Ателье одежды для взрослых и детей</h1>
-						<span class="banner__features">Индивидуальный пошив.</span>
-						<p>Оставьте свой номер телефона или ссылку на VK страницу и мы с вами свяжемся.</p>
-						<a href="#" class="banner__btn">Оставить контакты</a>
-					</div>
-					<div class="banner-right">
-						<img src="img/banner.jpg" alt="Индивидуальный пошив для взрослых и детей">
-					</div>
+					<h1 class="banner__title">Ателье одежды для&nbsp;взрослых и детей</h1>
+					<span class="banner__features">Индивидуальный пошив</span>
+					<p class="banner__text">Оставьте свой номер телефона или ссылку на VK страницу и мы с вами свяжемся.</p>
+					<a href="#" class="banner__btn" onclick="showModalCall()">Оставить контакты</a>
 				</div>
 			</div>
 		</div>
@@ -205,6 +207,7 @@
 			<form enctype="multipart/form-data" method="POST">
 				<input class="modal-callback__name" type="text" name="name" placeholder="Ваше имя">
 				<input class="modal-callback__tel" type="tel" name="tel" placeholder="Ваше телефон">
+				<input class="modal-callback__id" type="text" name="id_vk" placeholder="Ваш id в VK">
 				<button type="submit" class="modal-callback__btn contacts-form__btn">Перезвонить мне</button>
 			</form>
 		</div>
