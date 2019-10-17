@@ -1,0 +1,39 @@
+.decor-font() {
+		display: inline-block;
+		color: #ff5b97;
+		font-family: @decor-font;
+		font-size: 36px;
+	}
+
+.title() {
+		font-family: @bold-font;
+		font-size: 30px;
+		line-height: 36px;
+	}
+.button() {
+		display: block;
+		width: 200px;
+		padding: 20px 32px;
+		border: 1px solid #000000;
+		font-family: @bold-font;
+		font-size: @f-size-small;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.12px;
+		backfround: transparent;
+		cursor: pointer;
+	}
+
+.button-hover() {
+	border: 1px solid transparent;
+	color: #ffffff;
+	background: @color-hover;
+	box-shadow: 0 0 2px @color-hover;
+	transition: @transition-hover;
+}
+
+.flexsb() {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

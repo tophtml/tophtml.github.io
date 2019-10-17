@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_mixins";
 @import "_media";
 
 @font-face {
@@ -59,19 +60,17 @@ a {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-
-
 .header-section {
 	position: relative;
 	min-height: 900px;
-	height: 100vh;
 }
 .header-bg {
 	position: absolute;
-	width: 50%;
 	top: 0;
-	right: 0;
-	z-index:-1;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	background: url(../img/banner.jpg) no-repeat;
 }
 .header-wrap {
 	.flexsb;
@@ -158,35 +157,252 @@ a {
 		line-height: 40px;
 	}
 	&__features {
-		display: inline-block;
-		margin: 50px 0 40px;
-		color: #ff5b97;
-		font-family: @decor-font;
+		.decor-font;
 		font-size: 44px;
+		margin: 50px 0 40px;
 	}
 	&__text {
 		max-width: 320px;
 		margin-bottom: 55px;
 	}
 	&__btn {
-		display: block;
-		width: 200px;
+		.button();
 		margin-right: auto;
-		padding: 20px 32px;
-		border: 1px solid #000000;
-		font-family: @bold-font;
-		font-size: @f-size-small;
-		text-align: center;
-		text-transform: uppercase;
-		letter-spacing: 0.12px;
-		backfround: transparent;
-		cursor: pointer;
 		&:hover {
-			border: 1px solid transparent;
-			color: #ffffff;
-			background: @color-hover;
-			box-shadow: 0 0 2px @color-hover;
-			transition: @transition-hover;
+			.button-hover()
 		}
 	}
 }
+.unique-design-section {
+	position: relative;
+	min-height: 900px;
+}
+.unique-design-bg{
+	position: absolute;
+	top: 0;
+	right: 50%;
+	width: 50%;
+	height: 100%;
+	background: url(../img/unique-design.jpg) no-repeat;
+}
+.unique-design {
+	max-width: 405px;
+	margin-left: auto;
+	padding: 235px 0 5px;
+	text-align: right;
+	&__features {
+		.decor-font();
+		margin-bottom: 22px;
+	}
+	&__title {
+		.title();
+		margin-bottom: 92px;
+	}
+	&__text {
+		display: inline-block;
+		max-width: 347px;
+		margin-bottom: 25px;
+	}
+	&__btn {
+		.button();
+		margin-left: auto;
+		&:hover {
+		.button-hover();
+		}
+	}
+}
+.sewing-section {
+	position: relative;
+	min-height: 900px;
+}
+.sewing-bg {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	background: url(../img/sewing.jpg) no-repeat;
+}
+.sewing {
+	max-width: 430px;
+	margin-right: auto;
+	padding: 235px 0 5px;
+	&__features {
+		.decor-font();
+		margin-bottom: 22px;
+	}
+	&__title {
+		.title();
+		margin-bottom: 92px;
+	}
+	&__text {
+		display: inline-block;
+		max-width: 375px;
+		margin-bottom: 25px;
+	}
+	&__btn {
+		.button();
+		margin-right: auto;
+		&:hover {
+			.button-hover();
+		}
+	}
+}
+.work-process-section {
+	padding: 180px 0 55px;
+	text-align: center;
+}
+.work-process-row1 {
+	.flexsb();
+	max-width: 965px;
+	margin: 170px auto 0;
+}
+.work-process-row2 {
+	.flexsb();
+	max-width: 965px;
+	margin: 0 auto;
+}
+.work-process {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 165px;
+	margin: 0 0 165px 0;
+	&::before {
+		position: absolute;
+		content: "";
+		top: -80px;
+		left: 50%;
+		width: 58px;
+		height: 53px;
+		transform: translateX(-50%);
+	}
+	&_first::before {
+		background: url(../img/icons/notepad.png) no-repeat;
+	}
+	&_second::before {
+		background: url(../img/icons/weight-loss.png) no-repeat;
+	}
+	&_third::before {
+		background: url(../img/icons/waist.png) no-repeat;
+	}
+	&_forth::before {
+		background: url(../img/icons/towel.png) no-repeat;
+	}
+	&_fifth::before {
+		background: url(../img/icons/dress.png) no-repeat;
+	}
+	&_sixth::before {
+		background: url(../img/icons/giftbox.png) no-repeat;
+	}
+	&__main-title {
+		.title();
+		margin-bottom: 87px;
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-size: 15px;
+		font-family: @bold-font;
+	}
+	&__text {
+		font-size: 15px;
+	}
+}
+.box-section {
+	padding: 0 0 100px;
+}
+.box {
+	text-align: center;
+	&__title {
+		.title();
+		margin-bottom: 20px;
+	}
+	&__text {
+		display: inline-block;
+		max-width: 182px;
+		margin-bottom: 50px;
+		font-size: 14px;
+		font-style: italic;
+	}
+}
+.box-item-wrap {
+	.flexsb();
+}
+.box-item {
+	position:relative;
+	padding: 90px 0 24px 28px; 
+	&-left {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: right;
+		width: 32%;
+	}
+	&-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: left;
+		width: 32%;
+	}
+	&__img {
+		align-self: center;
+		width: 32%;
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-size: 15px;
+		font-family: @bold-font;
+	}
+	&__text {
+		font-size: 15px;
+		&_bold {
+			font-family: @bold-font;
+		}
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		top: 30px;
+		width: 40px;
+		height: 41px;
+	}
+	&_first::before {
+		right: 0;
+		background: url(../img/icons/hanger.png) no-repeat;
+	}
+	&_second::before {
+		right: 0;
+		background: url(../img/icons/file.png) no-repeat;
+	}
+	&_third::before {
+		left: 28px;
+		background: url(../img/icons/sweater.png) no-repeat;
+	}
+	&_forth {
+		border: 2px solid #e72867;
+		&::before {
+			left: 28px;
+			background: url(../img/icons/gift.png) no-repeat;
+		}
+	}
+}
+.delivery {
+	padding: 0 0 100px;
+	text-align: center;
+	&__title {
+	.title();
+	margin-bottom: 70px;
+	}
+}
+	
+
+
+
+
+
+
+
+
+
