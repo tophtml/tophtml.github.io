@@ -111,6 +111,7 @@ a {
 		}
 		&_selected {
 			color: #ff0a6a;
+			transition: @transition-hover;
 		}
 	}
 	&__list &__item:last-child {
@@ -169,7 +170,7 @@ a {
 		.button();
 		margin-right: auto;
 		&:hover {
-			.button-hover()
+			.button-hover();
 		}
 	}
 }
@@ -182,13 +183,18 @@ a {
 	top: 0;
 	left: 0;
 	z-index: 99;
-	margin-top: -32px;
 	&__list {
 		text-align: right;
 	}
 }
-.active {  
-	background: red;  
+.sticky-menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-left: auto;
+}
+.open-menu {
+	display: block;
 }
 .unique-design-section {
 	position: relative;
@@ -477,6 +483,8 @@ a {
 	}
 }
 .feedback-form {
+	position: relative;
+	max-width: 750px;
 	margin-left: 60px;
 	&__name {
 		.form-comment;
@@ -527,6 +535,19 @@ a {
 			.button-hover();
 		}
 	}
+}
+.help-feedback-name {
+	position: absolute;
+	top: 12px;
+	left: 210px;
+	.form-help();
+	
+}
+.help-feedback-comment {
+	position: absolute;
+	top: 55px;
+	left: 610px;
+	.form-help();
 }
 .contacts-section {
 	position: relative;
@@ -602,6 +623,7 @@ a {
 		cursor: pointer;
 		&:hover {
 			color: @color-hover;
+			transition: @transition-hover;
 		}
 		&::before {
 			position: absolute;
@@ -628,8 +650,40 @@ a {
 	display: block;
 	margin: 10px 0 30px;
 }
-
-
+.modal-feedback-overlay {
+	.overlay;
+}
+.modal-feedback {
+	.modal;
+	&__text {
+		margin-bottom: 30px;
+		line-height: 24px;
+	}
+	&__btn {
+		.modal-button;
+		&:hover {
+			box-shadow: 0 0 2px @color-hover;
+		}
+	}
+}
+.modal-tel-overlay {
+	.overlay;
+}
+.modal-tel {
+	.modal;
+	&__text {
+	width: 250px;
+	}
+	&__btn {
+	.modal-button;
+	display: inline-block;
+	width: 100px;
+	margin: 30px 20px 0 0;
+	&:last-child {
+		margin-right: 0;
+	}
+	}
+}
 
 
 

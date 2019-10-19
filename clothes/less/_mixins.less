@@ -39,6 +39,7 @@
 	justify-content: space-between;
 }
 .form-comment() {
+	position: relative;
 	display: block;
 	margin-bottom: 10px;
 	padding: 10px;
@@ -62,5 +63,41 @@
 	border: 0;
 	border-bottom: 1px solid #dddddd;
 	color: #333333;
-
 }
+
+.form-help() {
+	color: #f14d70;
+	font-size: 10px;
+	font-weight: 300;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(50, 6, 51, 0.4);
+}
+
+.modal() {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	padding: 40px 40px;
+	text-align: center;
+	background-color: #ffffff;
+	transform: translateX(-50%);
+}
+
+.modal-button {
+	display: block;
+	margin: 0 auto;
+	.button;
+	.button-hover;
+	width: 120px;
+	padding: 10px 20px;
+	font-weight: 600;
+	box-shadow: none;
+} 
+
