@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -26,16 +26,15 @@
 								<a class="main-nav__link">Главная</a>
 							</li>
 							<li class="main-nav__item">
-								<a class="main-nav__link">Преимущества</a>
+								<a href="#features-link" class="main-nav__link">Преимущества</a>
 							</li>
 							<li class="main-nav__item">
-								<a class="main-nav__link">Отзывы</a>
+								<a href="#feedback-link" class="main-nav__link">Отзывы</a>
 							</li>
 							<li class="main-nav__item">
-								<a class="main-nav__link">Контакты</a>
+								<a href="#contacts-link" class="main-nav__link">Контакты</a>
 							</li>
 						</ul>
-						<button class="main-nav__btn" aria-label="Menu button" onclick="showNav()"></button>
 					</nav>
 				</div>
 				<div class="banner">
@@ -47,8 +46,25 @@
 			</div>
 		</div>
 	</header>
-	<main>
-		<section id="fetures-link">
+	<main class="main">
+		<nav class="sticky-nav main-nav">
+			<ul class="sticky-nav__list main-nav__list">
+				<li class="sticky-nav__item main-nav__item main-nav__item_selected">
+					<a href="#home-link" class="sticky__link main-nav__link">Главная</a>
+				</li>
+				<li class="sticky__item main-nav__item">
+					<a href="#features-link" class="sticky__link main-nav__link">Преимущества</a>
+				</li>
+				<li class="sticky__item main-nav__item">
+					<a href="#feedback-link" class="sticky__link main-nav__link">Отзывы</a>
+				</li>
+				<li class="sticky__item main-nav__item">
+					<a href="#contacts-link" class="sticky__link main-nav__link">Контакты</a>
+				</li>
+			</ul>
+			<button class="main-nav__btn" aria-label="Menu button" onclick="showNav()"></button>
+		</nav>	
+		<section id="features-link">
 			<div class="unique-design-section">
 				<div class="unique-design-bg"></div>
 				<div class="container">
@@ -156,20 +172,49 @@
 				</div>
 			</div>
 		</div>
-		<section class="feedback-link">
+		<section id="feedback-link">
 			<div class="feedback-section">
 				<div class="container">
 					<h2 class="feedback__title">Отзывы о нас</h2>
 					<div class="feedback">
-						<span class="feedback__name">Людмила</span>
-						<p class="feedback__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum porro perferendis et atque molestias voluptatem facilis, illo nulla incidunt quo. Nemo soluta nesciunt quidem numquam distinctio mollitia dolor suscipit eum.</p>
-						<span class="feedback__name">Дарья</span>
-						<p class="feedback__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum porro perferendis et atque molestias voluptatem facilis, illo nulla incidunt quo. Nemo soluta nesciunt quidem numquam distinctio mollitia dolor suscipit eum.</p>
+						<div class="feedback-box">
+							<span class="feedback__name">Людмила</span>
+							<div class="ranking">
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+							</div>
+							<p class="feedback__text">Это лучшее ателье, с которым мне приходилось работать. Клиентоориентированность просто на запредельном и невероятном уровне. Попросила прислать мне заказ за два дня и они сделали. Молодцы! Так держать!</p>
+						</div>
+						<div class="feedback-box">
+							<span class="feedback__name">Дарья</span>
+							<div class="ranking">
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+							</div>
+							<p class="feedback__text">Все подружкам рекомендую это ателье. Материал очень высокого качества, в руках приятно держать, перебирать его снова и снова. А еще порадовала цена. За такой крутой товар сравнительно маленькая стоимость - супер!</p>
+						</div>
+						<div class="feedback-box">
+							<span class="feedback__name">Инна</span>
+							<div class="ranking">
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+								<span class="ranking__star"></span>
+							</div>
+							<p class="feedback__text">Как же я люблю это ателье. Уже сделала заказов пять и они ни разу не подвели. Размеры одежды до миллиметра пошиты. Девочки, попробуйте заказать и хорошее настроение вам гарантировано. А еще они всегда радуют приятными подарочками. Спасибо вам!</p>
+						</div>
 					</div>
 					<div class="feedback-form">
 						<form method="POST">
 							<input class="feedback-form__name" type="text" name="name" placeholder="Введите Ваше имя">
-							<textarea class="feedback-form__comment" placeholder="оставьте Ваш отзыв"></textarea>
+							<textarea class="feedback-form__comment" placeholder="Оставьте Ваш отзыв"></textarea>
 							<button type="submit" class="feedback-form__btn">Отправить</button>
 						</form>
 					</div>
@@ -178,29 +223,29 @@
 		</section>
 		<section id="contacts-link">
 			<div class="contacts-section">
+				<div class="contacts-bg"></div>
 				<div class="container">
 					<div class="contacts">
 						<div class="contacts-left">
-							<h2 class="contacts__title">Изготовим по вашим эскизам или эскизам других дизайнеров!</h2>
+							<h2 class="contacts__title">Изготовим по вашим эскизам или&nbsp;эскизам других дизайнеров!</h2>
 							<p class="contacts__text">Просто оставьте нам фотографию или эскиз изделия и мы перезвоним вам и скажем примерную цену и срок изготовления.</p>
 							<div class="contacts-form">
 								<form enctype="multipart/form-data" method="POST">
-									<input class="contacts-form__name" type="text" name="name" placeholder="Ваше имя">
-									<input class="contacts-form__tel" type="tel" name="tel" placeholder="Ваше телефон">
-									<input type="file" name="file"><span class="contacts-form__text">Прикрепить файл</span>
-									<button type="submit" class="contacts-form__btn">Отправить заявку</button>
+									<input class="contacts-form__name" type="text" name="name" placeholder="Ваше имя" maxlength="15">
+									<input class="contacts-form__tel" type="tel" name="tel" placeholder="Ваше телефон" maxlength="15">
+									<label class="contacts-file-wrap">
+										<input class="contacts-form__file" type="file" name="file"><span class="contacts-form__text">Прикрепить файл</span>
+									</label>
+									<button type="submit" class="contacts-form__btn">Оставить заявку</button>
 								</form>
 							</div>
-						</div>
-						<div class="contacts-right">
-							<img src="img/contacts.jpg" alt="Изготовление одежды по вашему эскизу">
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-	<div class="modal-callback-overlay">
+	<!-- <div class="modal-callback-overlay">
 		<div class="modal-callback">
 			<form enctype="multipart/form-data" method="POST">
 				<input class="modal-callback__name" type="text" name="name" placeholder="Ваше имя">
@@ -209,7 +254,7 @@
 				<button type="submit" class="modal-callback__btn contacts-form__btn">Перезвонить мне</button>
 			</form>
 		</div>
-	</div>
+	</div> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/less.min.js" type="text/javascript"></script>
 	<script src="js/script.js"></script>

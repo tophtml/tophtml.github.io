@@ -28,6 +28,7 @@
 	border: 1px solid transparent;
 	color: #ffffff;
 	background: @color-hover;
+	background-image: linear-gradient(25deg, #e12462 0%, #ff4d87 100%);
 	box-shadow: 0 0 2px @color-hover;
 	transition: @transition-hover;
 }
@@ -36,4 +37,30 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+.form-comment() {
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #e50938;
+	border-radius: 5px;
+	color: #333333;
+	font-family: @bold-font;
+	font-weight: 600;
+	background-color: #fdf5f5;
+}
+
+.form-comment-placeholder() {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.contacts-form() {
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 0;
+	border-bottom: 1px solid #dddddd;
+	color: #333333;
+
 }
