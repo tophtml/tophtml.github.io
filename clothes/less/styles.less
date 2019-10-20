@@ -1,6 +1,6 @@
 @import "_variables";
 @import "_mixins";
-@import "_media";
+
 
 @font-face {
 	font-family: "Proxima Nova Light";
@@ -618,6 +618,7 @@ a {
 		position: absolute;
 		top: 10px;
 		left: 40px;
+		width: 120px;
 		font-size: 12px;
 		letter-spacing: 0.12px;
 		cursor: pointer;
@@ -684,9 +685,23 @@ a {
 	}
 	}
 }
+.help-name,
+.help-tel,
+.help-social,
+.help-btn {
+	.form-help;
+	display: block;
+	padding-left: 5px;
+	text-align: left;
+}
+.help-btn {
+	margin-top: 10px;
+}
+.contacts-form__modal_send {
+	width: 400px;
+}
 
-
-
+@import "_media";
 
 
 

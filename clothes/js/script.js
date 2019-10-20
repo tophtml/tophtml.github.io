@@ -89,6 +89,26 @@ function showHelpComment(feedbackComment, helpText) {
 //tel-form
 let telOverlay = document.querySelector('.modal-tel-overlay');
 let putTel = document.querySelector('.modal-tel');
+let telSendForm = document.querySelector('.contacts-form__modal_send');
+
+function closeTelOverlay(choice) {
+let telName = document.querySelector('.contacts-form__name');
+let telTel = document.querySelector('.contacts-form__tel');
+let telSocial = document.querySelector('.contacts-form__id');
+let telStopForm = document.querySelector('.help-btn');
+
+  if (choice == 1) {
+    if (telName.value.length != 0 || telTel.value.length != 0 || telSocial.value.length != 0) {
+        telSendForm.style.display = "block";
+      }
+        else {
+          telStopForm.innerHTML = "Пожалуйста, введите имя, телефон, id";
+        }
+  }  
+  if (choice == 2) {
+    telOverlay.style.display = "none";
+  }
+}
 
 function showModalCall() {
   if(showModalCall) {
@@ -98,17 +118,50 @@ function showModalCall() {
 }
 
 
+// function validateRegEx(regex, inputStr, helpText,helpMessage) {
+//   if(!regex.test(inputStr)) {
+//     if(helpText !=null) {
+//       helpText.innerHTML = helpMessage
+//     }
+//     else {
+//       if (helpText !=null) {
+//         helpText.innerHTML = "";
+//       }
+//     }
+//   }
+// }
+
+function showHelpTel(inputField, helpText) {
+  if(inputField.value.length == 0) {
+    if(helpText != null) {
+      helpText.innerHTML = "Пожалуйста, заполните поле";
+    }
+  }
+     else {
+    if(helpText != null)
+    helpText.innerHTML = "";
+    }
+  }
+
+
+
+
+
+
 //Close Overlay
 function closeOverlay() {
   let closeOverlay = document.querySelector('.modal-feedback-overlay');
+  let telOverlay = document.querySelector('.modal-tel-overlay');
   if(closeOverlay) {
   closeOverlay.style.display = 'none';
   telOverlay.style.display = 'none';
+  telSendForm.style.display = "none";
   }
 }
 
 function closeOutterOverlay() {
   let closeOverlay = document.querySelector('.modal-feedback-overlay');
+  let telOverlay = document.querySelector('.modal-tel-overlay');
   if(closeOutterOverlay) {
   closeOverlay.style.display = 'none';
   }
@@ -120,5 +173,6 @@ window.addEventListener('keydown', function (event) {
     let telOverlay = document.querySelector('.modal-tel-overlay');
     closeOverlay.style.display = 'none';
     telOverlay.style.display = 'none';
+    telSendForm.style.display = 'none';
   }
 })

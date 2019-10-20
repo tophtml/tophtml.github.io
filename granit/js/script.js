@@ -1,5 +1,5 @@
 function hamburgerOpen() {
-	var hamburger = document.getElementById("sticky-menu");
+	var hamburger = document.getElementById("js-overlay");
 	hamburger.classList.toggle("overlay_show");
 }
 

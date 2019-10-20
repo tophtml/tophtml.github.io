@@ -271,15 +271,22 @@
 			<button class="modal-feedback__btn" onclick="closeOverlay()">Ok</button>
 		</div>
 	</div>
-	<div class="modal-tel-overlay" onclick="closeOutterOverlay()">
+	<div class="modal-tel-overlay hidden" onclick="closeOutterOverlay()">
 		<div class="modal-tel">
-			<input class="contacts-form__name modal-tel__text" type="text" name="name" placeholder="Ваше имя" maxlength="15">
-			<span class=""></span>
-			<input class="contacts-form__tel modal-tel__text" type="tel" name="tel" placeholder="Ваше телефон" maxlength="15">
-			<span class=""></span>
+			<input class="contacts-form__name modal-tel__text" type="text" name="name" placeholder="Ваше имя" maxlength="15" onblur="showHelpTel(this,document.querySelector('.help-name'))">
+			<span class="help-name"></span>
+			<input class="contacts-form__tel modal-tel__text" type="tel" name="tel" placeholder="Ваше телефон" maxlength="15" onblur="showHelpTel(this,document.querySelector('.help-tel'))">
+			<span class="help-tel"></span>
+			<input class="contacts-form__id contacts-form__name modal-tel__text" type="text" name="id_vk" placeholder="Ваш id в VK" maxlength="15" onblur="showHelpTel(this,document.querySelector('.help-social'))">
+			<span class="help-social"></span>
+			<div class="modal-feedback contacts-form__modal_send hidden">
+				<p class="modal-feedback__text modal-form__text">Спасибо за заявку.<br> Мы Вам вскоре перезвоним</p>
+				<button class="modal-feedback__btn" onclick="closeOverlay()">Ok</button>
+			</div>
 			<div class="modal-button-overlay">
-				<button class="modal-tel__btn" onclick="closeOverlay()">Oтправить</button>
-				<button class="modal-tel__btn" onclick="closeOverlay()">Отмена</button>
+				<button class="modal-tel__btn" onclick="closeTelOverlay(1)">Oтправить</button>
+				<button class="modal-tel__btn" onclick="closeTelOverlay(2)">Отмена</button>
+				<span class="help-btn"></span>
 			</div>
 		</div>
 	</div>
