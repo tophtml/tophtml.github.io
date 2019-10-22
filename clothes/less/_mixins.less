@@ -47,13 +47,19 @@
 }
 
 .button-mid-dev() {
-		width: 150px;
-		padding: 20px;
+	width: 150px;
+	padding: 20px;
+	border: 1px solid transparent;
+	color: #ffffff;
+	background-image: linear-gradient(25deg, #e12462 0%, #ff4d87 100%);
 }
 
 .button-sm-dev() {
 	width: 135px;
     padding: 12px;
+    border: 1px solid transparent;
+    color: #ffffff;
+    background-image: linear-gradient(25deg, #e12462 0%, #ff4d87 100%);
 }
 
 .flexsb() {
@@ -101,6 +107,17 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(50, 6, 51, 0.4);
+	animation-name: fadeInOverlay;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOverlay {
+	0% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: rgba(50, 6, 51, 0.4);
+	}
 }
 
 .modal() {
@@ -111,6 +128,12 @@
 	text-align: center;
 	background-color: #ffffff;
 	transform: translateX(-50%);
+}
+
+.modal-sm-dev() {
+	width: 95%;
+	top: 15%;
+	padding: 40px 25px;
 }
 
 .modal-button {
