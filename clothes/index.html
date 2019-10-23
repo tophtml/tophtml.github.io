@@ -235,15 +235,16 @@
 							<h2 id="form-link" class="contacts__title">Изготовим по вашим эскизам или&nbsp;эскизам других дизайнеров!</h2>
 							<p class="contacts__text">Просто оставьте нам фотографию или эскиз изделия и мы перезвоним вам и скажем примерную цену и срок изготовления.</p>
 							<div class="contacts-form">
-								<form enctype="multipart/form-data" method="POST">
-									<input class="contacts-form__name" type="text" name="name" placeholder="Ваше имя" maxlength="15">
-									<span class=""></span>
-									<input class="contacts-form__tel" type="tel" name="tel" placeholder="Ваше телефон" maxlength="15">
-									<span class=""></span>
+								<form enctype="multipart/form-data" method="POST" action="form.html">
+									<input id="js-order-name" class="contacts-form__name" type="text" name="name" placeholder="Ваше имя" maxlength="15" onblur="showNameOrder(this,document.getElementById('order-name-help'))">
+									<span id="order-name-help"></span>
+									<input id="js-order-tel" class="contacts-form__tel" type="tel" name="tel" placeholder="Ваше телефон" maxlength="16" onblur="showTelOrder(this,document.getElementById('order-tel-help'))">
+									<span id="order-tel-help"></span>
 									<label class="contacts-file-wrap">
-										<input class="contacts-form__file" type="file" name="file"><span class="contacts-form__text">Прикрепить файл</span>
+										<input class="contacts-form__file" type="file" name="file" onchange="uploadFile(this)"><span class="contacts-form__text">Прикрепить файл</span>
+										<span class="order-file-help"></span>
 									</label>
-									<button type="submit" class="contacts-form__btn">Оставить заявку</button>
+									<input type="button" class="contacts-form__btn" value="Оставить заявку" onclick="sendOrder(this.form)">
 								</form>
 							</div>
 						</div>

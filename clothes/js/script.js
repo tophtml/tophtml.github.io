@@ -144,9 +144,45 @@ function showHelpTel(inputField, helpText) {
   }
 
 
+//make order
 
+function RegEx(regex,input,helpText,helpMessage) {
+  if (!regex.test(input)) {
+    if (helpText != null)
+      helpText.innerHTML = helpMessage;
+      return false;
+  }
+  else {
+  if (helpText != null) 
+    helpText.innerHTML = "";
+    return true;
+  }
+}
 
+function showNameOrder(inputField, helpText) {
+  return RegEx(/.+/,inputField.value,helpText,"Пожалуйста, введите имя");
+}
 
+function showTelOrder(inputField, helpText) {
+  return RegEx(/^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/,inputField.value,helpText,"Пожалуйста, введите число в формате +7(495)222-22-22");
+}
+
+function sendOrder(form) {
+  if(showNameOrder(form['js-order-name'],form['order-name-help']) && showTelOrder(form['js-order-tel'],form['order-tel-help'])) {
+      form.submit();
+  }
+  else {
+    feedbackOverlay.style.display = 'block';
+    feedbackStopForm.style.display = 'block';
+    document.getElementById('order-tel-help').innerHTML = "Пожалуйста, введите число в формате +7(495)222-22-22";
+    document.getElementById('order-name-help').innerHTML = "Пожалуйста, введите имя";
+
+  }
+}
+
+function uploadFile(target) {
+    document.querySelector(".order-file-help").innerHTML = target.files[0].name;
+}
 
 //Close Overlay
 function closeOverlay() {
