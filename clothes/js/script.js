@@ -45,70 +45,70 @@ $(window).scroll(function(){
 
 //feedback-form
 let feedbackOverlay = document.querySelector('.modal-feedback-overlay');
-let feedbackName = document.querySelector('.feedback-form__name');
-let feedbackComment = document.querySelector('.feedback-form__comment');
+let feedbackNameHelp = document.getElementById('js-feedback-name_help');
+let feedbackCommentHelp = document.getElementById('js-feedback-comment_help');
 let feedbackStopForm = document.querySelector('.feedback-form__modal_error');
 let feedbackSendForm = document.querySelector('.feedback-form__modal_send');
+let feedbackName = document.getElementById('js-feedback-name');
+let feedbackComment = document.getElementById('js-feedback-comment');
 
-function sendComment() {
-  if(feedbackName.value.length == 0 || feedbackComment.value.length == 0) {
-  feedbackOverlay.style.display = 'block';
-  feedbackStopForm.style.display = 'block';
+function RegEx(regex,input,helpText,helpMessage) {
+  if(!regex.test(input)) {
+    if(helpText != null) 
+      helpText.innerHTML = helpMessage;
+      return false;
+    }
+    else {
+      if(helpText !=null) 
+        helpText.innerHTML = "";
+        return true;
+    }
+}
+
+function showHelpFeedback(inputField,helpText) {
+  return RegEx(/.+/,inputField.value,helpText,"Пожалуйста, введите имя");
+}
+
+function showHelpComment(inputField,helpText) {
+  return RegEx(/.+/,inputField.value,helpText,"Пожалуйста, введите текст");
+}
+
+function sendComment(form) {
+  if(showHelpFeedback(form['js-feedback-name'],form['help-feedback-name']) && showHelpComment(form['js-feedback-comment'],form['feedback-form__comment'])) {
+    form.submit();
+    // feedbackOverlay.style.display = 'block';
+    // feedbackSendForm.style.display = 'block';
   }
   else {
-    feedbackName.value="";
-    feedbackComment.value="";
     feedbackOverlay.style.display = 'block';
-    feedbackSendForm.style.display = 'block';
-  }
-}
-function showHelpFeedback(feedbackName, helpText) {
-   if(feedbackName.value.length == 0) {
-    if(helpText != null) {
-    helpText.innerHTML = "Пожалуйста, введите имя";
-   }
-   }
-   else {
-    if(helpText != null)
-    helpText.innerHTML = "";
- }
-}
+    feedbackStopForm.style.display = 'block';
+    messageError.innerText = 'Пожалуйста, заполните поля формы';
 
-function showHelpComment(feedbackComment, helpText) {
-   if(feedbackComment.value.length == 0) {
-    if(helpText != null) {
-    helpText.innerHTML = "Пожалуйста, введите текст";
-   }
-   }
-   else {
-    if(helpText != null)
-    helpText.innerHTML = "";
- }
+    if (feedbackName.value == 0) {
+      feedbackNameHelp.innerHTML = "Пожалуйста, введите имя";
+      feedbackCommentHelp.innerHTML = "";
+    }
+    if (feedbackComment.value == 0) {
+     feedbackNameHelp.innerHTML = "";
+      feedbackCommentHelp.innerHTML = "Пожалуйста, введите текст";
+    }
+    if (feedbackName.value == 0 && feedbackComment.value == 0) {
+      feedbackNameHelp.innerHTML = "Пожалуйста, введите имя";
+      feedbackCommentHelp.innerHTML = "Пожалуйста, введите текст";
+    }
+  }
 }
 
 //tel-form
+
 let telOverlay = document.querySelector('.modal-tel-overlay');
 let putTel = document.querySelector('.modal-tel');
-let telSendForm = document.querySelector('.contacts-form__modal_send');
+let contactsNameHelp = document.getElementById('js-contacts-name_help');
+let contactsTelHelp = document.getElementById('js-contacts-tel_help');
+let contactsName = document.getElementById('js-contacts-name');
+let contactsTel = document.getElementById('js-contacts-tel');
 
-function closeTelOverlay(choice) {
-let telName = document.querySelector('.contacts-form__name');
-let telTel = document.querySelector('.contacts-form__tel');
-let telSocial = document.querySelector('.contacts-form__id');
-let telStopForm = document.querySelector('.help-btn');
 
-  if (choice == 1) {
-    if (telName.value.length != 0 || telTel.value.length != 0 || telSocial.value.length != 0) {
-        telSendForm.style.display = "block";
-      }
-        else {
-          telStopForm.innerHTML = "Пожалуйста, введите имя, телефон, id";
-        }
-  }  
-  if (choice == 2) {
-    telOverlay.style.display = "none";
-  }
-}
 
 function showModalCall() {
   if(showModalCall) {
@@ -117,47 +117,54 @@ function showModalCall() {
   }
 }
 
+function closeTelOverlay() {
+  if(closeTelOverlay) {
+    telOverlay.style.display = "none";
+    putTel.style.display = 'none';
+  }
+}
 
-// function validateRegEx(regex, inputStr, helpText,helpMessage) {
-//   if(!regex.test(inputStr)) {
-//     if(helpText !=null) {
-//       helpText.innerHTML = helpMessage
-//     }
-//     else {
-//       if (helpText !=null) {
-//         helpText.innerHTML = "";
-//       }
-//     }
-//   }
-// }
+function showContactsName(inputField,helpText) {
+  return RegEx(/.+/,inputField.value,helpText,"Пожалуйста, введите имя");
+}
 
-function showHelpTel(inputField, helpText) {
-  if(inputField.value.length == 0) {
-    if(helpText != null) {
-      helpText.innerHTML = "Пожалуйста, заполните поле";
+function showContactsTel(inputField,helpText) {
+  return RegEx(/^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/,inputField.value,helpText,"Пожалуйста, введите число в формате +7(495)222-22-22");
+}
+
+function showContactsSocial(inputField,helpText) {
+  return RegEx(/^id\d{1,12}$/,inputField.value,helpText,"Пожалуйста, введите id в формате id333");
+}
+
+function sendContacts(form) {
+  if(showContactsName(form['js-contacts-name'],form['js-contacts-name_help']) && showContactsTel(form['js-contacts-tel'],form['js-contacts-tel_help'])) {
+    form.submit();
+  }
+  else {
+   document.querySelector('.help-btn').innerHTML = 'Пожалуйста, введите имя и телефон';
+
+    if (contactsName.value == 0) {
+      contactsNameHelp.innerText = "Пожалуйста, введите имя";
+      contactsTelHelp.innerText = "";
+    }
+    if (contactsTel.value == 0) {
+     contactsNameHelp.innerText = "";
+      contactsTelHelp.innerText = "Пожалуйста, введите число в формате +7(495)222-22-22";
+    }
+    if (contactsName.value == 0 && contactsTel.value == 0) {
+      contactsNameHelp.innerText = "Пожалуйста, введите имя";
+      contactsTelHelp.innerText = "Пожалуйста, введите число в формате +7(495)222-22-22";
     }
   }
-     else {
-    if(helpText != null)
-    helpText.innerHTML = "";
-    }
-  }
-
+}
 
 //make order
 
-function RegEx(regex,input,helpText,helpMessage) {
-  if (!regex.test(input)) {
-    if (helpText != null)
-      helpText.innerHTML = helpMessage;
-      return false;
-  }
-  else {
-  if (helpText != null) 
-    helpText.innerHTML = "";
-    return true;
-  }
-}
+let orderNameHelp = document.getElementById('order-name-help');
+let orderTelHelp = document.getElementById('order-tel-help');
+let orderName = document.getElementById('js-order-name');
+let orderTel = document.getElementById('js-order-tel');
+let messageError = document.querySelector('.modal-feedback__text');
 
 function showNameOrder(inputField, helpText) {
   return RegEx(/.+/,inputField.value,helpText,"Пожалуйста, введите имя");
@@ -174,8 +181,21 @@ function sendOrder(form) {
   else {
     feedbackOverlay.style.display = 'block';
     feedbackStopForm.style.display = 'block';
-    document.getElementById('order-tel-help').innerHTML = "Пожалуйста, введите число в формате +7(495)222-22-22";
-    document.getElementById('order-name-help').innerHTML = "Пожалуйста, введите имя";
+    messageError.innerText = 'Пожалуйста, правильно заполните поля формы';
+    
+     if (orderName.value == 0) {
+      orderNameHelp.innerText = "Пожалуйста, введите имя";
+      orderTelHelp.innerText = "";
+    }
+    if (orderTel.value == 0) {
+     orderNameHelp.innerText = "";
+      orderTelHelp.innerText = "Пожалуйста, введите число в формате +7(495)222-22-22";
+    }
+    if (orderName.value == 0 && orderTel.value == 0) {
+      orderNameHelp.innerText = "Пожалуйста, введите имя";
+      orderTelHelp.innerText = "Пожалуйста, введите число в формате +7(495)222-22-22";
+    }
+
 
   }
 }

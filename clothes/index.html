@@ -215,13 +215,13 @@
 						</div>
 					</div>
 					<div class="feedback-form">
-						<div>
-							<input class="feedback-form__name" type="text" name="name" placeholder="Введите Ваше имя" onblur="showHelpFeedback(this, document.querySelector('.help-feedback-name'))">
-							<span class="help-feedback-name"></span>
-							<textarea class="feedback-form__comment" placeholder="Оставьте Ваш отзыв" onblur="showHelpComment(this, document.querySelector('.help-feedback-comment'))"></textarea>
-							<span class="help-feedback-comment"></span>
-							<button class="feedback-form__btn" onclick="sendComment()">Отправить</button>
-						</div>
+						<form method="POST" action="form/feedback.html">
+							<input id="js-feedback-name" class="feedback-form__name" type="text" name="name" placeholder="Введите Ваше имя" onblur="showHelpFeedback(this, document.getElementById('js-feedback-name_help'))">
+							<span class="help-feedback-name" id="js-feedback-name_help"></span>
+							<textarea id="js-feedback-comment" class="feedback-form__comment" placeholder="Оставьте Ваш отзыв" onblur="showHelpComment(this, document.getElementById('js-feedback-comment_help'))"></textarea>
+							<span class="help-feedback-comment" id="js-feedback-comment_help"></span>
+							<input class="feedback-form__btn" type="button" value="Отправить" onclick="sendComment(this.form)">
+						</form>
 					</div>
 				</div>
 			</div>
@@ -235,7 +235,7 @@
 							<h2 id="form-link" class="contacts__title">Изготовим по вашим эскизам или&nbsp;эскизам других дизайнеров!</h2>
 							<p class="contacts__text">Просто оставьте нам фотографию или эскиз изделия и мы перезвоним вам и скажем примерную цену и срок изготовления.</p>
 							<div class="contacts-form">
-								<form enctype="multipart/form-data" method="POST" action="form.html">
+								<form enctype="multipart/form-data" method="POST" action="form/form.html">
 									<input id="js-order-name" class="contacts-form__name" type="text" name="name" placeholder="Ваше имя" maxlength="15" onblur="showNameOrder(this,document.getElementById('order-name-help'))">
 									<span id="order-name-help"></span>
 									<input id="js-order-tel" class="contacts-form__tel" type="tel" name="tel" placeholder="Ваше телефон" maxlength="16" onblur="showTelOrder(this,document.getElementById('order-tel-help'))">
@@ -253,16 +253,6 @@
 			</div>
 		</section>
 	</main>
-	<!-- <div class="modal-callback-overlay">
-		<div class="modal-callback">
-			<form enctype="multipart/form-data" method="POST">
-				<input class="modal-callback__name" type="text" name="name" placeholder="Ваше имя">
-				<input class="modal-callback__tel" type="tel" name="tel" placeholder="Ваше телефон">
-				<input class="modal-callback__id" type="text" name="id_vk" placeholder="Ваш id в VK">
-				<button type="submit" class="modal-callback__btn contacts-form__btn">Перезвонить мне</button>
-			</form>
-		</div>
-	</div> -->
 	<div class="modal-feedback-overlay hidden" onclick="closeOutterOverlay()">
 		<div class="modal-feedback feedback-form__modal_error hidden">
 			<p class="modal-feedback__text">Пожалуйста, заполните пустые поля формы</p>
@@ -275,21 +265,23 @@
 	</div>
 	<div class="modal-tel-overlay hidden" onclick="closeOutterOverlay()">
 		<div class="modal-tel">
-			<input class="contacts-form__name modal-tel__text" type="text" name="name" placeholder="Ваше имя" maxlength="15" onblur="showHelpTel(this,document.querySelector('.help-name'))">
-			<span class="help-name"></span>
-			<input class="contacts-form__tel modal-tel__text" type="tel" name="tel" placeholder="Ваше телефон" maxlength="15" onblur="showHelpTel(this,document.querySelector('.help-tel'))">
-			<span class="help-tel"></span>
-			<input class="contacts-form__id contacts-form__name modal-tel__text" type="text" name="id_vk" placeholder="Ваш id в VK" maxlength="15" onblur="showHelpTel(this,document.querySelector('.help-social'))">
-			<span class="help-social"></span>
-			<div class="modal-feedback contacts-form__modal_send hidden">
-				<p class="modal-feedback__text modal-form__text">Спасибо за заявку.<br> Мы Вам вскоре перезвоним</p>
-				<button class="modal-feedback__btn" onclick="closeOverlay()">Ok</button>
-			</div>
-			<div class="modal-button-overlay">
-				<button class="modal-tel__btn" onclick="closeTelOverlay(1)">Oтправить</button>
-				<button class="modal-tel__btn" onclick="closeTelOverlay(2)">Отмена</button>
-				<span class="help-btn"></span>
-			</div>
+			<form method="POST" action="form/callback.html">
+				<input id="js-contacts-name" class="contacts-form__name modal-tel__text" type="text" name="name" placeholder="Ваше имя" maxlength="15" onblur="showContactsName(this,document.getElementById('js-contacts-name_help'))">
+				<span id="js-contacts-name_help" class="help-name"></span>
+				<input id="js-contacts-tel" class="contacts-form__tel modal-tel__text" type="tel" name="tel" placeholder="Ваше телефон" maxlength="17" onblur="showContactsTel(this,document.getElementById('js-contacts-tel_help'))">
+				<span id="js-contacts-tel_help" class="help-tel"></span>
+				<input class="contacts-form__id contacts-form__name modal-tel__text" type="text" name="id_vk" placeholder="Ваш id в VK (необязательно)" maxlength="15" onblur="showContactsSocial(this,document.querySelector('.help-social'))">
+				<span class="help-social"></span>
+				<!-- <div class="modal-feedback contacts-form__modal_send hidden">
+					<p class="modal-feedback__text modal-form__text">Спасибо за заявку.<br> Мы Вам вскоре перезвоним</p>
+					<button class="modal-feedback__btn" onclick="closeOverlay()">Ok</button>
+				</div> -->
+				<div class="modal-button-overlay">
+					<input type="button" value="Oтправить" class="modal-tel__btn" onclick="sendContacts(this.form)">
+					<span class="help-btn"></span>
+				</div>
+			</form>
+			<button class="modal-tel__btn" onclick="closeTelOverlay()">Отмена</button>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
