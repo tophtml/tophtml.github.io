@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>21 degree</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header id="home-link">
+		<div class="header-section">
+			<div class="container">
+				<div class="header">
+					<div class="header-logo">
+						<div class="header-logo__img">
+							<img src="img/icons/logo.png" alt="Логотип 21 degree">
+						</div>
+						<span class="header-logo__text">Degree</span>
+					</div>
+					<div class="header-tel">
+						<span class="header-tel__text">Есть вопросы? Звоните!</span>
+						<a class="header-tel__link" href="#" onclick="makeCall()">8 /800/ 259 09 36</a>
+					</div>
+					<nav class="header-nav">
+						<div class="main-nav-wrap hidden">
+							<ul class="header-nav__list">
+								<li class="header-nav__item">
+									<a id="#home-link" class="header-nav__link">Главная</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#services-link" class="header-nav__link">Наши услуги</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#prise-link" class="__link">Расчитать стоимость</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#-link" class="header-nav__link">Портфолио</a>
+								</li>
+							</ul>
+						</div>
+						<div class="hamburger">
+							<button class="hamburger__btn" arial-label="Кнопка меню" onclick="openMenu()"></button>
+							<span class="hamburger__title">Меню</span>
+						</div>
+					</nav>
+				</div>
+				<div class="banner">
+					<h1 class="banner__title">Услуги по 3D моделированию</h1>
+					<h2 class="banner__subtitle">полный спектр услуг</h2>
+					<span class="banner__text">Оставьте заявку сейчас и получите дизайн интерьера 25кв<sup>2</sup> бесплатно!*</span>
+					<div class="banner-form">
+						<form novalidate method="POST" action="form/design-form.html">
+							<div class="banner-form-wrap">
+								<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
+								<span id="js-design_name-help"></span>
+								<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="Номер телефона">
+								<span id="js-design_email-help"></span>
+								<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="E-mail">
+								<span id="js-design_tel-help"></span>
+							</div>	
+							<input class="button banner-form__btn" type="button" value="Оставить заявку!">
+						</form>
+						<span class="banner-form__text">*Мы гарантируем конфидициальность передаваемых данных</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
