@@ -108,8 +108,6 @@ let contactsTelHelp = document.getElementById('js-contacts-tel_help');
 let contactsName = document.getElementById('js-contacts-name');
 let contactsTel = document.getElementById('js-contacts-tel');
 
-
-
 function showModalCall() {
   if(showModalCall) {
     telOverlay.style.display = 'block';

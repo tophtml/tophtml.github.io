@@ -1,7 +1,6 @@
 @import "_variables";
 @import "_mixins";
 
-
 @font-face {
 	font-family: "Proxima Nova Light";
 	src: url("../fonts/proxima_nova_light.woff2") format("woff2");
@@ -195,6 +194,17 @@ a {
 }
 .open-menu {
 	display: block;
+	transition: 0.5s;
+	animation: menuFade 0.7s;
+	
+}
+@keyframes menuFade  {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .unique-design-section {
 	position: relative;
@@ -573,7 +583,6 @@ a {
 		max-width: 442px;
 		margin-bottom: 60px;
 		font-size: 18px;
-
 	}
 }
 .contacts-form {
@@ -646,6 +655,18 @@ a {
 		}
 	}
 }
+#order-name-help,
+#order-tel-help,
+.order-file-help {
+	.form-help;
+	display: block;
+	width: 200px;
+	margin: 0 0 10px 10px;
+}
+.order-file-help {
+	color: @color-placeholder;
+	padding-top: 15px;
+}
 .contacts-file-wrap {
 	position: relative;
 	display: block;
@@ -674,15 +695,25 @@ a {
 .modal-tel {
 	.modal;
 	&__text {
-	width: 250px;
+		width: 250px;
+	}
+	&__help {
+		position: absolute;
+		bottom: 20px;
+		left: 40px;
+		width: 100%;
 	}
 	&__btn {
-	.modal-button;
-	display: inline-block;
-	width: 100px;
-	margin: 30px 20px 0 0;
-		&:last-child {
-			margin-right: 0;
+		.modal-button;
+		width: 100px;
+		margin: 20px 0 0 15px;
+		&_second {
+			.modal-button;
+			position: absolute;
+			bottom: 40px;
+			right: 55px;
+			width: 100px;
+
 		}
 	}
 }
@@ -701,6 +732,22 @@ a {
 .contacts-form__modal_send {
 	width: 400px;
 }
+.contacts-form-page {
+		margin: 50px auto 0;
+		text-align: center;
+		&__title {
+			max-width: 450px;
+			margin: 0 auto 20px;
+			line-height: 45px;
+		}
+		&__btn {
+			margin: 0 auto;
+		}
+		&__img {
+			width: 60%;
+			margin: 20px auto 0;
+		}
+	}
 
 @import "_media";
 

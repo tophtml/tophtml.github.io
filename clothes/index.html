@@ -272,16 +272,10 @@
 				<span id="js-contacts-tel_help" class="help-tel"></span>
 				<input class="contacts-form__id contacts-form__name modal-tel__text" type="text" name="id_vk" placeholder="Ваш id в VK (необязательно)" maxlength="15" onblur="showContactsSocial(this,document.querySelector('.help-social'))">
 				<span class="help-social"></span>
-				<!-- <div class="modal-feedback contacts-form__modal_send hidden">
-					<p class="modal-feedback__text modal-form__text">Спасибо за заявку.<br> Мы Вам вскоре перезвоним</p>
-					<button class="modal-feedback__btn" onclick="closeOverlay()">Ok</button>
-				</div> -->
-				<div class="modal-button-overlay">
-					<input type="button" value="Oтправить" class="modal-tel__btn" onclick="sendContacts(this.form)">
-					<span class="help-btn"></span>
-				</div>
+				<input type="button" value="Oтправить" class="modal-tel__btn" onclick="sendContacts(this.form)">
+				<span class="help-btn modal-tel__help"></span>
 			</form>
-			<button class="modal-tel__btn" onclick="closeTelOverlay()">Отмена</button>
+			<button class="modal-tel__btn_second" onclick="closeTelOverlay()">Отмена</button>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
