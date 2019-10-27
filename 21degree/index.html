@@ -34,10 +34,19 @@
 									<a id="#services-link" class="header-nav__link">Наши услуги</a>
 								</li>
 								<li class="header-nav__item">
-									<a id="#prise-link" class="__link">Расчитать стоимость</a>
+									<a id="#price-link" class="header-nav__link">Расчитать стоимость</a>
 								</li>
 								<li class="header-nav__item">
-									<a id="#-link" class="header-nav__link">Портфолио</a>
+									<a id="#portfolio-link" class="header-nav__link">Портфолио</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#advantages-link" class="header-nav__link">Преимущества</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#portfolio-link" class="header-nav__link"></a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#portfolio-link" class="header-nav__link"></a>
 								</li>
 							</ul>
 						</div>
@@ -69,7 +78,152 @@
 			</div>
 		</div>
 	</header>
-
+	<section id="services-link">
+		<div class="services-section">
+			<div class="container">
+				<h2 class="title services__title">Наши услуги</h2>
+				<div class="services">
+					<div class="services-info services-info_first">
+						<h3 class="services__subtitle">Дизайн интерьера</h3>
+						<p class="services__text">Услуга, направленная на разработку интерьеров помещений с целью обеспечить удобство и эстетически приятное ощущение у человека при нахождении в помещении</p>
+						<button class="button services__btn" onclick="makeCallback()">Оставить заявку</button>
+					</div>
+					<div class="services__img">
+						<img src="img/interior.jpg" alt="Интерьер от 21 degree">
+					</div>
+				</div>
+				<div class="services">
+					<div class="services__img">
+						<img src="img/exterior.jpg" alt="Экстерьер от 21 degree">
+					</div>
+					<div class="services-info services-info_second">
+						<h3 class="services__subtitle">Дизайн экстерьера</h3>
+						<p class="services__text">Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий, позволяющая обеспечить удобство людей при нахождении на территории</p>
+					</div>
+				</div>
+				<div class="services">
+					<div class="services-info services-info_third">
+						<h3 class="services__subtitle">Визуализация</h3>
+						<p class="services__text">Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий, позволяющая обеспечить удобство людей при нахождении на территории</p>
+					</div>
+					<div class="services__img">
+						<img src="img/visualization.jpg" alt="Визуализация от 21 degree">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="price-link">
+		<div class="price-section">
+			<div class="container">
+				<h2 class="price__title">Расчитать стоимость</h2>
+				<span class="price__subtitle">Расчитайте предварительную стоимость разработки интерьера</span>
+				<div class="price-wrap">
+					<div class="price-square">
+						<div class="square">
+							<h3 class="square__title">Площадь помещения:</h3>
+							<div class="square-calc">
+								<ul class="square-calc__list">
+									<li class="square-calc__item square-calc__item_first" onclick="chooseValue()">100м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_selected square-calc__item_second" onclick="chooseValue()">10 000м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_third" onclick="chooseValue()">250 000м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_forth" onclick="chooseValue()">500 000м<sup class="calc_degree">2</sup></li>
+								</ul>
+							</div>
+						</div>
+						<div class="package">
+							<h3 class="package__title">Выберите пакет:</h3>
+							<div class="package__btn-wrap">
+								<div class="package__btn-box_first">
+									<button class="package__btn package__btn_first" onclick="choosePackage()">Light</button>
+									<p class="package__info package__info_first">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>
+								</div>
+								<div class="package__btn-box_second">
+									<button class="package__btn package__btn_selected package__btn_second" onclick="choosePackage()">Medium</button>
+									<p class="package__info package__info_second">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>
+								</div>
+								<div class="package__btn-box_third">
+									<button class="package__btn package__btn_third" onclick="choosePackage()">Full</button>
+									<p class="package__info package__info_third">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-calc">
+						<h3 class="price-calc__title">Площадь помещения:</h3>
+						<span class="price-calc__value">1 000м<sup class="calc_degree">2</sup></span>
+						<h3 class="price-calc__title">Средняя стоимость м<sup class="calc_degree">2</sup> :</h3>
+						<span class="price-calc__value">4 850 тг.</span>
+						<h3 class="price-calc__title">Средняя стоимость объекта:</h3>
+						<span class="price-calc__value">48 500 тг.</span>
+						<button class="button price-calc__btn">Получить консультацию специалиста</button>
+						<span class="price-calc__text">или позвоните нам по телефону:</span>
+						<a class="price-calc__tel" href="#">+ 7 727 388 71 77</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="portfolio-link">
+		<div class="portfolio-section">
+			<div class="container">
+				<h2 class="title portfolio__title">Портфолио</h2>
+				<ul class="portfolio__list">
+					<li class="portfolio__item portfolio__item_first" onclick="choosePortfolio()">все проекты</li>
+					<li class="portfolio__item portfolio__item_selected portfolio__item_second" onclick="choosePortfolio()">экстерьеры</li>
+					<li class="portfolio__item portfolio__item_third" onclick="choosePortfolio()">жилые интерьеры</li>
+					<li class="portfolio__item portfolio__item_forth" onclick="choosePortfolio()">общественные интерьеры</li>
+				</ul>
+				<div class="portfolio__img-wrap">
+					<div class="portfolio__img portfolio__img_first">
+						<img src="img/portfolio/portfolio_first.jpg" alt="Многоэтажный дом">
+					</div>
+					<div class="portfolio__img portfolio__img_second">
+						<img src="img/portfolio/portfolio_second.jpg" alt="Фасад элитного дома">
+					</div>
+					<div class="portfolio__img portfolio__img_third">
+						<img src="img/portfolio/portfolio_third.jpg" alt="Современный элитный массив">
+					</div>
+					<div class="portfolio__img portfolio__img_forth">
+						<img src="img/portfolio/portfolio_forth.jpg" alt="Невысокий дом загорода">
+					</div>
+					<div class="portfolio__img portfolio__img_fifth">
+						<img src="img/portfolio/portfolio_fifth.jpg" alt="Современный многоэтажный дом в Садовом кольце">
+					</div>
+					<div class="portfolio__img portfolio__img_sixth">
+						<img src="img/portfolio/portfolio_sixth.jpg" alt="Дом в винтажном стиле">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="advantages-link">
+		<div class="advantages-section">
+			<div class="container">
+				<h2 class="title advantages__title">Почему мы лучшие?</h2>
+				<div class="advantages-wrap">
+					<div class="advantages advantages-first">
+						<p class="advantages__text advantages__text_first">Профессиональные дизайнеры и визуализаторы с зарубежной практикой работы</p>
+					</div>
+					<div class="advantages advantages-second">
+						<p class="advantages__text advantages__text_second">Интеративный подход, работаем до полного согласования с Вами</p>
+					</div>
+					<div class="advantages advantages-third">
+						<p class="advantages__text advantages__text_third">Решаем вопрос закупки, берем авторский надзор на себя (пакет Full)</p>
+					</div>
+					<div class="advantages advantages-forth">
+						<p class="advantages__text advantages__text_forth">Над проектом работает группа специалистов под началом project менеджера в ERP системе</p>
+					</div>
+					<div class="advantages advantages-fifth">
+						<p class="advantages__text advantages__text_fifth">Выполнение раньше установленных сроков</p>
+					</div>
+					<div class="advantages advantages-sixth">
+						<p class="advantages__text advantages__text_sixth">Дарим альбом проекта, вместе с 25% скидкой на следующее обращение</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
