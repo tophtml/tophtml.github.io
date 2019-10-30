@@ -7,7 +7,7 @@
 }
 html,
 body {
-	color: #3f3f3f;;
+	color: #3f3f3f;
 	font: 400 14px Roboto, Arial, Helvetica, sans-srif;
 }
 img {
@@ -717,6 +717,7 @@ a {
 	transition: all ease 1s;
 }
 .partners-carousel__img {
+	width: 116px;
 	margin-right: 44px;
 }
 .partners__btn_right,
@@ -821,4 +822,173 @@ a {
 }
 .team-quote__position {
 	font-weight: 300;
+}
+.blog-section {
+	padding: 45px 0 60px;
+	text-align: center;
+	background-color: #f2f8f9;
+	opacity: 0.8;
+}
+.blog__title {
+	margin-bottom: 50px;
+}
+.blog__title::after {
+	position: absolute;
+	content: "";
+	bottom: -12px;
+	left: 50%;
+	width: 377px;
+	height: 1px;
+	background-color: #19b5fe;
+	transform: translateX(-50%);
+}
+.blog-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.blog {
+	width: 49%;
+	margin: 10px 0 0;
+}
+.blog__img {
+	margin-bottom: 25px;
+}
+.blog__link {
+	color: #19b5fe;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 24px;
+}
+.blog__link:hover  {
+	text-decoration: underline;
+}
+.contacts-section {
+	padding: 50px 0 0;
+	color: #ffffff;
+	text-align: center;
+	background: #3f3f3f url(../img/contacts-bg.jpg) center top no-repeat;
+}
+.contacts__title {
+	position: relative;
+	margin-bottom: 40px;
+	color: #ffffff; 
+}
+.contacts__title::after {
+	position: absolute;
+	content: "";
+	bottom: -12px;
+	left: 50%;
+	width: 377px;
+	height: 1px;
+	background-color: #ffffff;
+	transform: translateX(-50%);
+}
+.contacts__subtitle {
+	display: block;
+	margin-bottom: 30px;
+	font-size: 26px;
+	font-weight: 300;
+}
+.contacts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 70px;
+}
+.contacts-form {
+	width: 750px;
+}
+.contacts-form-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.contacts-form__text {
+	width: 240px;
+	margin: 5px 0 13px;
+	padding: 16px 0 16px 20px;
+	border: 1px solid rgba(0, 0, 0, 0.11);
+	border-radius: 8px;
+	background-color: #ffffff;
+}
+.contacts-form__text::placeholder,
+.contacts-form__text::-moz-placeholder,
+.contacts-form__text:-moz-placeholder,
+.contacts-form__text::-webkit-input-placeholder {
+	color: #606060;
+	font-size: 13px;
+	font-weight: 300;
+}
+.contacts-form__text:-ms-input-placeholder {
+	color: #606060;
+	font-size: 13px;
+	font-weight: 300;
+}
+.contacts-form__message {
+	width: 750px;
+	min-height: 123px;
+	margin-bottom: 17px;
+	padding: 16px 20px 16px 20px;
+	color: #3f3f3f;
+	font: 400 14px Roboto, Arial, Helvetica, sans-srif;
+	resize: none;
+}
+.contacts__btn {
+	display: block;
+	margin: 0 auto;
+	padding: 20px 45px;
+}
+.contacts-data {
+	width: 290px;
+	margin-top: 10px;
+}
+.contacts__text {
+	position: relative;
+	display: block;
+	margin-bottom: 20px;
+	padding-left: 40px;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: left;
+}
+.contacts__text::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 35px;
+}
+.contacts__text_first::before {
+	background: url(../img/icons/tel_contacts.png) no-repeat;
+}
+.contacts__text_second::before {
+	background: url(../img/icons/whatsup.png) no-repeat;
+}
+.contacts__text_third::before {
+	background: url(../img/icons/envelope.png) no-repeat;
+}
+.contacts__text_forth::before {
+	background: url(../img/icons/skype.png) no-repeat;
+}
+.contacts__text_fifth::before {
+	background: url(../img/icons/telegram.png) no-repeat;
+}
+.contacts__schedule {
+	display: block;
+	margin-top: 25px;
+	font-size: 16px;
+	font-weight: 300;
+	text-align: left;
+}
+.contacts-map {
+	margin: -2px 0;
+	cursor: pointer;
+}
+.footer-section {
+	padding: 35px 0;
+	color: #ffffff;
+	background-color: #24241f;
 }

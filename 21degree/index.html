@@ -34,7 +34,7 @@
 									<a id="#services-link" class="header-nav__link">Наши услуги</a>
 								</li>
 								<li class="header-nav__item">
-									<a id="#price-link" class="header-nav__link">Расчитать стоимость</a>
+									<a id="#price-link" class="header-nav__link">Рассчитать стоимость</a>
 								</li>
 								<li class="header-nav__item">
 									<a id="#portfolio-link" class="header-nav__link">Портфолио</a>
@@ -47,6 +47,12 @@
 								</li>
 								<li class="header-nav__item">
 									<a id="#team-link" class="header-nav__link">Наша команда</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#blog-link" class="header-nav__link">Блог</a>
+								</li>
+								<li class="header-nav__item">
+									<a id="#contacts-link" class="header-nav__link">Контакты</a>
 								</li>
 							</ul>
 						</div>
@@ -269,16 +275,36 @@
 				<h2 class="title partners__title">Нам доверяют более 50 компаний</h2>
 				<div class="partners-carousel-box">
 					<div class="partners-carousel">
-						<img class="partners-carousel__img" src="img/icons/partners/logo1.png" alt="Джетта строй">
-						<img class="partners-carousel__img" src="img/icons/partners/logo2.png" alt="Интел">
-						<img class="partners-carousel__img" src="img/icons/partners/logo3.png" alt="Строй Инвест">
-						<img class="partners-carousel__img" src="img/icons/partners/logo4.png" alt="Абри">
-						<img class="partners-carousel__img" src="img/icons/partners/logo5.png" alt="Вега">
-						<img class="partners-carousel__img" src="img/icons/partners/logo6.png" alt="Фльберта">
-						<img class="partners-carousel__img" src="img/icons/partners/logo7.png" alt="Ремекс">
-						<img class="partners-carousel__img" src="img/icons/partners/logo8.png" alt="Кайтнет">
-						<img class="partners-carousel__img" src="img/icons/partners/logo9.png" alt="Стримвуд">
-						<img class="partners-carousel__img" src="img/icons/partners/logo10.png" alt="Спутник">
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo1.png" alt="Джетта строй">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo2.png" alt="Интел">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo3.png" alt="Строй Инвест">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo4.png" alt="Абри">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo5.png" alt="Вега">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo6.png" alt="Фльберта">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo7.png" alt="Ремекс">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo8.png" alt="Кайтнет">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo9.png" alt="Стримвуд">
+						</div>
+						<div class="partners-carousel__img">
+							<img src="img/icons/partners/logo10.png" alt="Спутник">
+						</div>
 					</div>
 					<button class="partners__btn_right" onclick="moveSliderRight()">
 						<img class="partners-arr_right" src="img/icons/left_arrow_inactive.svg" alt="Arrow to the right">
@@ -348,6 +374,121 @@
 			</div>
 		</div>
 	</section>
+	<section id="blog-link">
+		<div class="blog-section">
+			<div class="container">
+				<h2 class="title blog__title">Блог</h2>
+				<div class="blog-wrap">
+					<article class="blog blog-first">
+						<div class="blog__img">
+							<img src="img/blog-first.jpg" alt="Минимализм в дизайне">
+						</div>
+						<a class="blog__link" href="blog/minimalism.html">Минимализм – это самый простой, практичный и «спорный» стиль в дизайне интерьеров</a>
+				</article>
+					<article class="blog blog-second">
+						<div class="blog__img">
+							<img src="img/blog-second.jpg" alt="Стиль Прованс">
+						</div>
+						<a class="blog__link" href="blog/minimalism.html">Прованс - это спокойный южный регион Франции, с великолепнейшей природой</a>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contacts-link">
+		<div class="contacts-section">
+			<div class="container">
+				<h2 class="title contacts__title">Остались вопросы?</h2>
+				<span class="contacts__subtitle">Задайте их в форме ниже и наши специалисты свяжуться с Вами!</span>
+				<div class="contacts">
+					<div class="contacts-form">
+						<form method="POST" action="form/design-form.html">
+							<div class="contacts-form-wrap">
+								<input id="js-contacts-name" class="contacts-form__text" type="text" name="name" placeholder="Ваше имя" onblur="showHelpContactsName(this,document.getElementById('js-contacts-name-help'))">
+								<span id="js-contacts-name-help"></span>
+								<input id="js-contacts-email" class="contacts-form__text" type="email" name="email" placeholder="Ваш e-mail" onblur="showHelpContactsEmail(this,document.getElementById('js-contacts-email-help'))">
+								<span id="js-contacts-email-help"></span>
+								<input id="js-contacts-tel" class="contacts-form__text" type="tel" name="tel" placeholder="Ваш номер телефона" onblur="showHelpContactsTel(this,document.getElementById('js-contacts-tel-help'))">
+								<span id="js-contacts-tel-help"></span>
+							</div>
+							<textarea id="js-contacts-text" class="contacts-form__text contacts-form__message" placeholder="Ваше сообщение" onblur="showHelpContactsText(this,document.getElementById('js-contacts-tel-help'))"></textarea>
+							<span class="js-contacts-text-help"></span>
+							<input class="button contacts__btn" type="button" value="Оставить заявку!" onclick="sendContactsForm()">
+							<span id="js-contacts-btn-help"></span>
+						</form>
+					</div>
+					<div class="contacts-data">
+						<span class="contacts__text contacts__text_first">+ 7 896 876 66 77</span>
+						<span class="contacts__text contacts__text_second">+ 7 896 876 66 77</span>
+						<span class="contacts__text contacts__text_third">sales@23degree.kz</span>
+						<span class="contacts__text contacts__text_forth">skype: 23degree</span>
+						<span class="contacts__text contacts__text_fifth">telegram: 23degree</span>
+						<span class="contacts__schedule">График работы: с 9-00 до 18-00. Пн.-Пт.</span>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-map">
+				<div class="contacts-map__img" onclick="showModalMap()">
+					<img src="img/map-bg.jpg">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer-section">
+		<div class="container">
+			<div class="footer-wrap">
+				<nav class="footer-nav">
+					<ul class="footer-nav__list">
+						<li class="footer-nav__item">
+							<a class="footer-nav__link">Главная</a>
+						</li>
+						<li class="footer-nav__item">
+							<a class="footer-nav__link">Наши услуги</a>
+						</li>
+						<li class="footer-nav__item">
+							<a class="footer-nav__link">Рассчитать стоимость</a>
+						</li>
+						<li class="footer-nav__item">
+							<a class="footer-nav__link">Портфолио</a>
+						</li>
+						<li class="footer-nav__item">
+							<a class="footer-nav__link">Наша команда</a>
+						</li>
+						<li class="footer-nav__item">
+							<a class="footer-nav__link">Блог</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-social">
+					<span class="footer-social__text">Мы в социальных сетях:</span>
+					<ul class="footer-social__list">
+						<li class="footer-social__item">
+							<a class="footer-social__link">fb</a>
+						</li>
+						<li class="footer-social__item">
+							<a class="footer-social__link">g+</a>
+						</li>
+						<li class="footer-social__item">
+							<a class="footer-social__link">inst</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="copyright-wrap">
+					<div class="copyright-left">
+						<span class="copyright-left__text">&copy; Kazteleport, 2015. Все права защищены</span>
+					</div>
+					<div class="copyright-right">
+						<span class="copyright-right__text">Создание сайта - </span>
+						<div class="copyright-right__img">
+							<img src="img/icons/logo_copyright.png" alt="Genesis">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
