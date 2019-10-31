@@ -29,3 +29,18 @@ function moveSliderRight() {
 		partnerArrowRight.src ='img/icons/left_arrow_inactive.svg';
 	}
 }
+
+//AUTOSLIDER FOR BLOG
+autoSlider();
+
+function autoSlider() {
+	setTimeout(function() {
+		left = left - 700;
+		
+		if (left<-2800) {
+			left = 0;
+		}
+		document.querySelector('.blog-slider').style.left = left + 'px';
+		autoSlider();
+	}, 10000);
+}
