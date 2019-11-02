@@ -22,61 +22,67 @@
 					</div>
 					<div class="header-tel">
 						<span class="header-tel__text">Есть вопросы? Звоните!</span>
-						<a class="header-tel__link" href="#" onclick="makeCall()">8 /800/ 259 09 36</a>
+						<a class="header-tel__link">8 /800/ 259 09 36</a>
 					</div>
-					<nav class="header-nav">
-						<div class="main-nav-wrap hidden">
-							<ul class="header-nav__list">
-								<li class="header-nav__item">
-									<a id="#home-link" class="header-nav__link">Главная</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#services-link" class="header-nav__link">Наши услуги</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#price-link" class="header-nav__link">Рассчитать стоимость</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#portfolio-link" class="header-nav__link">Портфолио</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#advantages-link" class="header-nav__link">Преимущества</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#process-link" class="header-nav__link">Процесс взаимодействия</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#team-link" class="header-nav__link">Наша команда</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#blog-link" class="header-nav__link">Блог</a>
-								</li>
-								<li class="header-nav__item">
-									<a id="#contacts-link" class="header-nav__link">Контакты</a>
-								</li>
-							</ul>
-						</div>
-						<div class="hamburger">
-							<button class="hamburger__btn" arial-label="Кнопка меню" onclick="openMenu()"></button>
-							<span class="hamburger__title">Меню</span>
-						</div>
-					</nav>
+					<div class="hamburger">
+						<button class="hamburger__btn" arial-label="Кнопка меню"></button>
+						<span class="hamburger__title">Меню</span>
+					</div>
 				</div>
+				<nav class="header-nav">
+					<div class="main-nav-wrap">
+						<ul class="header-nav__list">
+							<li class="header-nav__item">
+								<a href="#home-link" class="header-nav__link">Главная</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#services-link" class="header-nav__link">Наши услуги</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#price-link" class="header-nav__link">Рассчитать стоимость</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#portfolio-link" class="header-nav__link">Портфолио</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#advantages-link" class="header-nav__link">Преимущества</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#process-link" class="header-nav__link">Процесс взаимодействия</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#team-link" class="header-nav__link">Наша команда</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#blog-link" class="header-nav__link">Блог</a>
+							</li>
+							<li class="header-nav__item">
+								<a href="#contacts-link" class="header-nav__link">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</nav>	
 				<div class="banner">
 					<h1 class="banner__title">Услуги по 3D моделированию</h1>
 					<h2 class="banner__subtitle">полный спектр услуг</h2>
 					<span class="banner__text">Оставьте заявку сейчас и получите дизайн интерьера 25кв<sup>2</sup> бесплатно!*</span>
 					<div class="banner-form">
-						<form novalidate method="POST" action="form/design-form.html">
+						<form novalidate method="POST" action="form/form.html">
 							<div class="banner-form-wrap">
-								<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
-								<span id="js-design_name-help"></span>
-								<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="Номер телефона">
-								<span id="js-design_email-help"></span>
-								<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="E-mail">
-								<span id="js-design_tel-help"></span>
+								<div class="design-form-wrap">
+									<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
+									<span id="js-design_name-help" class="help-text"></span>
+								</div>
+								<div class="design-form-wrap">
+									<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
+									<span id="js-design_email-help" class="help-text"></span>
+								</div>
+								<div class="design-form-wrap">
+									<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
+									<span id="js-design_tel-help" class="help-text"></span>
+								</div>
 							</div>	
-							<input class="button banner-form__btn" type="button" value="Оставить заявку!">
+							<input class="button banner-form__btn" type="button" value="Оставить заявку!" onclick="sendFormDesign(this.form)">
 						</form>
 						<span class="banner-form__text">*Мы гарантируем конфидициальность передаваемых данных</span>
 					</div>
@@ -92,7 +98,7 @@
 					<div class="services-info services-info_first">
 						<h3 class="services__subtitle">Дизайн интерьера</h3>
 						<p class="services__text">Услуга, направленная на разработку интерьеров помещений с целью обеспечить удобство и эстетически приятное ощущение у человека при нахождении в помещении</p>
-						<button class="button services__btn" onclick="makeCallback()">Оставить заявку</button>
+						<button class="button services__btn">Оставить заявку</button>
 					</div>
 					<div class="services__img">
 						<img src="img/interior.jpg" alt="Интерьер от 21 degree">
@@ -122,7 +128,7 @@
 	<section id="price-link">
 		<div class="price-section">
 			<div class="container">
-				<h2 class="price__title">Расчитать стоимость</h2>
+				<h2 class="price__title">Рассчитать стоимость</h2>
 				<span class="price__subtitle">Расчитайте предварительную стоимость разработки интерьера</span>
 				<div class="price-wrap">
 					<div class="price-square">
@@ -162,7 +168,7 @@
 						<span class="price-calc__value">4 850 тг.</span>
 						<h3 class="price-calc__title">Средняя стоимость объекта:</h3>
 						<span class="price-calc__value">48 500 тг.</span>
-						<button class="button price-calc__btn">Получить консультацию специалиста</button>
+						<button class="button price-calc__btn" onclick="makeCallback()">Получить консультацию специалиста</button>
 						<span class="price-calc__text">или позвоните нам по телефону:</span>
 						<a class="price-calc__tel" href="#">+ 7 727 388 71 77</a>
 					</div>
@@ -306,10 +312,10 @@
 							<img src="img/icons/partners/logo10.png" alt="Спутник">
 						</div>
 					</div>
-					<button class="partners__btn_right" onclick="moveSliderRight()">
+					<button class="partners__btn_right">
 						<img class="partners-arr_right" src="img/icons/left_arrow_inactive.svg" alt="Arrow to the right">
 					</button>
-					<button class="partners__btn_left" onclick="moveSliderLeft()">
+					<button class="partners__btn_left">
 						<img class="partners-arr_left" src="img/icons/left_arrow.svg" alt="Arrow to the left">
 					</button>	
 				</div>
@@ -489,6 +495,39 @@
 			</div>
 		</div>
 	</footer>
+	<div class="overlay-form hidden">
+		<div class="modal-form">
+			<p class="modal-form__text">Пожалуйста, заполните все поля в требуемом формате</p>
+		</div>
+	</div>
+	<div class="overlay-callback hidden">
+		<div class="modal-callback">
+			<div class="banner-form">
+				<form novalidate method="POST" action="form/form.html">
+					<div class="banner-form-wrap">
+						<div class="design-form-wrap">
+							<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
+							<span id="js-design_name-help" class="help-text"></span>
+						</div>
+						<div class="design-form-wrap">
+							<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
+							<span id="js-design_email-help" class="help-text"></span>
+						</div>
+						<div class="design-form-wrap">
+							<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
+							<span id="js-design_tel-help" class="help-text"></span>
+						</div>
+					</div>	
+					<div class="design-form-btn">
+						<input class="button banner-form__btn" type="button" value="Оставить заявку!" onclick="sendFormDesign(this.form)">
+						<button class="button banner-form__btn">Отмена</button>
+					</div>
+				</form>
+			</div>	
+		</div>
+	</div>
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
