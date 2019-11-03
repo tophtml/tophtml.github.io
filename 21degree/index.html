@@ -163,7 +163,7 @@
 					</div>
 					<div class="price-calc">
 						<h3 class="price-calc__title">Площадь помещения:</h3>
-						<span class="price-calc__value">1 000м<sup class="calc_degree">2</sup></span>
+						<span class="price-calc__value">10 000м<sup class="calc_degree">2</sup></span>
 						<h3 class="price-calc__title">Средняя стоимость м<sup class="calc_degree">2</sup> :</h3>
 						<span class="price-calc__value">4 850 тг.</span>
 						<h3 class="price-calc__title">Средняя стоимость объекта:</h3>
@@ -181,29 +181,29 @@
 			<div class="container">
 				<h2 class="title portfolio__title">Портфолио</h2>
 				<ul class="portfolio__list">
-					<li class="portfolio__item portfolio__item_first" onclick="choosePortfolio()">все проекты</li>
-					<li class="portfolio__item portfolio__item_selected portfolio__item_second" onclick="choosePortfolio()">экстерьеры</li>
+					<li class="portfolio__item portfolio__item_first">все проекты</li>
+					<li class="portfolio__item portfolio__item_selected portfolio__item_second" >экстерьеры</li>
 					<li class="portfolio__item portfolio__item_third" onclick="choosePortfolio()">жилые интерьеры</li>
 					<li class="portfolio__item portfolio__item_forth" onclick="choosePortfolio()">общественные интерьеры</li>
 				</ul>
 				<div class="portfolio__img-wrap">
-					<div class="portfolio__img portfolio__img_first">
-						<img src="img/portfolio/portfolio_first.jpg" alt="Многоэтажный дом">
+					<div class="portfolio__img">
+						<img class="portfolio__img_first" src="img/portfolio/portfolio_first.jpg" alt="Многоэтажный дом">
 					</div>
-					<div class="portfolio__img portfolio__img_second">
-						<img src="img/portfolio/portfolio_second.jpg" alt="Фасад элитного дома">
+					<div class="portfolio__img">
+						<img class="portfolio__img_second" src="img/portfolio/portfolio_second.jpg" alt="Фасад элитного дома">
 					</div>
-					<div class="portfolio__img portfolio__img_third">
-						<img src="img/portfolio/portfolio_third.jpg" alt="Современный элитный массив">
+					<div class="portfolio__img">
+						<img class="portfolio__img_third" src="img/portfolio/portfolio_third.jpg" alt="Современный элитный массив">
 					</div>
-					<div class="portfolio__img portfolio__img_forth">
-						<img src="img/portfolio/portfolio_forth.jpg" alt="Невысокий дом загорода">
+					<div class="portfolio__img">
+						<img class="portfolio__img_forth" src="img/portfolio/portfolio_forth.jpg" alt="Невысокий дом загорода">
 					</div>
-					<div class="portfolio__img portfolio__img_fifth">
-						<img src="img/portfolio/portfolio_fifth.jpg" alt="Современный многоэтажный дом в Садовом кольце">
+					<div class="portfolio__img">
+						<img class="portfolio__img_fifth" src="img/portfolio/portfolio_fifth.jpg" alt="Современный многоэтажный дом в Садовом кольце">
 					</div>
-					<div class="portfolio__img portfolio__img_sixth">
-						<img src="img/portfolio/portfolio_sixth.jpg" alt="Дом в винтажном стиле">
+					<div class="portfolio__img">
+						<img class="portfolio__img_sixth" src="img/portfolio/portfolio_sixth.jpg" alt="Дом в винтажном стиле">
 					</div>
 				</div>
 			</div>
@@ -408,19 +408,24 @@
 				<span class="contacts__subtitle">Задайте их в форме ниже и наши специалисты свяжуться с Вами!</span>
 				<div class="contacts">
 					<div class="contacts-form">
-						<form method="POST" action="form/design-form.html">
+						<form method="POST" action="form/form.html">
 							<div class="contacts-form-wrap">
-								<input id="js-contacts-name" class="contacts-form__text" type="text" name="name" placeholder="Ваше имя" onblur="showHelpContactsName(this,document.getElementById('js-contacts-name-help'))">
-								<span id="js-contacts-name-help"></span>
-								<input id="js-contacts-email" class="contacts-form__text" type="email" name="email" placeholder="Ваш e-mail" onblur="showHelpContactsEmail(this,document.getElementById('js-contacts-email-help'))">
-								<span id="js-contacts-email-help"></span>
-								<input id="js-contacts-tel" class="contacts-form__text" type="tel" name="tel" placeholder="Ваш номер телефона" onblur="showHelpContactsTel(this,document.getElementById('js-contacts-tel-help'))">
-								<span id="js-contacts-tel-help"></span>
+								<div class="contacts-input-wrap">
+									<input id="js-contacts-name" class="contacts-form__text" type="text" name="name" placeholder="Ваше имя">
+									<span id="js-contacts-name-help" class="help-text"></span>
+								</div>
+								<div class="contacts-input-wrap">
+									<input id="js-contacts-email" class="contacts-form__text" type="email" name="email" placeholder="Ваш e-mail">
+									<span id="js-contacts-email-help" class="help-text"></span>
+								</div>
+								<div class="contacts-input-wrap">
+									<input id="js-contacts-tel" class="contacts-form__text" type="tel" name="tel" placeholder="Ваш номер телефона">
+									<span id="js-contacts-tel-help" class="help-text"></span>
+								</div>
 							</div>
-							<textarea id="js-contacts-text" class="contacts-form__text contacts-form__message" placeholder="Ваше сообщение" onblur="showHelpContactsText(this,document.getElementById('js-contacts-tel-help'))"></textarea>
+							<textarea id="js-contacts-text" class="contacts-form__text contacts-form__message" placeholder="Ваше сообщение"></textarea>
 							<span class="js-contacts-text-help"></span>
-							<input class="button contacts__btn" type="button" value="Оставить заявку!" onclick="sendContactsForm()">
-							<span id="js-contacts-btn-help"></span>
+							<input class="button contacts__btn" type="button" value="Оставить заявку!" onclick="sendContactsForm(this.form)">
 						</form>
 					</div>
 					<div class="contacts-data">
@@ -434,7 +439,7 @@
 				</div>
 			</div>
 			<div class="contacts-map">
-				<div class="contacts-map__img" onclick="showModalMap()">
+				<div class="contacts-map__img">
 					<img src="img/map-bg.jpg">
 				</div>
 			</div>
@@ -506,28 +511,32 @@
 				<form novalidate method="POST" action="form/form.html">
 					<div class="banner-form-wrap">
 						<div class="design-form-wrap">
-							<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
-							<span id="js-design_name-help" class="help-text"></span>
+							<input id="js-callback_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
+							<span id="js-callback_name-help" class="help-text"></span>
 						</div>
 						<div class="design-form-wrap">
-							<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
-							<span id="js-design_email-help" class="help-text"></span>
+							<input id="js-callback_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
+							<span id="js-callback_email-help" class="help-text"></span>
 						</div>
 						<div class="design-form-wrap">
-							<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
-							<span id="js-design_tel-help" class="help-text"></span>
+							<input id="js-callback_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
+							<span id="js-callback_tel-help" class="help-text"></span>
 						</div>
 					</div>	
 					<div class="design-form-btn">
-						<input class="button banner-form__btn" type="button" value="Оставить заявку!" onclick="sendFormDesign(this.form)">
-						<button class="button banner-form__btn">Отмена</button>
+						<input class="button banner-form__btn" type="button" value="Оставить заявку!" onclick="sendCallback(this.form)">
+						<span class="help-text help-text_btn"></span>
 					</div>
 				</form>
+				<button class="button banner-form__btn help-text_btn-cancel">Отмена</button>
 			</div>	
 		</div>
 	</div>
-
-
+	<div class="overlay-map hidden">
+		<div class="modal-map">
+			<iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8221.862820899501!2d76.94230910743737!3d43.23323808124845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f026e53ac61%3A0xe89c8a631bfbbd88!2sDostyk%20Plaza.!5e0!3m2!1sru!2skz!4v1572771220946!5m2!1sru!2skz"></iframe>
+		</div>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
