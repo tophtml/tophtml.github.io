@@ -13,11 +13,301 @@ function autoSlider() {
 	}, 10000);
 }
 
-//OVERLAY 
-let overlayForm = document.querySelector('.overlay-form');
-overlayForm.onclick = closeOutterOverlay;
+//CALCULATION  OF PRICE
+
+let squareCalcFirst = document.querySelector('.square-calc__item_first');
+let squareCalcSecond = document.querySelector('.square-calc__item_second');
+let squareCalcThird = document.querySelector('.square-calc__item_third');
+let squareCalcForth = document.querySelector('.square-calc__item_forth');
+
+squareCalcFirst.onclick = chooseValueFirst;
+squareCalcSecond.onclick = chooseValueSecond;
+squareCalcThird.onclick = chooseValueThird;
+squareCalcForth.onclick = chooseValueForth;
+
+let squareBuild = document.querySelector('.price-calc__square');
+let squareOne = document.querySelector('.price-calc__square_one');
+let squareTotal = document.querySelector('.price-calc__total');
+
+
+function chooseValueFirst() {
+	squareCalcFirst.classList.add('square-calc__item_selected-left');
+	squareCalcSecond.classList.remove('square-calc__item_selected');
+	squareCalcThird.classList.remove('square-calc__item_selected');
+	squareCalcForth.classList.remove('square-calc__item_selected-right');
+	squareBuild.innerHTML = '100м<sup class="calc_degree">2</sup>';
+
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '100м2') {
+		squareTotal.innerHTML = '372 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='100м2') {
+		squareTotal.innerHTML = '485 000 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='100м2') {
+		squareTotal.innerHTML = '599 990 тг.';
+	}
+}
+function chooseValueSecond() {
+	squareCalcFirst.classList.remove('square-calc__item_selected-left');
+	squareCalcSecond.classList.add('square-calc__item_selected');
+	squareCalcThird.classList.remove('square-calc__item_selected');
+	squareCalcForth.classList.remove('square-calc__item_selected-right');
+	squareBuild.innerHTML = '10 000м<sup class="calc_degree">2</sup>';
+
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '10 000м2') {
+	squareTotal.innerHTML = '3 720 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='10 000м2') {
+	squareTotal.innerHTML = '48 500 000 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='10 000м2') {
+		squareTotal.innerHTML = '59 999  000 тг.';
+	}
+}
+function chooseValueThird() {
+	squareCalcFirst.classList.remove('square-calc__item_selected-left');
+	squareCalcSecond.classList.remove('square-calc__item_selected');
+	squareCalcThird.classList.add('square-calc__item_selected');
+	squareCalcForth.classList.remove('square-calc__item_selected-right');
+	squareBuild.innerHTML = '250 000м<sup class="calc_degree">2</sup>';
+
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '250 000м2') {
+		squareTotal.innerHTML = '930 000 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='250 000м2') {
+		squareTotal.innerHTML = '1 212 500 000 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='250 000м2') {
+		squareTotal.innerHTML = '1 499 750 000 тг.';
+	}
+}
+function chooseValueForth() {
+	squareCalcFirst.classList.remove('square-calc__item_selected-left');
+	squareCalcSecond.classList.remove('square-calc__item_selected');
+	squareCalcThird.classList.remove('square-calc__item_selected');
+	squareCalcForth.classList.add('square-calc__item_selected-right');
+	squareBuild.innerHTML = '500 000м<sup class="calc_degree">2</sup>';
+
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '500 000м2') {
+		squareTotal.innerHTML = '1 860 000 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='500 000м2') {
+		squareTotal.innerHTML = '2 425 000 000 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='500 000м2') {
+		squareTotal.innerHTML = '2 999 500 000 тг.';
+	}
+}
+
+let packageFirst = document.querySelector('.package__btn_first');
+let packageSecond = document.querySelector('.package__btn_second');
+let packageThird = document.querySelector('.package__btn_third');
+
+packageFirst.onclick = choosePackageFirst;
+packageSecond.onclick = choosePackageSecond;
+packageThird.onclick = choosePackageThird;
+
+function choosePackageFirst() {
+	packageFirst.classList.add('package__btn_selected');
+	packageSecond.classList.remove('package__btn_selected');
+	packageThird.classList.remove('package__btn_selected');
+	squareOne.innerHTML = '3 720 тг.';
+
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '100м2') {
+		squareTotal.innerHTML = '372 000 тг.';
+	}
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '10 000м2') {
+	squareTotal.innerHTML = '3 720 000 тг.';
+	}
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '250 000м2') {
+		squareTotal.innerHTML = '930 000 000 тг.';
+	}
+	if (squareOne.textContent == '3 720 тг.' && squareBuild.textContent == '500 000м2') {
+		squareTotal.innerHTML = '1 860 000 000 тг.';
+	}
+}
+
+function choosePackageSecond() {
+	packageFirst.classList.remove('package__btn_selected');
+	packageSecond.classList.add('package__btn_selected');
+	packageThird.classList.remove('package__btn_selected');
+	squareOne.innerHTML = '4 850 тг.';
+
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='100м2') {
+		squareTotal.innerHTML = '485 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='10 000м2') {
+	squareTotal.innerHTML = '48 500 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='250 000м2') {
+		squareTotal.innerHTML = '1 212 500 000 тг.';
+	}
+	if (squareOne.textContent == '4 850 тг.' && squareBuild.textContent =='500 000м2') {
+		squareTotal.innerHTML = '2 425 000 000 тг.';
+	}
+}
+
+function choosePackageThird() {
+	packageFirst.classList.remove('package__btn_selected');
+	packageSecond.classList.remove('package__btn_selected');
+	packageThird.classList.add('package__btn_selected');
+	squareOne.innerHTML = '5 999 тг.';
+
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='100м2') {
+		squareTotal.innerHTML = '599 990 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='10 000м2') {
+		squareTotal.innerHTML = '59 999  000 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='250 000м2') {
+		squareTotal.innerHTML = '1 499 750 000 тг.';
+	}
+	if (squareOne.textContent == '5 999 тг.' && squareBuild.textContent =='500 000м2') {
+		squareTotal.innerHTML = '2 999 500 000 тг.';
+	}
+}
+
+//PORTFOLIO IMG
+
+let portfolioFirst = document.querySelector('.portfolio__item_first');
+let portfolioSecond = document.querySelector('.portfolio__item_second');
+let portfolioThird = document.querySelector('.portfolio__item_third');
+let portfolioForth = document.querySelector('.portfolio__item_forth');
+let portfolioFifth = document.querySelector('.portfolio__item_fifth');
+let portfolioSixth = document.querySelector('.portfolio__item_sixth');
+
+// let portfolioImg = ["document.querySelector('.portfolio__img_first')",
+// "document.querySelector('.portfolio__img_second')",
+// "document.querySelector('.portfolio__img_third')",
+// "document.querySelector('.portfolio__img_forth')",
+// "document.querySelector('.portfolio__img_fifth')",
+// "document.querySelector('.portfolio__img_sixth')"
+// ];
+
+let portfolioImgFirst = document.querySelector('.portfolio__img_first');
+let portfolioImgSecond = document.querySelector('.portfolio__img_second');
+let portfolioImgThird = document.querySelector('.portfolio__img_third');
+let portfolioImgForth = document.querySelector('.portfolio__img_forth');
+let portfolioImgFifth = document.querySelector('.portfolio__img_fifth');
+let portfolioImgSixth = document.querySelector('.portfolio__img_sixth');
+
+portfolioFirst.onclick = showFirstTab;
+portfolioSecond.onclick = showSecondTab;
+portfolioThird.onclick = showThirdTab;
+portfolioForth.onclick = showForthTab;
+
+function showFirstTab() {
+	portfolioFirst.classList.add('portfolio__item_first-selected');
+	portfolioSecond.classList.remove('portfolio__item_selected');
+	portfolioThird.classList.remove('portfolio__item_selected');
+	portfolioForth.classList.remove('portfolio__item_forth-selected');
+
+	portfolioImgFirst.src = "img/interior.jpg";
+	portfolioImgSecond.src = "img/interior.jpg";
+	portfolioImgThird.src = "img/interior.jpg";
+	portfolioImgForth.src = "img/interior.jpg";
+	portfolioImgFifth.src = "img/interior.jpg";
+	portfolioImgSixth.src = "img/interior.jpg";
+
+	portfolioImgFirst.classList.add('portfolio__img_anim');
+	portfolioImgSecond.classList.add('portfolio__img_anim');
+	portfolioImgThird.classList.add('portfolio__img_anim');
+	portfolioImgForth.classList.add('portfolio__img_anim');
+	portfolioImgFifth.classList.add('portfolio__img_anim');
+	portfolioImgSixth.classList.add('portfolio__img_anim');
+
+	setTimeout(function() { portfolioImgFirst.classList.remove('portfolio__img_anim');
+	portfolioImgSecond.classList.remove('portfolio__img_anim');
+	portfolioImgThird.classList.remove('portfolio__img_anim');
+	portfolioImgForth.classList.remove('portfolio__img_anim');
+	portfolioImgFifth.classList.remove('portfolio__img_anim');
+	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+}
+function showSecondTab() {
+	portfolioFirst.classList.remove('portfolio__item_first-selected');
+	portfolioSecond.classList.add('portfolio__item_selected');
+	portfolioThird.classList.remove('portfolio__item_selected');
+	portfolioForth.classList.remove('portfolio__item_forth-selected');
+
+	portfolioImgFirst.src = "img/exterior.jpg";
+	portfolioImgSecond.src = "img/exterior.jpg";
+	portfolioImgThird.src = "img/exterior.jpg";
+	portfolioImgForth.src = "img/exterior.jpg";
+	portfolioImgFifth.src = "img/exterior.jpg";
+	portfolioImgSixth.src = "img/exterior.jpg";
+
+	portfolioImgFirst.classList.add('portfolio__img_anim');
+	portfolioImgSecond.classList.add('portfolio__img_anim');
+	portfolioImgThird.classList.add('portfolio__img_anim');
+	portfolioImgForth.classList.add('portfolio__img_anim');
+	portfolioImgFifth.classList.add('portfolio__img_anim');
+	portfolioImgSixth.classList.add('portfolio__img_anim');
+
+	setTimeout(function() { portfolioImgFirst.classList.remove('portfolio__img_anim');
+	portfolioImgSecond.classList.remove('portfolio__img_anim');
+	portfolioImgThird.classList.remove('portfolio__img_anim');
+	portfolioImgForth.classList.remove('portfolio__img_anim');
+	portfolioImgFifth.classList.remove('portfolio__img_anim');
+	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+}
+
+function showThirdTab() {
+	portfolioFirst.classList.remove('portfolio__item_first-selected');
+	portfolioSecond.classList.remove('portfolio__item_selected');
+	portfolioThird.classList.add('portfolio__item_selected');
+	portfolioForth.classList.remove('portfolio__item_forth-selected');
+
+	portfolioImgFirst.src = "img/blog-first.jpg";
+	portfolioImgSecond.src = "img/blog-first.jpg";
+	portfolioImgThird.src = "img/blog-first.jpg";
+	portfolioImgForth.src = "img/blog-first.jpg";
+	portfolioImgFifth.src = "img/blog-first.jpg";
+	portfolioImgSixth.src = "img/blog-first.jpg";
+
+	portfolioImgFirst.classList.add('portfolio__img_anim');
+	portfolioImgSecond.classList.add('portfolio__img_anim');
+	portfolioImgThird.classList.add('portfolio__img_anim');
+	portfolioImgForth.classList.add('portfolio__img_anim');
+	portfolioImgFifth.classList.add('portfolio__img_anim');
+	portfolioImgSixth.classList.add('portfolio__img_anim');
+
+	setTimeout(function() { portfolioImgFirst.classList.remove('portfolio__img_anim');
+	portfolioImgSecond.classList.remove('portfolio__img_anim');
+	portfolioImgThird.classList.remove('portfolio__img_anim');
+	portfolioImgForth.classList.remove('portfolio__img_anim');
+	portfolioImgFifth.classList.remove('portfolio__img_anim');
+	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+}
+function showForthTab() {
+	portfolioFirst.classList.remove('portfolio__item_first-selected');
+	portfolioSecond.classList.remove('portfolio__item_selected');
+	portfolioThird.classList.remove('portfolio__item_selected');
+	portfolioForth.classList.add('portfolio__item_forth-selected');
+
+	portfolioImgFirst.src = "img/blog-second.jpg";
+	portfolioImgSecond.src = "img/blog-second.jpg";
+	portfolioImgThird.src = "img/blog-second.jpg";
+	portfolioImgForth.src = "img/blog-second.jpg";
+	portfolioImgFifth.src = "img/blog-second.jpg";
+	portfolioImgSixth.src = "img/blog-second.jpg";
+
+	portfolioImgFirst.classList.add('portfolio__img_anim');
+	portfolioImgSecond.classList.add('portfolio__img_anim');
+	portfolioImgThird.classList.add('portfolio__img_anim');
+	portfolioImgForth.classList.add('portfolio__img_anim');
+	portfolioImgFifth.classList.add('portfolio__img_anim');
+	portfolioImgSixth.classList.add('portfolio__img_anim');
+
+	setTimeout(function() { portfolioImgFirst.classList.remove('portfolio__img_anim');
+	portfolioImgSecond.classList.remove('portfolio__img_anim');
+	portfolioImgThird.classList.remove('portfolio__img_anim');
+	portfolioImgForth.classList.remove('portfolio__img_anim');
+	portfolioImgFifth.classList.remove('portfolio__img_anim');
+	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+}
 
 //REGEX 
+
 function RegEx(regex,input,helpText,helpMessage) {
 	if(!regex.test(input)) {
 		if (helpText != null) 
@@ -32,6 +322,7 @@ function RegEx(regex,input,helpText,helpMessage) {
 	}
 
 //CALLBACK
+
 let overlayCall = document.querySelector('.overlay-callback');
 document.querySelector('.services__btn').onclick = makeCallback;
 
@@ -88,36 +379,8 @@ function cancelCall() {
 	}
 }
 
-//CLOSE OVERLAY
-
-function closeOutterOverlay () {
-	overlayForm.classList.remove('fadein-menu');
-
-	if (overlayForm) {
-		overlayForm.classList.add('fadeout-menu');		
-	}
-}
-
-function closeOutterMap () {
-	overlayMap.classList.remove('fadein-menu');
-
-	if (overlayMap) {
-		overlayMap.classList.add('fadeout-menu');		
-	}
-}
-
-window.addEventListener('keydown', function (event) {
-	overlayForm.classList.remove('fadein-menu');
-	overlayCall.classList.remove('fadein-menu');
-	overlayMap.classList.remove('fadein-menu');
-  if (event.key === 'Escape') {
-    overlayForm.classList.add('fadeout-menu');
-    overlayCall.classList.add('fadeout-menu');
-    overlayMap.classList.add('fadeout-menu');
-  }
-})
-
 //MAIN-MENU
+
 let burger = document.querySelector('.hamburger__btn');
 let mainMenu = document.querySelector('.header-nav');
 let mainMenuOut = document.querySelector('.banner');
@@ -131,6 +394,7 @@ burger.onmouseover = function() {
 		}
 	}
 }
+
 //BANNER-FORM
 
 let designNameInput = document.getElementById('js-design_name');
@@ -169,6 +433,7 @@ overlayForm.classList.remove('fadeout-menu');
 }
 
 //CONTACTS-FORM
+
 let contactsNameInput = document.getElementById('js-contacts-name');
 let contactsNameHelp = document.getElementById('js-contacts-name-help');
 contactsNameInput.onblur = showContactsName;
@@ -205,6 +470,7 @@ overlayForm.classList.remove('fadeout-menu');
 }
 
 //MAP IFRAME 
+
 let overlayMap = document.querySelector('.overlay-map');
 let mapIframe = document.querySelector('.contacts-map__img'); 
 mapIframe.onclick = showModalMap;
@@ -219,87 +485,39 @@ function showModalMap() {
 	}
 }
 
-//PORTFOLIO IMG
-let portfolioFirst = document.querySelector('.portfolio__item_first');
-let portfolioSecond = document.querySelector('.portfolio__item_second');
-let portfolioThird = document.querySelector('.portfolio__item_third');
-let portfolioForth = document.querySelector('.portfolio__item_forth');
-let portfolioFifth = document.querySelector('.portfolio__item_fifth');
-let portfolioSixth = document.querySelector('.portfolio__item_sixth');
+//OVERLAY 
 
-// let portfolioImg = ["document.querySelector('.portfolio__img_first')",
-// "document.querySelector('.portfolio__img_second')",
-// "document.querySelector('.portfolio__img_third')",
-// "document.querySelector('.portfolio__img_forth')",
-// "document.querySelector('.portfolio__img_fifth')",
-// "document.querySelector('.portfolio__img_sixth')"
-// ];
+let overlayForm = document.querySelector('.overlay-form');
+overlayForm.onclick = closeOutterOverlay;
 
-let portfolioImgFirst = document.querySelector('.portfolio__img_first');
-let portfolioImgSecond = document.querySelector('.portfolio__img_second');
-let portfolioImgThird = document.querySelector('.portfolio__img_third');
-let portfolioImgForth = document.querySelector('.portfolio__img_forth');
-let portfolioImgFifth = document.querySelector('.portfolio__img_fifth');
-let portfolioImgSixth = document.querySelector('.portfolio__img_sixth');
+//CLOSE OVERLAY
 
-portfolioFirst.onclick = showFirstTab;
-portfolioSecond.onclick = showSecondTab;
-portfolioThird.onclick = showThirdTab;
-portfolioForth.onclick = showForthTab;
+function closeOutterOverlay () {
+	overlayForm.classList.remove('fadein-menu');
 
-function showFirstTab() {
-	portfolioFirst.classList.add('portfolio__item_first-selected');
-	portfolioSecond.classList.remove('portfolio__item_selected');
-	portfolioThird.classList.remove('portfolio__item_selected');
-	portfolioForth.classList.remove('portfolio__item_forth-selected');
-
-	portfolioImgFirst.src = "img/interior.jpg";
-	portfolioImgSecond.src = "img/interior.jpg";
-	portfolioImgThird.src = "img/interior.jpg";
-	portfolioImgForth.src = "img/interior.jpg";
-	portfolioImgFifth.src = "img/interior.jpg";
-	portfolioImgSixth.src = "img/interior.jpg";
-}
-function showSecondTab() {
-	portfolioFirst.classList.remove('portfolio__item_first-selected');
-	portfolioSecond.classList.add('portfolio__item_selected');
-	portfolioThird.classList.remove('portfolio__item_selected');
-	portfolioForth.classList.remove('portfolio__item_forth-selected');
-
-	portfolioImgFirst.src = "img/exterior.jpg";
-	portfolioImgSecond.src = "img/exterior.jpg";
-	portfolioImgThird.src = "img/exterior.jpg";
-	portfolioImgForth.src = "img/exterior.jpg";
-	portfolioImgFifth.src = "img/exterior.jpg";
-	portfolioImgSixth.src = "img/exterior.jpg";
+	if (overlayForm) {
+		overlayForm.classList.add('fadeout-menu');		
+	}
 }
 
-function showThirdTab() {
-	portfolioFirst.classList.remove('portfolio__item_first-selected');
-	portfolioSecond.classList.remove('portfolio__item_selected');
-	portfolioThird.classList.add('portfolio__item_selected');
-	portfolioForth.classList.remove('portfolio__item_forth-selected');
+function closeOutterMap () {
+	overlayMap.classList.remove('fadein-menu');
 
-	portfolioImgFirst.src = "img/blog-first.jpg";
-	portfolioImgSecond.src = "img/blog-first.jpg";
-	portfolioImgThird.src = "img/blog-first.jpg";
-	portfolioImgForth.src = "img/blog-first.jpg";
-	portfolioImgFifth.src = "img/blog-first.jpg";
-	portfolioImgSixth.src = "img/blog-first.jpg";
+	if (overlayMap) {
+		overlayMap.classList.add('fadeout-menu');		
+	}
 }
-function showForthTab() {
-	portfolioFirst.classList.remove('portfolio__item_first-selected');
-	portfolioSecond.classList.remove('portfolio__item_selected');
-	portfolioThird.classList.remove('portfolio__item_selected');
-	portfolioForth.classList.add('portfolio__item_forth-selected');
 
-	portfolioImgFirst.src = "img/blog-second.jpg";
-	portfolioImgSecond.src = "img/blog-second.jpg";
-	portfolioImgThird.src = "img/blog-second.jpg";
-	portfolioImgForth.src = "img/blog-second.jpg";
-	portfolioImgFifth.src = "img/blog-second.jpg";
-	portfolioImgSixth.src = "img/blog-second.jpg";
-}
+window.addEventListener('keydown', function (event) {
+	overlayForm.classList.remove('fadein-menu');
+	overlayCall.classList.remove('fadein-menu');
+	overlayMap.classList.remove('fadein-menu');
+  if (event.key === 'Escape') {
+    overlayForm.classList.add('fadeout-menu');
+    overlayCall.classList.add('fadeout-menu');
+    overlayMap.classList.add('fadeout-menu');
+  }
+})
 
 //SLIDER
 

@@ -25,7 +25,7 @@
 						<a class="header-tel__link">8 /800/ 259 09 36</a>
 					</div>
 					<div class="hamburger">
-						<button class="hamburger__btn" arial-label="Кнопка меню"></button>
+						<button class="hamburger__btn" aria-label="Кнопка меню"></button>
 						<span class="hamburger__title">Меню</span>
 					</div>
 				</div>
@@ -136,10 +136,10 @@
 							<h3 class="square__title">Площадь помещения:</h3>
 							<div class="square-calc">
 								<ul class="square-calc__list">
-									<li class="square-calc__item square-calc__item_first" onclick="chooseValue()">100м<sup class="calc_degree">2</sup></li>
-									<li class="square-calc__item square-calc__item_selected square-calc__item_second" onclick="chooseValue()">10 000м<sup class="calc_degree">2</sup></li>
-									<li class="square-calc__item square-calc__item_third" onclick="chooseValue()">250 000м<sup class="calc_degree">2</sup></li>
-									<li class="square-calc__item square-calc__item_forth" onclick="chooseValue()">500 000м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_first">100м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_selected square-calc__item_second">10 000м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_third">250 000м<sup class="calc_degree">2</sup></li>
+									<li class="square-calc__item square-calc__item_forth">500 000м<sup class="calc_degree">2</sup></li>
 								</ul>
 							</div>
 						</div>
@@ -147,15 +147,15 @@
 							<h3 class="package__title">Выберите пакет:</h3>
 							<div class="package__btn-wrap">
 								<div class="package__btn-box_first">
-									<button class="package__btn package__btn_first" onclick="choosePackage()">Light</button>
+									<button class="package__btn package__btn_first">Light</button>
 									<p class="package__info package__info_first">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>
 								</div>
 								<div class="package__btn-box_second">
-									<button class="package__btn package__btn_selected package__btn_second" onclick="choosePackage()">Medium</button>
+									<button class="package__btn package__btn_selected package__btn_second">Medium</button>
 									<p class="package__info package__info_second">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>
 								</div>
 								<div class="package__btn-box_third">
-									<button class="package__btn package__btn_third" onclick="choosePackage()">Full</button>
+									<button class="package__btn package__btn_third">Full</button>
 									<p class="package__info package__info_third">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</p>
 								</div>
 							</div>
@@ -163,11 +163,11 @@
 					</div>
 					<div class="price-calc">
 						<h3 class="price-calc__title">Площадь помещения:</h3>
-						<span class="price-calc__value">10 000м<sup class="calc_degree">2</sup></span>
+						<span class="price-calc__value price-calc__square">10 000м<sup class="calc_degree">2</sup></span>
 						<h3 class="price-calc__title">Средняя стоимость м<sup class="calc_degree">2</sup> :</h3>
-						<span class="price-calc__value">4 850 тг.</span>
+						<span class="price-calc__value price-calc__square_one">4 850 тг.</span>
 						<h3 class="price-calc__title">Средняя стоимость объекта:</h3>
-						<span class="price-calc__value">48 500 тг.</span>
+						<span class="price-calc__value price-calc__total">48 500 тг.</span>
 						<button class="button price-calc__btn" onclick="makeCallback()">Получить консультацию специалиста</button>
 						<span class="price-calc__text">или позвоните нам по телефону:</span>
 						<a class="price-calc__tel" href="#">+ 7 727 388 71 77</a>
@@ -183,8 +183,8 @@
 				<ul class="portfolio__list">
 					<li class="portfolio__item portfolio__item_first">все проекты</li>
 					<li class="portfolio__item portfolio__item_selected portfolio__item_second" >экстерьеры</li>
-					<li class="portfolio__item portfolio__item_third" onclick="choosePortfolio()">жилые интерьеры</li>
-					<li class="portfolio__item portfolio__item_forth" onclick="choosePortfolio()">общественные интерьеры</li>
+					<li class="portfolio__item portfolio__item_third">жилые интерьеры</li>
+					<li class="portfolio__item portfolio__item_forth">общественные интерьеры</li>
 				</ul>
 				<div class="portfolio__img-wrap">
 					<div class="portfolio__img">
@@ -385,18 +385,18 @@
 			<div class="container">
 				<h2 class="title blog__title">Блог</h2>
 				<div class="blog-wrap">
-					<article class="blog blog-first">
+					<div class="blog blog-first">
 						<div class="blog__img">
 							<img src="img/blog-first.jpg" alt="Минимализм в дизайне">
 						</div>
 						<a class="blog__link" href="blog/minimalism.html">Минимализм – это самый простой, практичный и «спорный» стиль в дизайне интерьеров</a>
-				</article>
-					<article class="blog blog-second">
+				</div>
+					<div class="blog blog-second">
 						<div class="blog__img">
 							<img src="img/blog-second.jpg" alt="Стиль Прованс">
 						</div>
 						<a class="blog__link" href="blog/provans.html">Прованс - это спокойный южный регион Франции, с великолепнейшей природой</a>
-					</article>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -440,7 +440,7 @@
 			</div>
 			<div class="contacts-map">
 				<div class="contacts-map__img">
-					<img src="img/map-bg.jpg">
+					<img src="img/map-bg.jpg" alt="Карта Алматы">
 				</div>
 			</div>
 		</div>
@@ -537,7 +537,6 @@
 			<iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8221.862820899501!2d76.94230910743737!3d43.23323808124845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f026e53ac61%3A0xe89c8a631bfbbd88!2sDostyk%20Plaza.!5e0!3m2!1sru!2skz!4v1572771220946!5m2!1sru!2skz"></iframe>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

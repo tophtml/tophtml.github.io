@@ -421,7 +421,9 @@ a {
 	font-weight: 300;
 }
 .square-calc__item::after,
-.square-calc__item_selected::after {
+.square-calc__item_selected::after,
+.square-calc__item_selected-left::after, 
+.square-calc__item_selected-right::after {
 	position: absolute;
 	content: "";
 	top: 25px;
@@ -437,7 +439,9 @@ a {
 	background-color: #19b5fe;
 	transition: 0.4s;
 }
-.square-calc__item_selected::before {
+.square-calc__item_selected::before,
+.square-calc__item_selected-left::before,
+.square-calc__item_selected-right::before  {
 	position: absolute;
 	content: "";
 	top: 31px;
@@ -453,7 +457,15 @@ a {
 .square-calc__item_first::after {
 	left: 0;
 }
-.square-calc__item_selected::after {
+.square-calc__item_selected-left::before {
+	left: 0;
+}
+.square-calc__item_selected-right::before {
+	left: 75px;
+}
+.square-calc__item_selected::after,
+.square-calc__item_selected-left::after,
+.square-calc__item_selected-right::after {
 	background-color: #19b5fe;
 	cursor: default;
 }
@@ -474,6 +486,8 @@ a {
 	justify-content: space-between;
 }
 .package__btn {
+	position: relative;
+	z-index: 2;
 	width: 190px;
 	padding: 16px 0 12px;
 	border: 1px solid #ffffff;
@@ -508,7 +522,7 @@ a {
 .package__info {
 	position: absolute;
 	visibility: hidden;
-	top: 55px;
+	top: 65px;
 	left: 50%;
 	width: 300px;
 	margin-top: 10px;
@@ -651,6 +665,9 @@ a {
 .portfolio__img {
 	width: 31%;
 	margin: 0 auto 25px;
+}
+.portfolio__img_anim {
+	animation: fadeMainMenu 1.5s forwards;
 }
 .advantages-section {
 	padding: 45px 0 55px;
