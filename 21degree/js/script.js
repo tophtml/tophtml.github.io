@@ -202,12 +202,19 @@ function showFirstTab() {
 	portfolioThird.classList.remove('portfolio__item_selected');
 	portfolioForth.classList.remove('portfolio__item_forth-selected');
 
-	portfolioImgFirst.src = "img/interior.jpg";
-	portfolioImgSecond.src = "img/interior.jpg";
-	portfolioImgThird.src = "img/interior.jpg";
-	portfolioImgForth.src = "img/interior.jpg";
-	portfolioImgFifth.src = "img/interior.jpg";
-	portfolioImgSixth.src = "img/interior.jpg";
+	portfolioImgFirst.src = "img/portfolio/portfolio-1_first.jpg";
+	portfolioImgSecond.src = "img/portfolio/portfolio-1_second.jpg";
+	portfolioImgThird.src = "img/portfolio/portfolio-1_third.jpg";
+	portfolioImgForth.src = "img/portfolio/portfolio-1_forth.jpg";
+	portfolioImgFifth.src = "img/portfolio/portfolio-1_fifth.jpg";
+	portfolioImgSixth.src = "img/portfolio/portfolio-1_sixth.jpg";
+
+	portfolioImgFirst.alt = "Библиотека с преобладанием белого цвета";
+	portfolioImgSecond.alt = "Прихожая в стиле Hi-Tech";
+	portfolioImgThird.alt = "Студия в современном дизайне";
+	portfolioImgForth.alt = "Комнаты отдыха в офисе";
+	portfolioImgFifth.alt = "Дом в винтажном стиле";
+	portfolioImgSixth.alt = "Гостиная с террасой";
 
 	portfolioImgFirst.classList.add('portfolio__img_anim');
 	portfolioImgSecond.classList.add('portfolio__img_anim');
@@ -229,12 +236,19 @@ function showSecondTab() {
 	portfolioThird.classList.remove('portfolio__item_selected');
 	portfolioForth.classList.remove('portfolio__item_forth-selected');
 
-	portfolioImgFirst.src = "img/exterior.jpg";
-	portfolioImgSecond.src = "img/exterior.jpg";
-	portfolioImgThird.src = "img/exterior.jpg";
-	portfolioImgForth.src = "img/exterior.jpg";
-	portfolioImgFifth.src = "img/exterior.jpg";
-	portfolioImgSixth.src = "img/exterior.jpg";
+	portfolioImgFirst.src = "img/portfolio/portfolio-2_first.jpg";
+	portfolioImgSecond.src = "img/portfolio/portfolio-2_second.jpg";
+	portfolioImgThird.src = "img/portfolio/portfolio-2_third.jpg";
+	portfolioImgForth.src = "img/portfolio/portfolio-2_forth.jpg";
+	portfolioImgFifth.src = "img/portfolio/portfolio-2_fifth.jpg";
+	portfolioImgSixth.src = "img/portfolio/portfolio-2_sixth.jpg";
+
+	portfolioImgFirst.alt = "Многоэтажный дом";
+	portfolioImgSecond.alt = "Фасад элитного дома";
+	portfolioImgThird.alt = "Современный элитный массив";
+	portfolioImgForth.alt = "Невысокий дом загорода";
+	portfolioImgFifth.alt = "Современный многоэтажный дом в Садовом кольце";
+	portfolioImgSixth.alt = "Дом в винтажном стиле";
 
 	portfolioImgFirst.classList.add('portfolio__img_anim');
 	portfolioImgSecond.classList.add('portfolio__img_anim');
@@ -257,12 +271,19 @@ function showThirdTab() {
 	portfolioThird.classList.add('portfolio__item_selected');
 	portfolioForth.classList.remove('portfolio__item_forth-selected');
 
-	portfolioImgFirst.src = "img/blog-first.jpg";
-	portfolioImgSecond.src = "img/blog-first.jpg";
-	portfolioImgThird.src = "img/blog-first.jpg";
-	portfolioImgForth.src = "img/blog-first.jpg";
-	portfolioImgFifth.src = "img/blog-first.jpg";
-	portfolioImgSixth.src = "img/blog-first.jpg";
+	portfolioImgFirst.src = "img/portfolio/portfolio-3_first.jpg";
+	portfolioImgSecond.src = "img/portfolio/portfolio-3_second.jpg";
+	portfolioImgThird.src = "img/portfolio/portfolio-3_third.jpg";
+	portfolioImgForth.src = "img/portfolio/portfolio-3_forth.jpg";
+	portfolioImgFifth.src = "img/portfolio/portfolio-3_fifth.jpg";
+	portfolioImgSixth.src = "img/portfolio/portfolio-3_sixth.jpg";
+
+	portfolioImgFirst.alt = "Студия в современном дизайне";
+	portfolioImgSecond.alt = "Гостиная с террасой";
+	portfolioImgThird.alt = "Зал с потолком в прованском стиле";
+	portfolioImgForth.alt = "Прихожая в стиле Hi-Tech";
+	portfolioImgFifth.alt = "Кухня с подвесным потолком";
+	portfolioImgSixth.alt = "Библиотека с преобладанием белого цвета";
 
 	portfolioImgFirst.classList.add('portfolio__img_anim');
 	portfolioImgSecond.classList.add('portfolio__img_anim');
@@ -284,12 +305,19 @@ function showForthTab() {
 	portfolioThird.classList.remove('portfolio__item_selected');
 	portfolioForth.classList.add('portfolio__item_forth-selected');
 
-	portfolioImgFirst.src = "img/blog-second.jpg";
-	portfolioImgSecond.src = "img/blog-second.jpg";
-	portfolioImgThird.src = "img/blog-second.jpg";
-	portfolioImgForth.src = "img/blog-second.jpg";
-	portfolioImgFifth.src = "img/blog-second.jpg";
-	portfolioImgSixth.src = "img/blog-second.jpg";
+	portfolioImgFirst.src = "img/portfolio/portfolio-4_first.jpg";
+	portfolioImgSecond.src = "img/portfolio/portfolio-4_second.jpg";
+	portfolioImgThird.src = "img/portfolio/portfolio-4_third.jpg";
+	portfolioImgForth.src = "img/portfolio/portfolio-4_forth.jpg";
+	portfolioImgFifth.src = "img/portfolio/portfolio-4_fifth.jpg";
+	portfolioImgSixth.src = "img/portfolio/portfolio-4_sixth.jpg";
+
+	portfolioImgFirst.alt = "Лаундж зона в офисном помещении";
+	portfolioImgSecond.alt = "Комнаты отдыха в офисе";
+	portfolioImgThird.alt = "Барбершоп в винтажном дизайне";
+	portfolioImgForth.alt = "Гостиничный холл";
+	portfolioImgFifth.alt = "Зона отдыха гостиничного комплекса";
+	portfolioImgSixth.alt = "Ресепшин в стиле Модерн";
 
 	portfolioImgFirst.classList.add('portfolio__img_anim');
 	portfolioImgSecond.classList.add('portfolio__img_anim');
