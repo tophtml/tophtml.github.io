@@ -1502,9 +1502,187 @@ a {
 	*:active {
 		outline: none;
 	}
-
-
-
-
+	.header-section {
+		padding: 10px 0 15px;
+		background-size: 200% 100%;
+	}
+	.header {
+		margin-bottom: 40px;
+	}
+	.header-logo__img {
+		width: 45px;
+	}
+	.header-logo__text {
+		margin-left: 5px;
+		font-size: 22px;
+	}
+	.header-tel,
+	.price__subtitle,
+	.package__info,
+	.portfolio__item::after {
+		display: none;
+	}
+	.banner__title {
+		font-size: 36px;
+	}
+	.banner__subtitle {
+		margin: 0 0 20px;
+		font-size: 22px;
+	}
+	.banner__text {
+		margin: 20px auto;
+		font-size: 18px;
+	}
+	.banner-form {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.banner-form-wrap {
+		display: block;
+		margin-bottom: 15px;
+	}
+	.banner-form__input {
+		width: 100%;
+		margin: 10px auto;
+	}
+	.help-text {
+		top: 62px;
+	}
+	.banner-form__btn {
+		margin: 15px auto 5px;
+	}
+	.banner-form__text {
+		margin: 5px auto;
+		font-size: 13px;
+		line-height: 14px;
+	}
+	.services-section,
+	.price-section,
+	.portfolio-section {
+		padding: 15px 0;
+	}
+	.title,
+	.price__title,
+	.portfolio__title {
+		margin: 0 auto 15px;
+		font-size: 30px;
+		text-align: center;
+	}
+	.title::before,
+	.price__title::after,
+	.portfolio__title::after  {
+		top: 40px;
+		width: 280px;
+	}
+	.services {
+		margin: 10px 0;
+	}
+	.services__subtitle {
+		font-size: 26px;
+		text-align: center;
+	}
+	.services-info {
+		order: 2;
+		width: 100%;
+		margin: 10px auto 0;
+		padding: 0;
+	}
+	.services__img {
+		order: 1;
+		width: 100%;
+	}
+	.services__text {
+		width: 100%;
+		margin: 0 auto 10px;
+		font-size: 15px;
+		text-align: justify;
+	}
+	.button {
+		margin: 0 auto;
+	}
+	.price__title {
+		margin-bottom: 30px;
+		font-size: 29px;
+	}
+	.square {
+		padding: 15px 5px 5px;
+	}
+	.square__title,
+	.package__title {
+		padding-left: 15px;
+		font-size: 18px;
+	}
+	.square-calc__item {
+		font-size: 12px;
+	}
+	.square-calc::before {
+    	width: 100%;
+	}
+	.square-calc__item_forth::after {
+   		left: 90%;
+	}
+	.square-calc__item_selected-right::before {
+   		left: 52px;
+	}
+	.package__btn-box_first,
+	.package__btn-box_second,
+	.package__btn-box_third {
+		width: 30%;
+	    margin: 0 5px 20px 0;
+	}
+	.package__btn {
+    	width: 100%;
+	}
+	.price-calc {
+		margin-top: 10px;
+	}
+	.price-calc__title {
+	    margin-bottom: 0px;
+	    font-size: 16px;
+	}
+	.price-calc__value {
+	    font-size: 20px;
+	}
+	.price-calc__total {
+		margin-bottom: 5px;
+	}
+	.price-calc__text {
+		margin: 5px auto;
+	}
+	.portfolio__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 10px;
+		border: 0;
+	}
+	.portfolio__item {
+		width: 33%;
+		margin: 5px auto;
+		padding: 5px 0;
+		border-radius: 5px;
+		font-size: 11px;
+		text-align: center;
+	}
+	.portfolio__item:hover,
+	.portfolio__item_selected .portfolio__item_second,
+	.portfolio__item_selected,
+	.portfolio__item_first-selected,
+	.portfolio__item_forth-selected {
+		margin: 5px auto;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 11px;
+		color: #ffffff;
+		background-color: #19b5fe;
+		transform: scale(1);
+	}
+	.portfolio__item_forth {
+		width: 100%;
+	}
+	.portfolio__img {
+		width: 48%;
+		margin-bottom: 4px;
+	}
 
 }
