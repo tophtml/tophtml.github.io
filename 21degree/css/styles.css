@@ -836,10 +836,10 @@ a {
 .team-section {
 	padding: 55px 0;
 }
-.team__tile {
+.team__title {
 	margin-bottom: 60px;
 }
-.team__tile::after {
+.team__title::after {
 	position: absolute;
 	content: "";
 	bottom: -12px;
@@ -1496,7 +1496,6 @@ a {
 	}
 }
 
-
 @media (max-width: 767px) {
 	*:focus,
 	*:active {
@@ -1519,7 +1518,13 @@ a {
 	.header-tel,
 	.price__subtitle,
 	.package__info,
-	.portfolio__item::after {
+	.portfolio__item::after,
+	.advantages__title::after,
+	.partners__title::after,
+	.team-quote::before,
+	.team-quote::after,
+	.footer-social__text,
+	.copyright::before  {
 		display: none;
 	}
 	.banner__title {
@@ -1558,19 +1563,34 @@ a {
 	}
 	.services-section,
 	.price-section,
-	.portfolio-section {
+	.portfolio-section,
+	.advantages-section,
+	.process-section,
+	.team-section,
+	.blog-section,
+	.contacts-section,
+	.footer-section {
 		padding: 15px 0;
 	}
 	.title,
 	.price__title,
-	.portfolio__title {
+	.portfolio__title,
+	.advantages__title,
+	.process__title,
+	.team__title,
+	.blog__title,
+	.contacts__title {
 		margin: 0 auto 15px;
 		font-size: 30px;
 		text-align: center;
 	}
 	.title::before,
 	.price__title::after,
-	.portfolio__title::after  {
+	.portfolio__title::after,
+	.process__title::after,
+	.team__title::after,
+	.blog__title::after,
+	.contacts__title::after  {
 		top: 40px;
 		width: 280px;
 	}
@@ -1657,7 +1677,7 @@ a {
 		border: 0;
 	}
 	.portfolio__item {
-		width: 33%;
+		width: 30%;
 		margin: 5px auto;
 		padding: 5px 0;
 		border-radius: 5px;
@@ -1677,6 +1697,9 @@ a {
 		background-color: #19b5fe;
 		transform: scale(1);
 	}
+	.portfolio__item_third {
+		width: 40%;
+	}
 	.portfolio__item_forth {
 		width: 100%;
 	}
@@ -1684,5 +1707,176 @@ a {
 		width: 48%;
 		margin-bottom: 4px;
 	}
+	.advantages {
+		width: 100%;
+		text-align: center;
+	}
+	.advantages__text {
+		max-width: 100%;
+		margin: 0 auto 100px;
+	}
+	.advantages__text::before  {
+		top: -5px;
+	}
+	.advantages__text::after  {
+		top: -75px;
+	}
+	.advantages__text_first {
+		margin-top: 80px;
+	}
+	.advantages__text_sixth {
+		margin-bottom: 10px;
+	}
+	.process__title,
+	.partners__title {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	.process__title::after {
+		top: 35px;
+	}
+	.process__text {
+		width: 100%;
+		font-size: 14px;
+		text-align: center;
+	}
+	.team__title {
+		margin-bottom: 25px;
+	}
+	.team {
+		width: 46%;
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+	.team__name {
+		width: 100%;
+		margin: 5px auto;
+		font-size: 18px;
+	}
+	.team__position {
+		font-size: 14px;
+	}
+	.team-quote {
+		margin: 0 auto;
+	}
+	.team-quote__slogan {
+		margin-bottom: 5px;
+		font-size: 24px;
+	}
+	.team-quote__text {
+		margin-bottom: 0;
+		font-size: 14px;
+		text-align: justify;
+	}
+	.team-quote__name {
+		text-align: right;
+	}
+	.team-quote__position {
+		font-size: 12px;
+		text-align: right;
+	}
+	.blog {
+		width: 100%;
+	}
+	.blog__img {
+		margin-bottom: 5px;
+	}
+	.blog__link {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.contacts {
+		margin-bottom: 15px;
+	}
+	.contacts__subtitle {
+		margin-bottom: 5px;
+		font-size: 18px;
+	}
+	.contacts-form {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.contacts-input-wrap {
+		width: 60%;
+		margin: 0 auto;
+	}
+	.contacts-form__text {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.contacts__text {
+		margin-bottom: 15px;
+	}
+	.contacts-form__message {
+		margin-bottom: 5px;
+	}
+	.contacts-data {
+		width: 90%;
+	}
+	.contacts__schedule {
+		display: block;
+		max-width: 100%;
+		margin-top: 15px;
+		font-size: 14px;
+	}
+	.contacts-map {
+		min-height: 100px;
+	}
+	.footer-nav {
+		width: 100%;
+	}
+	.footer-social {
+		width: 100%;
+	}
+	.footer-nav__list {
+		justify-content: center;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.footer-nav {
+		width: 395px;
+		margin: 0 auto 10px;
+	}
+	.footer-nav__item {
+		width: 47%;
+		font-size: 14px;
+	}
+	.footer-nav__item:nth-child(even) {
+		margin-left: 20px;
+	}
+	.footer-social__list {
+		justify-content: center;
+	}
+	.footer-social {
+   		width: 170px;
+   		margin: 0 auto;
+	}
+	.copyright {
+		padding-top: 50px;
+	}
+	.copyright-wrap {
+		font-size: 12px;
+		justify-content: center;
+	}
+	.copyright-left {
+		order: 2;
+	}
+	.copyright-right__img {
+		margin: -22px 5px 0 5px;
+	}
 
+}
+@media (max-width: 400px) {
+	.team__name {
+		font-size: 14px;
+	}
+	.contacts-input-wrap {
+		width: 100%;
+	}
+	.footer-nav {
+		width: 100%;
+	}
+	.footer-nav__item {
+    	width: 43%;
+	}
 }

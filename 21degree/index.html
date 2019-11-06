@@ -70,16 +70,16 @@
 						<form novalidate method="POST" action="form/form.html">
 							<div class="banner-form-wrap">
 								<div class="design-form-wrap">
-									<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
+									<input id="js-design_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя" maxlength="20">
 									<span id="js-design_name-help" class="help-text"></span>
 								</div>
 								<div class="design-form-wrap">
 									<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
-									<span id="js-design_email-help" class="help-text"></span>
+									<span id="js-design_email-help" class="help-text" maxlength="20"></span>
 								</div>
 								<div class="design-form-wrap">
 									<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
-									<span id="js-design_tel-help" class="help-text"></span>
+									<span id="js-design_tel-help" class="help-text" maxlength="20"></span>
 								</div>
 							</div>	
 							<input class="button banner-form__btn" type="button" value="Оставить заявку!" onclick="sendFormDesign(this.form)">
@@ -326,7 +326,7 @@
 	<section id="team-link">
 		<div class="team-section">
 			<div class="container">
-				<h2 class="title team__tile">Наша команда</h2>
+				<h2 class="title team__title">Наша команда</h2>
 				<div class="team-wrap">
 					<div class="team">
 						<div class="team__img">
@@ -411,16 +411,16 @@
 						<form method="POST" action="form/form.html">
 							<div class="contacts-form-wrap">
 								<div class="contacts-input-wrap">
-									<input id="js-contacts-name" class="contacts-form__text" type="text" name="name" placeholder="Ваше имя">
+									<input id="js-contacts-name" class="contacts-form__text" type="text" name="name" placeholder="Ваше имя" maxlength="20">
 									<span id="js-contacts-name-help" class="help-text"></span>
 								</div>
 								<div class="contacts-input-wrap">
-									<input id="js-contacts-email" class="contacts-form__text" type="email" name="email" placeholder="Ваш e-mail">
+									<input id="js-contacts-email" class="contacts-form__text" type="email" name="email" placeholder="Ваш e-mail" maxlength="20">
 									<span id="js-contacts-email-help" class="help-text"></span>
 								</div>
 								<div class="contacts-input-wrap">
 									<input id="js-contacts-tel" class="contacts-form__text" type="tel" name="tel" placeholder="Ваш номер телефона">
-									<span id="js-contacts-tel-help" class="help-text"></span>
+									<span id="js-contacts-tel-help" class="help-text" maxlength="20"></span>
 								</div>
 							</div>
 							<textarea id="js-contacts-text" class="contacts-form__text contacts-form__message" placeholder="Ваше сообщение"></textarea>
@@ -511,15 +511,15 @@
 				<form novalidate method="POST" action="form/form.html">
 					<div class="banner-form-wrap">
 						<div class="design-form-wrap">
-							<input id="js-callback_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя">
+							<input id="js-callback_name" class="banner-form__input" type="text" name="name" placeholder="Ваше имя" maxlength="20">
 							<span id="js-callback_name-help" class="help-text"></span>
 						</div>
 						<div class="design-form-wrap">
-							<input id="js-callback_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
+							<input id="js-callback_email" class="banner-form__input" type="email" name="email" placeholder="E-mail" maxlength="20">
 							<span id="js-callback_email-help" class="help-text"></span>
 						</div>
 						<div class="design-form-wrap">
-							<input id="js-callback_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
+							<input id="js-callback_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона" maxlength="20">
 							<span id="js-callback_tel-help" class="help-text"></span>
 						</div>
 					</div>	
