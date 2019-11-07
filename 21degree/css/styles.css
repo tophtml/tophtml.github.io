@@ -823,6 +823,7 @@ a {
 	height: 25px;
 	border: none;
 	cursor: pointer;
+	background-color: transparent;
 }
 .partners__btn_left {
 	top: 125px;
@@ -1524,7 +1525,8 @@ a {
 	.team-quote::before,
 	.team-quote::after,
 	.footer-social__text,
-	.copyright::before  {
+	.copyright::before,
+	.blog-main__title::after  {
 		display: none;
 	}
 	.banner__title {
@@ -1547,7 +1549,7 @@ a {
 		margin-bottom: 15px;
 	}
 	.banner-form__input {
-		width: 100%;
+		width: 50%;
 		margin: 10px auto;
 	}
 	.help-text {
@@ -1740,6 +1742,21 @@ a {
 		font-size: 14px;
 		text-align: center;
 	}
+	.partners-carousel-box {
+   		width: 305px;
+	}
+	.partners-arr_right,
+	.partners-arr_left {
+		width: 30px;
+	}
+	.partners__btn_right {
+		top: 70px;
+    	left: 12%;
+	}
+	.partners__btn_left {
+		top: 74px;
+    	right: 12%;
+	}
 	.team__title {
 		margin-bottom: 25px;
 	}
@@ -1864,9 +1881,83 @@ a {
 	.copyright-right__img {
 		margin: -22px 5px 0 5px;
 	}
+	.modal-callback .banner-form__input {
+		display: block;
+		width: 300px;
+	}
+	.modal-callback .help-text {
+		top: 58px;
+		left: 68%;
+	}
+	.modal-callback .design-form-wrap:last-child {
+		margin-bottom: 35px;
+	}
+	.modal-map {
+		max-width: 80%;
+	}
+	.blog-main {
+		padding: 0 10px 20px;
+	}
+	.blog-main__title {
+		max-width: 90%;
+		font-size: 24px;
+	}
+	.blog-main__img {
+		width: 300px;
+	}
+	.blog-slider-wrap {
+    	width: 520px;
+    }
+}
 
+@media (max-width: 550px) {
+	.banner-form__input {
+		width: 80%;
+	}
+	.partners__title {
+		font-size: 20px;
+	}
+	.partners__btn_left {
+		right: -2%;
+	}
+	.partners__btn_right {
+		left: -2%;
+	}
+	.modal-map {
+		max-width: 90%;
+	}
+	.blog-main-body {
+		background: none;
+	}
+	.blog-main {
+		padding: 0 0 15px;
+	}
+	.blog-main__title {
+		max-width: 100%;
+		font-size: 18px;
+	}
+	.blog-main__img,
+	.blog-main__img_first,
+	.blog-main__img_second {
+		float: none;
+		width: 300px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.blog-slider-wrap {
+    	width: 380px;
+    }
 }
 @media (max-width: 400px) {
+	.banner-form__input {
+		width: 90%;
+	}
+	.partners__title {
+	    font-size: 18px;
+	}
+	.partners-carousel-box {
+	    width: 190px;
+	}
 	.team__name {
 		font-size: 14px;
 	}
@@ -1879,4 +1970,31 @@ a {
 	.footer-nav__item {
     	width: 43%;
 	}
+	.modal-callback {
+    	width: 315px;
+    	height: 360px;
+	}
+	.modal-callback .help-text {
+		left: 60%;
+	}
+	.modal-callback .banner-form__btn,
+	.modal-callback .help-text_btn-cancel {
+		width: 130px;
+		padding: 15px;
+	}
+	.modal-callback .help-text_btn-cancel {
+    	margin: -46px 6% 0 auto;
+    }
+    .blog-main__title {
+		font-size: 17px;
+	}
+    .blog-slider-wrap {
+    	width: 95%;
+    	margin-bottom: -75px;
+    }
+    .blog-slider-wrap img {
+    	max-width: 70%;
+    	height: 250px;
+    }
+
 }
