@@ -26,15 +26,14 @@
 					</div>
 					<div class="hamburger">
 						<button class="hamburger__btn" aria-label="Кнопка меню"></button>
+						<button class="hamburger__btn hamburger__btn-small hidden" aria-label="Кнопка меню на маленьком экране"></button>
+						<button class="hamburger__btn-close hidden" aria-label="Кнопка Закрыть меню на маленьком меню"></button>
 						<span class="hamburger__title">Меню</span>
 					</div>
 				</div>
 				<nav class="header-nav">
 					<div class="main-nav-wrap">
 						<ul class="header-nav__list">
-							<li class="header-nav__item">
-								<a href="#home-link" class="header-nav__link">Главная</a>
-							</li>
 							<li class="header-nav__item">
 								<a href="#services-link" class="header-nav__link">Наши услуги</a>
 							</li>
@@ -74,12 +73,12 @@
 									<span id="js-design_name-help" class="help-text"></span>
 								</div>
 								<div class="design-form-wrap">
-									<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="E-mail">
-									<span id="js-design_email-help" class="help-text" maxlength="20"></span>
+									<input id="js-design_email" class="banner-form__input" type="email" name="email" placeholder="E-mail" maxlength="20">
+									<span id="js-design_email-help" class="help-text"></span>
 								</div>
 								<div class="design-form-wrap">
-									<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона">
-									<span id="js-design_tel-help" class="help-text" maxlength="20"></span>
+									<input id="js-design_tel" class="banner-form__input" type="tel" name="tel" placeholder="Номер телефона" maxlength="20">
+									<span id="js-design_tel-help" class="help-text"></span>
 								</div>
 							</div>	
 							<input class="button banner-form__btn" type="button" value="Оставить заявку!" onclick="sendFormDesign(this.form)">
@@ -419,8 +418,8 @@
 									<span id="js-contacts-email-help" class="help-text"></span>
 								</div>
 								<div class="contacts-input-wrap">
-									<input id="js-contacts-tel" class="contacts-form__text" type="tel" name="tel" placeholder="Ваш номер телефона">
-									<span id="js-contacts-tel-help" class="help-text" maxlength="20"></span>
+									<input id="js-contacts-tel" class="contacts-form__text" type="tel" name="tel" placeholder="Ваш номер телефона" maxlength="20">
+									<span id="js-contacts-tel-help" class="help-text"></span>
 								</div>
 							</div>
 							<textarea id="js-contacts-text" class="contacts-form__text contacts-form__message" placeholder="Ваше сообщение"></textarea>
@@ -530,6 +529,14 @@
 				</form>
 				<button class="button banner-form__btn help-text_btn-cancel">Отмена</button>
 			</div>	
+		</div>
+	</div>
+	<div class="overlay-portfolio hidden">
+		<div class="modal-portfolio">
+			<figure class="modal-portfolio__img">
+				<img class="modal-portfolio__img-overlay" src="img/portfolio/portfolio-2_first.jpg" alt="Многоэтажный дом">
+				<figcaption class="modal-portfolio__name">Многоэтажный дом</figcaption>
+			</figure>
 		</div>
 	</div>
 	<div class="overlay-map hidden">

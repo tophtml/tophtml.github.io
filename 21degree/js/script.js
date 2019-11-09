@@ -169,6 +169,11 @@ function choosePackageThird() {
 
 //PORTFOLIO IMG
 
+
+let overlayPortfolio = document.querySelector('.overlay-portfolio');
+overlayPortfolio.onclick = closeOutterPortfolio;
+let portfolioImg = document.querySelector('.modal-portfolio__img-overlay');
+let portfolioImgName = document.querySelector('.modal-portfolio__name');
 let portfolioFirst = document.querySelector('.portfolio__item_first');
 let portfolioSecond = document.querySelector('.portfolio__item_second');
 let portfolioThird = document.querySelector('.portfolio__item_third');
@@ -229,7 +234,69 @@ function showFirstTab() {
 	portfolioImgForth.classList.remove('portfolio__img_anim');
 	portfolioImgFifth.classList.remove('portfolio__img_anim');
 	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+
+	portfolioImgFirst.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-1_first.jpg';
+		portfolioImg.alt = "Библиотека с преобладанием белого цвета";
+		portfolioImgName.innerHTML = "Библиотека с преобладанием белого цвета";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	 portfolioImgSecond.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-1_second.jpg';
+		portfolioImg.alt = "Прихожая в стиле Hi-Tech";
+		portfolioImgName.innerHTML = "Прихожая в стиле Hi-Tech";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgThird.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-1_third.jpg';
+		portfolioImg.alt = "Студия в современном дизайне";
+		portfolioImgName.innerHTML = "Студия в современном дизайне";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgForth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-1_forth.jpg';
+		portfolioImg.alt = "Комнаты отдыха в офисе";
+		portfolioImgName.innerHTML = "Комнаты отдыха в офисе";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgFifth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-1_fifth.jpg';
+		portfolioImg.alt = "Дом в винтажном стиле";
+		portfolioImgName.innerHTML = "Дом в винтажном стиле";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgSixth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-1_sixth.jpg';
+		portfolioImg.alt = "Гостиная с террасой";
+		portfolioImgName.innerHTML = "Гостиная с террасой";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
 }
+
 function showSecondTab() {
 	portfolioFirst.classList.remove('portfolio__item_first-selected');
 	portfolioSecond.classList.add('portfolio__item_selected');
@@ -264,6 +331,67 @@ function showSecondTab() {
 	portfolioImgFifth.classList.remove('portfolio__img_anim');
 	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
 }
+		
+	portfolioImgFirst.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-2_first.jpg';
+		portfolioImg.alt = "Многоэтажный дом";
+		portfolioImgName.innerHTML = "Многоэтажный дом";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	 portfolioImgSecond.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-2_second.jpg';
+		portfolioImg.alt = "Фасад элитного дома";
+		portfolioImgName.innerHTML = "Фасад элитного дома";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgThird.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-2_third.jpg';
+		portfolioImg.alt = "Современный элитный массив";
+		portfolioImgName.innerHTML = "Современный элитный массив";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgForth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-2_forth.jpg';
+		portfolioImg.alt = "Невысокий дом загорода";
+		portfolioImgName.innerHTML = "Невысокий дом загорода";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgFifth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-2_fifth.jpg';
+		portfolioImg.alt = "Современный многоэтажный дом в Садовом кольце";
+		portfolioImgName.innerHTML = "Современный многоэтажный дом в Садовом кольце";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgSixth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-2_sixth.jpg';
+		portfolioImg.alt = "Дом в винтажном стиле";
+		portfolioImgName.innerHTML = "Дом в винтажном стиле";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
 
 function showThirdTab() {
 	portfolioFirst.classList.remove('portfolio__item_first-selected');
@@ -298,6 +426,67 @@ function showThirdTab() {
 	portfolioImgForth.classList.remove('portfolio__img_anim');
 	portfolioImgFifth.classList.remove('portfolio__img_anim');
 	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+
+	portfolioImgFirst.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-3_first.jpg';
+		portfolioImg.alt = "Студия в современном дизайне";
+		portfolioImgName.innerHTML = "Студия в современном дизайне";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	 portfolioImgSecond.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-3_second.jpg';
+		portfolioImg.alt = "Гостиная с террасой";
+		portfolioImgName.innerHTML = "Гостиная с террасой";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgThird.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-3_third.jpg';
+		portfolioImg.alt = "Зал с потолком в прованском стиле";
+		portfolioImgName.innerHTML = "Зал с потолком в прованском стиле";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgForth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-3_forth.jpg';
+		portfolioImg.alt = "Прихожая в стиле Hi-Tech";
+		portfolioImgName.innerHTML = "Прихожая в стиле Hi-Tech";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgFifth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-3_fifth.jpg';
+		portfolioImg.alt = "Кухня с подвесным потолком";
+		portfolioImgName.innerHTML = "Кухня с подвесным потолком";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgSixth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-3_sixth.jpg';
+		portfolioImg.alt = "Библиотека с преобладанием белого цвета";
+		portfolioImgName.innerHTML = "Библиотека с преобладанием белого цвета";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
 }
 function showForthTab() {
 	portfolioFirst.classList.remove('portfolio__item_first-selected');
@@ -332,6 +521,67 @@ function showForthTab() {
 	portfolioImgForth.classList.remove('portfolio__img_anim');
 	portfolioImgFifth.classList.remove('portfolio__img_anim');
 	portfolioImgSixth.classList.remove('portfolio__img_anim');}, 1000);
+
+	portfolioImgFirst.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-4_first.jpg';
+		portfolioImg.alt = "Лаундж зона в офисном помещении";
+		portfolioImgName.innerHTML = "Лаундж зона в офисном помещении";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	 portfolioImgSecond.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-4_second.jpg';
+		portfolioImg.alt = "Комнаты отдыха в офисе";
+		portfolioImgName.innerHTML = "Комнаты отдыха в офисе";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgThird.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-4_third.jpg';
+		portfolioImg.alt = "Барбершоп в винтажном дизайне";
+		portfolioImgName.innerHTML = "Барбершоп в винтажном дизайне";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgForth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-4_forth.jpg';
+		portfolioImg.alt = "Гостиничный холл";
+		portfolioImgName.innerHTML = "Гостиничный холл";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgFifth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-4_fifth.jpg';
+		portfolioImg.alt = "Зона отдыха гостиничного комплекса";
+		portfolioImgName.innerHTML = "Зона отдыха гостиничного комплекса";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
+	portfolioImgSixth.onclick = function() {
+	 	overlayPortfolio.classList.remove('fadeout-menu');
+		overlayPortfolio.style.display = 'block';
+		portfolioImg.src = 'img/portfolio/portfolio-4_sixth.jpg';
+		portfolioImg.alt = "Ресепшин в стиле Модерн";
+		portfolioImgName.innerHTML = "Ресепшин в стиле Модерн";
+		if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadein-menu');
+		}
+	}
 }
 
 //REGEX 
@@ -410,16 +660,30 @@ function cancelCall() {
 //MAIN-MENU
 
 let burger = document.querySelector('.hamburger__btn');
+let burgerSmall = document.querySelector('.hamburger__btn-small');
+let burgerSmallClose = document.querySelector('.hamburger__btn-close');
 let mainMenu = document.querySelector('.header-nav');
+let mainMenuWrap = document.querySelector('.main-nav-wrap');
 let mainMenuOut = document.querySelector('.banner');
+burgerSmall.onclick = openHamburger;
+burgerSmallClose.onclick = closeHamburger;
 
 burger.onmouseover = function() {
 	mainMenu.classList.remove('fadeout-menu');
 	mainMenu.classList.add('fadein-menu');
-		if (mainMenu.style.opacity = '1') {
+	if (mainMenu) {
 			mainMenuOut.onmouseover = function() {
 			mainMenu.classList.add('fadeout-menu');
 		}
+	}
+}
+
+function openHamburger() {
+	mainMenu.classList.remove('fadeout-menu');
+	mainMenuWrap.style.top = '-38px';
+	burgerSmallClose.style.display = 'block';
+	if (mainMenu) {
+		mainMenu.classList.add('fadein-menu');
 	}
 }
 
@@ -504,7 +768,6 @@ let mapIframe = document.querySelector('.contacts-map__img');
 mapIframe.onclick = showModalMap;
 overlayMap.onclick = closeOutterMap;
 
-
 function showModalMap() {
 	overlayMap.classList.remove('fadeout-menu');
 	overlayMap.style.display = 'block';
@@ -536,14 +799,33 @@ function closeOutterMap () {
 	}
 }
 
+function closeOutterPortfolio () {
+	overlayPortfolio.classList.remove('fadein-menu');
+
+	if (overlayPortfolio) {
+		overlayPortfolio.classList.add('fadeout-menu');		
+	}
+}
+
+function closeHamburger () {
+	mainMenu.classList.remove('fadein-menu');
+	burgerSmallClose.style.display = 'none';
+
+	if (mainMenu) {
+		mainMenu.classList.add('fadeout-menu');		
+	}
+}
+
 window.addEventListener('keydown', function (event) {
 	overlayForm.classList.remove('fadein-menu');
 	overlayCall.classList.remove('fadein-menu');
 	overlayMap.classList.remove('fadein-menu');
+	overlayPortfolio.classList.remove('fadein-menu');
   if (event.key === 'Escape') {
     overlayForm.classList.add('fadeout-menu');
     overlayCall.classList.add('fadeout-menu');
     overlayMap.classList.add('fadeout-menu');
+    overlayPortfolio.classList.add('fadeout-menu');
   }
 })
 
@@ -582,4 +864,3 @@ function moveSliderRight() {
 		partnerArrowRight.src ='img/icons/left_arrow_inactive.svg';
 	}
 }
-
