@@ -1204,6 +1204,16 @@ a {
 	background: rgba(255,255,255,0.95);
 	transform: translateX(-50%);
 }
+.modal-map {
+	width: 600px;
+	height: 350px;
+	border-radius: 2px;
+}
+.modal-map__iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
 .modal-form__text {
 	position: absolute;
 	top: 50%;
