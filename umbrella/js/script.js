@@ -5,7 +5,8 @@ bannerBtn.onclick = openSite;
 
 function openSite() {
 	mainSite.style.display = 'block';
-	mainSite.classList.add('modal-overlay-in');
+	// mainSite.classList.add('modal-overlay-in');
+	 window.scrollBy({ top: 755, behavior: 'smooth' });
 }
 
 //SLIDER WORK
