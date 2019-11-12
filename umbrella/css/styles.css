@@ -127,7 +127,8 @@ a {
 	line-height: 30px;
 	text-align: center;
 }
-.banner__btn {
+.banner__btn,
+.banner__btn-small {
 	display: block;
 	position: relative;
 	width: 50px;
@@ -139,7 +140,8 @@ a {
 	background-color: #ffffff;
 	cursor: pointer;
 }
-.banner__btn::before {
+.banner__btn::before,
+.banner__btn-small::before {
 	position: absolute;
 	content: "";
 	top: 50%;
@@ -148,6 +150,9 @@ a {
 	height: 11px;
 	background: url(../img/icons/path.svg) no-repeat;
 	transform: translate(-50%, -50%);
+}
+.banner__btn-small {
+	display: none;
 }
 .banner__btn:hover {
 	box-shadow: 0 0 2px 15px rgb(255,255,255, 0.5);
@@ -618,13 +623,17 @@ a {
 		outline: none;
 	}
 	.header-navbar,
-	.contacts-form__btn::before {
+	.contacts-form__btn::before,
+	.banner__btn {
 		display: none;
 	}
 	.banner__title {
 		max-width: 300px;
 		margin: 45px auto 10px;
 		font-size: 28px;
+	}
+	.banner__btn-small {
+		display: block;
 	}
 	.work-section,
 	.team-section,

@@ -133,3 +133,16 @@ overlaySliderClose.onclick = function() {
 		overlaySlider.classList.add('modal-overlay-out');
 	}
 }
+
+window.addEventListener('keydown', function (event) {
+	overlayForm.classList.remove('modal-overlay-in');
+	overlayMap.classList.remove('modal-overlay-in');
+	overlaySliderClose.classList.remove('modal-overlay-in');
+	overlaySlider.classList.remove('modal-overlay-in');
+  if (event.key === 'Escape') {
+    overlayForm.classList.add('modal-overlay-out');
+    overlayMap.classList.add('modal-overlay-out');
+    overlaySliderClose.classList.add('modal-overlay-out');
+    overlaySlider.classList.add('modal-overlay-out');
+  }
+})
