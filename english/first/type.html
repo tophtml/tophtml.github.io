@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500i&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="../img_main/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<header id="header">
+		<div class="container">
+			<div class="header">
+				<img class="header__img" src="../img_main/logo.png" alt="Logo">
+				<h1 class="header__title">English cards</h1>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="type hidden">
+				<ul class="type__list">
+					<li class="type__item"><a class="type__link" href="#">Russian-English</a></li>
+					<li class="type__item"><a class="type__link type__link_pen" href="#">Writing</a></li>
+				</ul>
+			</div>
+			<div class="word"><!-- нажимаем на img и выпадает вниз список -->
+				<img class="word__img" src="img/carol.jpg" alt="Carol"> 
+				<span class="word__title">Колядка</span>       <!-- слово будет меняться на английское чере textHTML -->
+				<span class="word__voice">[ˈkærəl]</span>
+				<p class="word__example">We sang carols while we decorated the tree</p>
+				<p class="word__example">They sang carols at the Christmas Eve service</p><hr>
+				<ul class="word__list">
+					<li class="word__item"><span class="word__item_text">go caroling </span>[ˈkærəl] - колядовать
+						<p class="word__example">Last night we went caroling with our friends</p>
+					</li>
+				</ul>
+				<div class="btn-wrap">
+					<button class="word__btn word__btn_left">Random</button>
+					<button class="word__btn word__btn_right">Next</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
